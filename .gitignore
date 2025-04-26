@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data and Results
+data/
+results/
+*.ply
+*.obj
+*.png
+*.jpg
+*.jpeg
+
+# COLMAP
+colmap/workspace/
+colmap/sparse/
+colmap/dense/
+
+# Instant-NGP
+instant_ngp/checkpoints/
+instant_ngp/logs/
+
+# Logs
+*.log
+logs/
+
+# System
+.DS_Store
+Thumbs.db 
