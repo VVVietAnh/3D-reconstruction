@@ -6,6 +6,7 @@ import open3d as o3d
 import time
 import argparse
 from pathlib import Path
+import psutil
 
 # Default parameters for COLMAP
 DEFAULT_PARAMS = {
@@ -50,6 +51,25 @@ TEST_PARAMS = {
     }
 }
 
+def get_gpu_memory_usage():
+    """Get current GPU memory usage in MB using nvidia-smi"""
+    try:
+        result = subprocess.run(['nvidia-smi', '--query-gpu=memory.used', '--format=csv,noheader,nounits'], 
+                              capture_output=True, text=True)
+        if result.returncode == 0:
+            return float(result.stdout.strip())
+        return 0
+    except:
+        return 0
+
+def log_metrics(log_file, command, runtime, gpu_memory):
+    """Log metrics to file"""
+    with open(log_file, 'a') as f:
+        f.write(f"Command: {command}\n")
+        f.write(f"Runtime: {runtime:.2f} seconds\n")
+        f.write(f"GPU Memory Usage: {gpu_memory:.2f} MB\n")
+        f.write("-" * 50 + "\n")
+
 def run_colmap_commands(dataset_path, params):
     """Run COLMAP pipeline commands."""
     start_time = time.time()
@@ -57,6 +77,15 @@ def run_colmap_commands(dataset_path, params):
     # Create necessary directories
     os.makedirs(os.path.join(dataset_path, "sparse"), exist_ok=True)
     os.makedirs(os.path.join(dataset_path, "dense"), exist_ok=True)
+    
+    # Create output directory for logs
+    output_dir = os.path.join(dataset_path, "..", "output")
+    os.makedirs(output_dir, exist_ok=True)
+    log_file = os.path.join(output_dir, "colmap_log.txt")
+    
+    # Clear previous log file
+    if os.path.exists(log_file):
+        os.remove(log_file)
 
     commands = [
         # Feature extraction
@@ -88,14 +117,30 @@ def run_colmap_commands(dataset_path, params):
         f"colmap stereo_fusion --workspace_path {dataset_path}/dense --workspace_format COLMAP --input_type geometric --output_path {dataset_path}/dense/fused.ply"
     ]
 
-    for command in commands:
-        print(f"Running command: {command}")        
-        subprocess.run(command, shell=True, check=True)
+    total_runtime = 0
+    max_gpu_memory = 0
 
-    end_time = time.time()
-    total_time = end_time - start_time
+    for command in commands:
+        print(f"Running command: {command}")
+        cmd_start_time = time.time()
+        subprocess.run(command, shell=True, check=True)
+        cmd_runtime = time.time() - cmd_start_time
+        total_runtime += cmd_runtime
+        
+        # Get GPU memory usage
+        gpu_memory = get_gpu_memory_usage()
+        max_gpu_memory = max(max_gpu_memory, gpu_memory)
+        
+        # Log metrics
+        log_metrics(log_file, command, cmd_runtime, gpu_memory)
+
+    # Log total metrics
+    with open(log_file, 'a') as f:
+        f.write("\nTotal Metrics:\n")
+        f.write(f"Total Runtime: {total_runtime:.2f} seconds\n")
+        f.write(f"Max GPU Memory Usage: {max_gpu_memory:.2f} MB\n")
     
-    return total_time
+    return total_runtime, max_gpu_memory
 
 def convert_ply_to_obj(dataset_path):
     """Convert fused.ply to mesh using Poisson surface reconstruction."""
@@ -139,8 +184,9 @@ def process_scene(scene_path, params, test_mode=False):
             print(f"  {key}: {value}")
     
     # Run COLMAP pipeline
-    total_time = run_colmap_commands(scene_path, params)
+    total_time, max_gpu_memory = run_colmap_commands(scene_path, params)
     print(f"COLMAP pipeline completed in {total_time:.2f} seconds")
+    print(f"Max GPU Memory Usage: {max_gpu_memory:.2f} MB")
     
     # Convert to mesh
     success = convert_ply_to_obj(scene_path)
@@ -169,20 +215,20 @@ def main():
     params = TEST_PARAMS[args.test_config] if args.test else DEFAULT_PARAMS
     
     # Process datasets
-    if args.dataset == "dtu" or args.dataset == "all":
-        dtu_dir = os.path.join(args.input_dir, "dtu")
-        if os.path.exists(dtu_dir):
-            for scene in os.listdir(dtu_dir):
-                if args.scene is None or scene == args.scene:
-                    scene_path = os.path.join(dtu_dir, scene)
-                    process_scene(scene_path, params, args.test)
+    # if args.dataset == "dtu" or args.dataset == "all":
+    #     dtu_dir = os.path.join(args.input_dir, "dtu")
+    #     if os.path.exists(dtu_dir):
+    #         for scene in os.listdir(dtu_dir):
+    #             if args.scene is None or scene == args.scene:
+    #                 scene_path = os.path.join(dtu_dir, scene)
+    #                 process_scene(scene_path, params, args.test)
     
     if args.dataset == "tanks_and_temples" or args.dataset == "all":
         t2_dir = os.path.join(args.input_dir, "tanks_and_temples")
         if os.path.exists(t2_dir):
             for scene in os.listdir(t2_dir):
                 if args.scene is None or scene == args.scene:
-                    scene_path = os.path.join(t2_dir, scene)
+                    scene_path = os.path.join(t2_dir, scene, 'input')
                     process_scene(scene_path, params, args.test)
 
 if __name__ == '__main__':
