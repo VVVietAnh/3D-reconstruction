@@ -30,33 +30,33 @@ def run_pipeline(args):
     ]
     subprocess.run(colmap_cmd, check=True)
     
-    # Step 3: Train Instant-NGP
-    print("\n=== Step 3: Training Instant-NGP ===")
-    train_ngp_cmd = [
-        "python", "scripts/instant_ngp/train_instant_ngp.py",
-        "--data_dir", os.path.join(args.data_dir, f"{args.dataset}_instant_ngp"),
-        "--output_dir", os.path.join(args.output_dir, 'instant_ngp')
-    ]
-    subprocess.run(train_ngp_cmd, check=True)
+    # # Step 3: Train Instant-NGP
+    # print("\n=== Step 3: Training Instant-NGP ===")
+    # train_ngp_cmd = [
+    #     "python", "scripts/instant_ngp/train_instant_ngp.py",
+    #     "--data_dir", os.path.join(args.data_dir, f"{args.dataset}_instant_ngp"),
+    #     "--output_dir", os.path.join(args.output_dir, 'instant_ngp')
+    # ]
+    # subprocess.run(train_ngp_cmd, check=True)
     
-    # Step 4: Extract geometry from Instant-NGP
-    print("\n=== Step 4: Extracting geometry from Instant-NGP ===")
-    extract_cmd = [
-        "python", "scripts/instant_ngp/extract_geometry.py",
-        "--model_path", os.path.join(args.output_dir, 'instant_ngp', 'model.msgpack'),
-        "--output_dir", os.path.join(args.output_dir, 'instant_ngp')
-    ]
-    subprocess.run(extract_cmd, check=True)
+    # # Step 4: Extract geometry from Instant-NGP
+    # print("\n=== Step 4: Extracting geometry from Instant-NGP ===")
+    # extract_cmd = [
+    #     "python", "scripts/instant_ngp/extract_geometry.py",
+    #     "--model_path", os.path.join(args.output_dir, 'instant_ngp', 'model.msgpack'),
+    #     "--output_dir", os.path.join(args.output_dir, 'instant_ngp')
+    # ]
+    # subprocess.run(extract_cmd, check=True)
     
-    # Step 5: Evaluate results
-    print("\n=== Step 5: Evaluating results ===")
-    evaluate_cmd = [
-        "python", "scripts/evaluation/evaluate.py",
-        "--pred_path", os.path.join(args.output_dir, 'instant_ngp', 'mesh.obj'),
-        "--gt_path", os.path.join(args.data_dir, args.dataset, 'ground_truth.obj'),
-        "--output_dir", os.path.join(args.output_dir, 'evaluation')
-    ]
-    subprocess.run(evaluate_cmd, check=True)
+    # # Step 5: Evaluate results
+    # print("\n=== Step 5: Evaluating results ===")
+    # evaluate_cmd = [
+    #     "python", "scripts/evaluation/evaluate.py",
+    #     "--pred_path", os.path.join(args.output_dir, 'instant_ngp', 'mesh.obj'),
+    #     "--gt_path", os.path.join(args.data_dir, args.dataset, 'ground_truth.obj'),
+    #     "--output_dir", os.path.join(args.output_dir, 'evaluation')
+    # ]
+    # subprocess.run(evaluate_cmd, check=True)
 
 def main():
     parser = argparse.ArgumentParser(description='Run complete 3D reconstruction evaluation pipeline')
