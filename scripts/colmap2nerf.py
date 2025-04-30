@@ -91,11 +91,10 @@ def clean_up(output_path):
         logger.info(f"Removing existing sparse folder: {sparse_path}")
         shutil.rmtree(sparse_path)
 
-def run_colmap_commands(args):
+def run_colmap_commands(input_path, output_dir, colmap_matcher="exhaustive"):
     """Run COLMAP commands to create sparse reconstruction."""
     try:
         # Create output directory for COLMAP
-        output_dir = os.path.join(os.path.dirname(args.out), "temp_colmap")
         logger.info(f"Creating COLMAP output directory: {output_dir}")
         os.makedirs(output_dir, exist_ok=True)
 
@@ -113,7 +112,7 @@ def run_colmap_commands(args):
         # Run feature extraction
         logger.info("Running COLMAP feature extraction...")
         feature_extractor_cmd = (
-            f"colmap feature_extractor --database_path {db_path} --image_path {args.images} "
+            f"colmap feature_extractor --database_path {db_path} --image_path {input_path} "
             f"--SiftExtraction.max_num_features 8192 "
             f"--SiftExtraction.max_image_size 2000 "
             f"--SiftExtraction.estimate_affine_shape true "
@@ -124,9 +123,9 @@ def run_colmap_commands(args):
         logger.info("Feature extraction completed successfully")
         
         # Run matcher
-        logger.info(f"Running COLMAP {args.colmap_matcher} matcher...")
+        logger.info(f"Running COLMAP {colmap_matcher} matcher...")
         matcher_cmd = (
-            f"colmap {args.colmap_matcher}_matcher --database_path {db_path} "
+            f"colmap {colmap_matcher}_matcher --database_path {db_path} "
             f"--SiftMatching.max_ratio 0.85"
         )
         logger.info(f"Executing: {matcher_cmd}")
@@ -136,7 +135,7 @@ def run_colmap_commands(args):
         # Run mapper
         logger.info("Running COLMAP mapper...")
         mapper_cmd = (
-            f"colmap mapper --database_path {db_path} --image_path {args.images} "
+            f"colmap mapper --database_path {db_path} --image_path {input_path} "
             f"--output_path {sparse_path} "
             f"--Mapper.min_num_matches 15 "
             f"--Mapper.ba_global_max_num_iterations 50"
@@ -144,6 +143,17 @@ def run_colmap_commands(args):
         logger.info(f"Executing: {mapper_cmd}")
         subprocess.run(mapper_cmd, shell=True, check=True)
         logger.info("Sparse reconstruction completed successfully")
+
+        # Convert binary files to text format
+        logger.info("Converting binary files to text format...")
+        model_converter_cmd = (
+            f"colmap model_converter --input_path {os.path.join(sparse_path, '0')} "
+            f"--output_path {os.path.join(sparse_path, '0')} "
+            f"--output_type TXT"
+        )
+        logger.info(f"Executing: {model_converter_cmd}")
+        subprocess.run(model_converter_cmd, shell=True, check=True)
+        logger.info("Binary to text conversion completed successfully")
         
         # Return path to the first reconstruction
         return os.path.join(sparse_path, "0")
@@ -443,12 +453,8 @@ def main():
         
         # Run COLMAP
         logger.info("Running COLMAP...")
-        colmap_path = run_colmap_commands(args)
-
-        # Convrt files .bin to .txt
-        cameras, images, points3D = read_model(colmap_path, ".bin")
-        write_model(cameras, images, points3D, colmap_path, ".txt")
-
+        colmap_path = run_colmap_commands(args.images, os.path.join(os.path.dirname(args.out), "temp_colmap"), args.colmap_matcher)
+        
         # Convert to NeRF format
         nerf_data = convert_to_nerf_format(colmap_path, args.aabb_scale, args.images, args.keep_colmap_coords)
         
