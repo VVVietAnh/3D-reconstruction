@@ -94,3 +94,6 @@ fmt/build/
 
 # Output
 output/
+
+# Temp
+**/temp.py
