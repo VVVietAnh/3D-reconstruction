@@ -56,43 +56,17 @@ class PointCloudMetrics:
         
         return max(np.max(dist1), np.max(dist2))
 
-    def f_score(self, threshold=0.01):
-        """
-        Calculate F-score using Open3D distances.
-        
-        Args:
-            threshold: Distance threshold for considering a point as matched
-        Returns:
-            tuple: (f_score, precision, recall)
-        """
-        dist1 = np.asarray(self.pcd1.compute_point_cloud_distance(self.pcd2))
-        dist2 = np.asarray(self.pcd2.compute_point_cloud_distance(self.pcd1))
-        
-        precision = np.mean(dist2 < threshold)
-        recall = np.mean(dist1 < threshold)
-        
-        if precision + recall > 0:
-            f_score = 2 * precision * recall / (precision + recall)
-        else:
-            f_score = 0.0
-            
-        return f_score, precision, recall
-
-    def compute_all_metrics(self, threshold=0.01):
+    def compute_all_metrics(self):
         """Compute all metrics at once."""
         cd = self.chamfer_distance()
         hd = self.hausdorff_distance()
-        fs, precision, recall = self.f_score(threshold)
         
         return {
             'chamfer_distance': cd,
-            'hausdorff_distance': hd,
-            'f_score': fs,
-            'precision': precision,
-            'recall': recall
+            'hausdorff_distance': hd
         }
 
-def evaluate_point_clouds(gt_path, pred_path, threshold=0.01):
+def evaluate_point_clouds(gt_path, pred_path):
     """Evaluate predicted point cloud against ground truth."""
     print(f"\nEvaluating: {pred_path}")
     print(f"Loading point clouds...")
@@ -109,41 +83,36 @@ def evaluate_point_clouds(gt_path, pred_path, threshold=0.01):
     
     print("\nCalculating metrics...")
     start_time = time.time()
-    results = metrics_calculator.compute_all_metrics(threshold)
+    results = metrics_calculator.compute_all_metrics()
     print(f"Metrics calculated in {time.time() - start_time:.2f} seconds")
     
     print("\nResults:")
     print(f"Chamfer Distance: {results['chamfer_distance']:.6f}")
     print(f"Hausdorff Distance: {results['hausdorff_distance']:.6f}")
-    print(f"F-score (threshold={threshold}): {results['f_score']:.6f}")
-    print(f"Precision: {results['precision']:.6f}")
-    print(f"Recall: {results['recall']:.6f}")
     
     return results
 
 def main():
-    default_gt = "data/2T_3D/gt/Courthouse.ply"
-    colmap_pred = "data/2T_3D/Courthouse/fused.ply"
-    nerf_pred = "data/2T_3D/Courthouse/nerf.obj"
+    default_gt = "/home/doan/VA_0223/20250411_Final/Reconstruction_3D/eval/data/2T_3D/gt/Courthouse.ply"
+    colmap_pred = "/home/doan/VA_0223/20250411_Final/Reconstruction_3D/eval/data/2T_3D/Courthouse/fused.ply"
+    nerf_pred = "/home/doan/VA_0223/20250411_Final/Reconstruction_3D/eval/data/2T_3D/Courthouse/nerf.obj"
     
     parser = argparse.ArgumentParser(description='Evaluate 3D point clouds using multiple metrics')
     parser.add_argument('--gt', default=default_gt, help='Path to ground truth PLY file')
-    parser.add_argument('--threshold', type=float, default=0.01, 
-                        help='Distance threshold for F-score calculation')
     parser.add_argument('--output', help='Path to save results as numpy file')
     
     args = parser.parse_args()
     
     # Evaluate both predictions
     results = {
-        'colmap': evaluate_point_clouds(args.gt, colmap_pred, args.threshold),
-        'nerf': evaluate_point_clouds(args.gt, nerf_pred, args.threshold)
+        'colmap': evaluate_point_clouds(args.gt, colmap_pred),
+        'nerf': evaluate_point_clouds(args.gt, nerf_pred)
     }
     
     # Print comparison
     print("\n=== Comparison Summary ===")
     print("default gt: ", default_gt)
-    metrics = ['chamfer_distance', 'hausdorff_distance', 'f_score', 'precision', 'recall']
+    metrics = ['chamfer_distance', 'hausdorff_distance']
     
     print("\nMetric\t\tColmap\t\tNeRF")
     print("-" * 50)

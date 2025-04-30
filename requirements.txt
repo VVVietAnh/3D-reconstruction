@@ -1,4 +1,26 @@
-rembg
-filetype
-gradio
-asyncer
+# Core dependencies
+numpy>=1.21.0
+torch>=1.10.0
+opencv-python>=4.5.0
+scipy>=1.7.0
+tqdm>=4.62.0
+
+# 3D processing
+open3d>=0.15.0
+trimesh>=3.9.0
+pyrender>=0.1.45
+
+# Image processing and metrics
+lpips>=0.1.4
+scikit-image>=0.19.0
+
+# COLMAP dependencies
+colmap>=3.8.0
+
+# Instant-NGP dependencies
+fmt>=8.0.0
+
+# Additional utilities
+argparse>=1.4.0
+pillow>=8.3.0
+matplotlib>=3.4.0
