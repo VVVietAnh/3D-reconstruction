@@ -3,6 +3,7 @@ import os
 import shutil
 import open3d as o3d
 import time
+import argparse
 
 # Define tunable parameters
 params = {
@@ -125,32 +126,31 @@ def convert_ply_to_obj(output_path):
         return None
     return num_points
 
-if __name__ == "__main__":
-    # Define input and output paths
-    INPUT_PATH = "data/processed_images/xe_F1_khan"
-    ROOT_OUTPUT_PATH = "output/colmap"
-
-    output_dir_name = os.path.basename(INPUT_PATH).split(".")[0]
-    OUTPUT_PATH = os.path.join(ROOT_OUTPUT_PATH, output_dir_name)
-
-    clean_up(OUTPUT_PATH)
-    total_time = run_colmap_commands(INPUT_PATH, OUTPUT_PATH)
-    num_points = convert_ply_to_obj(OUTPUT_PATH)
+def main():
+    parser = argparse.ArgumentParser(description='Run COLMAP reconstruction')
+    parser.add_argument('--input_dir', required=True, help='Path to input scene directory')
+    parser.add_argument('--output_dir', default='output/colmap', help='Path to output directory')
+    parser.add_argument('--colmap_path', default='colmap', help='Path to COLMAP executable')
     
-    print(f"Execution time: {total_time} seconds")
+    args = parser.parse_args()
+    
+    # Create output directory if it doesn't exist
+    os.makedirs(args.output_dir, exist_ok=True)
+    
+    # Get scene name from input directory
+    scene_name = os.path.basename(args.input_dir)
+    output_path = os.path.join(args.output_dir, scene_name)
+    
+    # Clean up and run COLMAP
+    clean_up(output_path)
+    total_time = run_colmap_commands(args.input_dir, output_path)
+    num_points = convert_ply_to_obj(output_path)
+    
+    print(f"COLMAP reconstruction completed in {total_time:.2f} seconds")
     print(f"Number of points: {num_points}")
+    print(f"Results saved to {output_path}")
 
-    # Save results into CSV file
-    # import pandas as pd
-    
-    # data = {
-    #     "Execution Time (seconds)": [total_time],
-    #     "Number of Points": [num_points]
-    # }
-    
-    # df = pd.DataFrame(data)
-    # output_csv_path = os.path.join(OUTPUT_PATH, "result.csv")
-    # df.to_csv(output_csv_path, index=False)
-    # print(f"Results saved to {output_csv_path}")
+if __name__ == '__main__':
+    main()
 
 
