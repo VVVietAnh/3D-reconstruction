@@ -91,3 +91,6 @@ fmt/build/
 *.fbx
 *.glb
 *.gltf 
+
+# Output
+output/
