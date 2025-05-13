@@ -82,11 +82,11 @@ def run_colmap_commands(input_path, output_path):
         f"--SiftExtraction.estimate_affine_shape {params['SiftExtraction.estimate_affine_shape']} "
         f"--SiftExtraction.domain_size_pooling {params['SiftExtraction.domain_size_pooling']}",
         
-        # f"colmap exhaustive_matcher --database_path {output_path}/database.db "
-        # f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']}",
+        f"colmap exhaustive_matcher --database_path {output_path}/database.db "
+        f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']}",
 
-        f"colmap sequential_matcher --database_path {output_path}/database.db "
-        f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']} "
+        # f"colmap sequential_matcher --database_path {output_path}/database.db "
+        # f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']} "
         f"--SiftMatching.guided_matching {params['SiftMatching.guided_matching']} "
         f"--SequentialMatching.overlap {params['SequentialMatching.overlap']}",
         
