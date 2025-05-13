@@ -1,0 +1,1640 @@
+2025-05-13 17:30:05,595 - INFO - ==================================================
+2025-05-13 17:30:05,595 - INFO - Starting NeRF inference for scene: xe_F1_khan_60
+2025-05-13 17:30:05,595 - INFO - Input directory: /home/doan/VA_0223/20250411_Final/Reconstruction_3D/data/processed_images/xe_F1_khan_60
+2025-05-13 17:30:05,595 - INFO - Output directory: /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60
+2025-05-13 17:30:05,595 - INFO - ==================================================
+2025-05-13 17:30:05,595 - INFO - Executing COLMAP to NeRF conversion: /home/doan/VA_0223/20250411_Final/Reconstruction_3D/instant-ngp/.venv/bin/python3 scripts/colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_scale 4 --images /home/doan/VA_0223/20250411_Final/Reconstruction_3D/data/processed_images/xe_F1_khan_60 --out /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/transforms.json --overwrite
+2025-05-13 17:30:05,602 - INFO - /home/doan/VA_0223/20250411_Final/Reconstruction_3D/instant-ngp/scripts/colmap2nerf.py:92: SyntaxWarning: invalid escape sequence '\,'
+2025-05-13 17:30:05,602 - INFO - time_slice_value = f",select='between(t\,{start}\,{end})'"
+2025-05-13 17:30:05,602 - INFO - /home/doan/VA_0223/20250411_Final/Reconstruction_3D/instant-ngp/scripts/colmap2nerf.py:92: SyntaxWarning: invalid escape sequence '\,'
+2025-05-13 17:30:05,602 - INFO - time_slice_value = f",select='between(t\,{start}\,{end})'"
+2025-05-13 17:30:05,710 - INFO - W20250513 17:30:05.710470 2613457 feature_extraction.cc:398] Your current options use the maximum number of threads on the machine to extract features. Extracting SIFT features on the CPU can consume a lot of RAM per thread for large images. Consider reducing the maximum image size and/or the first octave or manually limit the number of extraction threads. Ignore this warning, if your machine has sufficient memory for the current settings.
+2025-05-13 17:30:05,711 - INFO - I20250513 17:30:05.710970 2613458 misc.cc:44]
+2025-05-13 17:30:05,711 - INFO - ==============================================================================
+2025-05-13 17:30:05,711 - INFO - Feature extraction
+2025-05-13 17:30:05,711 - INFO - ==============================================================================
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712211 2613479 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712272 2613480 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712473 2613471 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712495 2613472 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712513 2613473 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712527 2613474 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712541 2613475 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712554 2613476 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,712 - INFO - I20250513 17:30:05.712596 2613481 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,713 - INFO - I20250513 17:30:05.712616 2613477 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,713 - INFO - I20250513 17:30:05.712833 2613482 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:05,716 - INFO - I20250513 17:30:05.713137 2613478 sift.cc:717] Creating Covariant SIFT CPU feature extractor
+2025-05-13 17:30:08,386 - INFO - I20250513 17:30:08.386660 2613483 feature_extraction.cc:258] Processed file [1/60]
+2025-05-13 17:30:08,386 - INFO - I20250513 17:30:08.386689 2613483 feature_extraction.cc:261]   Name:            frame_0001.png
+2025-05-13 17:30:08,386 - INFO - I20250513 17:30:08.386693 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,386 - INFO - I20250513 17:30:08.386698 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,386 - INFO - I20250513 17:30:08.386700 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,387 - INFO - I20250513 17:30:08.386708 2613483 feature_extraction.cc:280]   Features:        3060
+2025-05-13 17:30:08,415 - INFO - I20250513 17:30:08.413076 2613483 feature_extraction.cc:258] Processed file [2/60]
+2025-05-13 17:30:08,415 - INFO - I20250513 17:30:08.415715 2613483 feature_extraction.cc:261]   Name:            frame_0002.png
+2025-05-13 17:30:08,416 - INFO - I20250513 17:30:08.416069 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,416 - INFO - I20250513 17:30:08.416391 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,416 - INFO - I20250513 17:30:08.416448 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,416 - INFO - I20250513 17:30:08.416501 2613483 feature_extraction.cc:280]   Features:        2967
+2025-05-13 17:30:08,452 - INFO - I20250513 17:30:08.452430 2613483 feature_extraction.cc:258] Processed file [3/60]
+2025-05-13 17:30:08,457 - INFO - I20250513 17:30:08.456857 2613483 feature_extraction.cc:261]   Name:            frame_0004.png
+2025-05-13 17:30:08,457 - INFO - I20250513 17:30:08.456909 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,457 - INFO - I20250513 17:30:08.456914 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,457 - INFO - I20250513 17:30:08.456920 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,457 - INFO - I20250513 17:30:08.456938 2613483 feature_extraction.cc:280]   Features:        2960
+2025-05-13 17:30:08,471 - INFO - I20250513 17:30:08.470677 2613483 feature_extraction.cc:258] Processed file [4/60]
+2025-05-13 17:30:08,471 - INFO - I20250513 17:30:08.470741 2613483 feature_extraction.cc:261]   Name:            frame_0000.png
+2025-05-13 17:30:08,471 - INFO - I20250513 17:30:08.470745 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,471 - INFO - I20250513 17:30:08.470748 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,471 - INFO - I20250513 17:30:08.470752 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,471 - INFO - I20250513 17:30:08.470762 2613483 feature_extraction.cc:280]   Features:        2768
+2025-05-13 17:30:08,473 - INFO - I20250513 17:30:08.473043 2613483 feature_extraction.cc:258] Processed file [5/60]
+2025-05-13 17:30:08,473 - INFO - I20250513 17:30:08.473073 2613483 feature_extraction.cc:261]   Name:            frame_0008.png
+2025-05-13 17:30:08,473 - INFO - I20250513 17:30:08.473078 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,473 - INFO - I20250513 17:30:08.473093 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,473 - INFO - I20250513 17:30:08.473106 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,473 - INFO - I20250513 17:30:08.473127 2613483 feature_extraction.cc:280]   Features:        2854
+2025-05-13 17:30:08,505 - INFO - I20250513 17:30:08.504418 2613483 feature_extraction.cc:258] Processed file [6/60]
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.504485 2613483 feature_extraction.cc:261]   Name:            frame_0005.png
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.504489 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.504491 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.504496 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.504509 2613483 feature_extraction.cc:280]   Features:        2933
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.505419 2613483 feature_extraction.cc:258] Processed file [7/60]
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.505440 2613483 feature_extraction.cc:261]   Name:            frame_0007.png
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.505443 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.505447 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.505451 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,510 - INFO - I20250513 17:30:08.505458 2613483 feature_extraction.cc:280]   Features:        3003
+2025-05-13 17:30:08,551 - INFO - I20250513 17:30:08.551023 2613483 feature_extraction.cc:258] Processed file [8/60]
+2025-05-13 17:30:08,551 - INFO - I20250513 17:30:08.551090 2613483 feature_extraction.cc:261]   Name:            frame_0010.png
+2025-05-13 17:30:08,551 - INFO - I20250513 17:30:08.551097 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,551 - INFO - I20250513 17:30:08.551102 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,551 - INFO - I20250513 17:30:08.551108 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,551 - INFO - I20250513 17:30:08.551123 2613483 feature_extraction.cc:280]   Features:        2661
+2025-05-13 17:30:08,558 - INFO - I20250513 17:30:08.552503 2613483 feature_extraction.cc:258] Processed file [9/60]
+2025-05-13 17:30:08,558 - INFO - I20250513 17:30:08.552537 2613483 feature_extraction.cc:261]   Name:            frame_0009.png
+2025-05-13 17:30:08,558 - INFO - I20250513 17:30:08.552541 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,558 - INFO - I20250513 17:30:08.552543 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,558 - INFO - I20250513 17:30:08.552548 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,558 - INFO - I20250513 17:30:08.552556 2613483 feature_extraction.cc:280]   Features:        2791
+2025-05-13 17:30:08,564 - INFO - I20250513 17:30:08.564002 2613483 feature_extraction.cc:258] Processed file [10/60]
+2025-05-13 17:30:08,564 - INFO - I20250513 17:30:08.564106 2613483 feature_extraction.cc:261]   Name:            frame_0011.png
+2025-05-13 17:30:08,565 - INFO - I20250513 17:30:08.564114 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,565 - INFO - I20250513 17:30:08.564118 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,565 - INFO - I20250513 17:30:08.564124 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,565 - INFO - I20250513 17:30:08.564146 2613483 feature_extraction.cc:280]   Features:        2558
+2025-05-13 17:30:08,576 - INFO - I20250513 17:30:08.575074 2613483 feature_extraction.cc:258] Processed file [11/60]
+2025-05-13 17:30:08,577 - INFO - I20250513 17:30:08.575173 2613483 feature_extraction.cc:261]   Name:            frame_0003.png
+2025-05-13 17:30:08,577 - INFO - I20250513 17:30:08.575181 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,578 - INFO - I20250513 17:30:08.575183 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,580 - INFO - I20250513 17:30:08.575187 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,580 - INFO - I20250513 17:30:08.575201 2613483 feature_extraction.cc:280]   Features:        2916
+2025-05-13 17:30:08,665 - INFO - I20250513 17:30:08.664790 2613483 feature_extraction.cc:258] Processed file [12/60]
+2025-05-13 17:30:08,668 - INFO - I20250513 17:30:08.665827 2613483 feature_extraction.cc:261]   Name:            frame_0006.png
+2025-05-13 17:30:08,668 - INFO - I20250513 17:30:08.665867 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:08,668 - INFO - I20250513 17:30:08.665872 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:08,668 - INFO - I20250513 17:30:08.665877 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:08,668 - INFO - I20250513 17:30:08.665894 2613483 feature_extraction.cc:280]   Features:        3187
+2025-05-13 17:30:10,576 - INFO - I20250513 17:30:10.575942 2613483 feature_extraction.cc:258] Processed file [13/60]
+2025-05-13 17:30:10,576 - INFO - I20250513 17:30:10.575975 2613483 feature_extraction.cc:261]   Name:            frame_0014.png
+2025-05-13 17:30:10,576 - INFO - I20250513 17:30:10.575980 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,576 - INFO - I20250513 17:30:10.575984 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,576 - INFO - I20250513 17:30:10.575987 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,576 - INFO - I20250513 17:30:10.575995 2613483 feature_extraction.cc:280]   Features:        2246
+2025-05-13 17:30:10,646 - INFO - I20250513 17:30:10.646705 2613483 feature_extraction.cc:258] Processed file [14/60]
+2025-05-13 17:30:10,647 - INFO - I20250513 17:30:10.646746 2613483 feature_extraction.cc:261]   Name:            frame_0012.png
+2025-05-13 17:30:10,647 - INFO - I20250513 17:30:10.646752 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,647 - INFO - I20250513 17:30:10.646756 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,647 - INFO - I20250513 17:30:10.646760 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,647 - INFO - I20250513 17:30:10.646768 2613483 feature_extraction.cc:280]   Features:        2393
+2025-05-13 17:30:10,690 - INFO - I20250513 17:30:10.689481 2613483 feature_extraction.cc:258] Processed file [15/60]
+2025-05-13 17:30:10,692 - INFO - I20250513 17:30:10.689522 2613483 feature_extraction.cc:261]   Name:            frame_0013.png
+2025-05-13 17:30:10,693 - INFO - I20250513 17:30:10.689527 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,693 - INFO - I20250513 17:30:10.689531 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,693 - INFO - I20250513 17:30:10.689535 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,693 - INFO - I20250513 17:30:10.689543 2613483 feature_extraction.cc:280]   Features:        2401
+2025-05-13 17:30:10,708 - INFO - I20250513 17:30:10.707019 2613483 feature_extraction.cc:258] Processed file [16/60]
+2025-05-13 17:30:10,708 - INFO - I20250513 17:30:10.707113 2613483 feature_extraction.cc:261]   Name:            frame_0016.png
+2025-05-13 17:30:10,708 - INFO - I20250513 17:30:10.707118 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,708 - INFO - I20250513 17:30:10.707121 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,708 - INFO - I20250513 17:30:10.707125 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,708 - INFO - I20250513 17:30:10.707140 2613483 feature_extraction.cc:280]   Features:        2289
+2025-05-13 17:30:10,723 - INFO - I20250513 17:30:10.722994 2613483 feature_extraction.cc:258] Processed file [17/60]
+2025-05-13 17:30:10,723 - INFO - I20250513 17:30:10.723060 2613483 feature_extraction.cc:261]   Name:            frame_0019.png
+2025-05-13 17:30:10,723 - INFO - I20250513 17:30:10.723065 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,723 - INFO - I20250513 17:30:10.723069 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,723 - INFO - I20250513 17:30:10.723074 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,723 - INFO - I20250513 17:30:10.723085 2613483 feature_extraction.cc:280]   Features:        2222
+2025-05-13 17:30:10,770 - INFO - I20250513 17:30:10.769272 2613483 feature_extraction.cc:258] Processed file [18/60]
+2025-05-13 17:30:10,770 - INFO - I20250513 17:30:10.769335 2613483 feature_extraction.cc:261]   Name:            frame_0015.png
+2025-05-13 17:30:10,771 - INFO - I20250513 17:30:10.769341 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,771 - INFO - I20250513 17:30:10.769344 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,771 - INFO - I20250513 17:30:10.769349 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,771 - INFO - I20250513 17:30:10.769361 2613483 feature_extraction.cc:280]   Features:        2402
+2025-05-13 17:30:10,779 - INFO - I20250513 17:30:10.778971 2613483 feature_extraction.cc:258] Processed file [19/60]
+2025-05-13 17:30:10,779 - INFO - I20250513 17:30:10.779065 2613483 feature_extraction.cc:261]   Name:            frame_0018.png
+2025-05-13 17:30:10,779 - INFO - I20250513 17:30:10.779071 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,779 - INFO - I20250513 17:30:10.779074 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,779 - INFO - I20250513 17:30:10.779080 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,779 - INFO - I20250513 17:30:10.779100 2613483 feature_extraction.cc:280]   Features:        2311
+2025-05-13 17:30:10,856 - INFO - I20250513 17:30:10.856551 2613483 feature_extraction.cc:258] Processed file [20/60]
+2025-05-13 17:30:10,858 - INFO - I20250513 17:30:10.856647 2613483 feature_extraction.cc:261]   Name:            frame_0017.png
+2025-05-13 17:30:10,858 - INFO - I20250513 17:30:10.856657 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,858 - INFO - I20250513 17:30:10.856660 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,858 - INFO - I20250513 17:30:10.856665 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,858 - INFO - I20250513 17:30:10.856680 2613483 feature_extraction.cc:280]   Features:        2291
+2025-05-13 17:30:10,863 - INFO - I20250513 17:30:10.863107 2613483 feature_extraction.cc:258] Processed file [21/60]
+2025-05-13 17:30:10,866 - INFO - I20250513 17:30:10.863175 2613483 feature_extraction.cc:261]   Name:            frame_0020.png
+2025-05-13 17:30:10,866 - INFO - I20250513 17:30:10.863179 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,866 - INFO - I20250513 17:30:10.863185 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,867 - INFO - I20250513 17:30:10.863191 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,867 - INFO - I20250513 17:30:10.863204 2613483 feature_extraction.cc:280]   Features:        2424
+2025-05-13 17:30:10,879 - INFO - I20250513 17:30:10.878957 2613483 feature_extraction.cc:258] Processed file [22/60]
+2025-05-13 17:30:10,879 - INFO - I20250513 17:30:10.879719 2613483 feature_extraction.cc:261]   Name:            frame_0021.png
+2025-05-13 17:30:10,879 - INFO - I20250513 17:30:10.879753 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,879 - INFO - I20250513 17:30:10.879757 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,880 - INFO - I20250513 17:30:10.879762 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,880 - INFO - I20250513 17:30:10.879777 2613483 feature_extraction.cc:280]   Features:        2470
+2025-05-13 17:30:10,916 - INFO - I20250513 17:30:10.915969 2613483 feature_extraction.cc:258] Processed file [23/60]
+2025-05-13 17:30:10,916 - INFO - I20250513 17:30:10.916062 2613483 feature_extraction.cc:261]   Name:            frame_0022.png
+2025-05-13 17:30:10,916 - INFO - I20250513 17:30:10.916067 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:10,916 - INFO - I20250513 17:30:10.916071 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:10,916 - INFO - I20250513 17:30:10.916078 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:10,916 - INFO - I20250513 17:30:10.916092 2613483 feature_extraction.cc:280]   Features:        2490
+2025-05-13 17:30:11,047 - INFO - I20250513 17:30:11.046082 2613483 feature_extraction.cc:258] Processed file [24/60]
+2025-05-13 17:30:11,047 - INFO - I20250513 17:30:11.046168 2613483 feature_extraction.cc:261]   Name:            frame_0023.png
+2025-05-13 17:30:11,047 - INFO - I20250513 17:30:11.046175 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:11,047 - INFO - I20250513 17:30:11.046178 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:11,047 - INFO - I20250513 17:30:11.046183 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:11,047 - INFO - I20250513 17:30:11.046200 2613483 feature_extraction.cc:280]   Features:        2657
+2025-05-13 17:30:12,873 - INFO - I20250513 17:30:12.872946 2613483 feature_extraction.cc:258] Processed file [25/60]
+2025-05-13 17:30:12,873 - INFO - I20250513 17:30:12.872973 2613483 feature_extraction.cc:261]   Name:            frame_0033.png
+2025-05-13 17:30:12,873 - INFO - I20250513 17:30:12.872977 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:12,873 - INFO - I20250513 17:30:12.872982 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:12,873 - INFO - I20250513 17:30:12.872985 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:12,873 - INFO - I20250513 17:30:12.872992 2613483 feature_extraction.cc:280]   Features:        2154
+2025-05-13 17:30:12,908 - INFO - I20250513 17:30:12.905165 2613483 feature_extraction.cc:258] Processed file [26/60]
+2025-05-13 17:30:12,908 - INFO - I20250513 17:30:12.905195 2613483 feature_extraction.cc:261]   Name:            frame_0035.png
+2025-05-13 17:30:12,908 - INFO - I20250513 17:30:12.905200 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:12,908 - INFO - I20250513 17:30:12.905202 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:12,908 - INFO - I20250513 17:30:12.905206 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:12,908 - INFO - I20250513 17:30:12.905215 2613483 feature_extraction.cc:280]   Features:        1821
+2025-05-13 17:30:12,938 - INFO - I20250513 17:30:12.937964 2613483 feature_extraction.cc:258] Processed file [27/60]
+2025-05-13 17:30:12,938 - INFO - I20250513 17:30:12.938050 2613483 feature_extraction.cc:261]   Name:            frame_0029.png
+2025-05-13 17:30:12,938 - INFO - I20250513 17:30:12.938057 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:12,938 - INFO - I20250513 17:30:12.938060 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:12,938 - INFO - I20250513 17:30:12.938066 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:12,938 - INFO - I20250513 17:30:12.938079 2613483 feature_extraction.cc:280]   Features:        2168
+2025-05-13 17:30:12,984 - INFO - I20250513 17:30:12.983924 2613483 feature_extraction.cc:258] Processed file [28/60]
+2025-05-13 17:30:12,984 - INFO - I20250513 17:30:12.983980 2613483 feature_extraction.cc:261]   Name:            frame_0026.png
+2025-05-13 17:30:12,984 - INFO - I20250513 17:30:12.983984 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:12,984 - INFO - I20250513 17:30:12.983987 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:12,984 - INFO - I20250513 17:30:12.983991 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:12,984 - INFO - I20250513 17:30:12.984004 2613483 feature_extraction.cc:280]   Features:        2781
+2025-05-13 17:30:13,015 - INFO - I20250513 17:30:13.015797 2613483 feature_extraction.cc:258] Processed file [29/60]
+2025-05-13 17:30:13,016 - INFO - I20250513 17:30:13.015836 2613483 feature_extraction.cc:261]   Name:            frame_0024.png
+2025-05-13 17:30:13,016 - INFO - I20250513 17:30:13.015839 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,016 - INFO - I20250513 17:30:13.015843 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,016 - INFO - I20250513 17:30:13.015848 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,016 - INFO - I20250513 17:30:13.015861 2613483 feature_extraction.cc:280]   Features:        2941
+2025-05-13 17:30:13,049 - INFO - I20250513 17:30:13.049517 2613483 feature_extraction.cc:258] Processed file [30/60]
+2025-05-13 17:30:13,053 - INFO - I20250513 17:30:13.049600 2613483 feature_extraction.cc:261]   Name:            frame_0034.png
+2025-05-13 17:30:13,053 - INFO - I20250513 17:30:13.049623 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,053 - INFO - I20250513 17:30:13.049641 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,053 - INFO - I20250513 17:30:13.049666 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,053 - INFO - I20250513 17:30:13.049698 2613483 feature_extraction.cc:280]   Features:        2160
+2025-05-13 17:30:13,086 - INFO - I20250513 17:30:13.085961 2613483 feature_extraction.cc:258] Processed file [31/60]
+2025-05-13 17:30:13,087 - INFO - I20250513 17:30:13.086045 2613483 feature_extraction.cc:261]   Name:            frame_0030.png
+2025-05-13 17:30:13,090 - INFO - I20250513 17:30:13.086053 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,090 - INFO - I20250513 17:30:13.086058 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,090 - INFO - I20250513 17:30:13.086064 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,090 - INFO - I20250513 17:30:13.086081 2613483 feature_extraction.cc:280]   Features:        2359
+2025-05-13 17:30:13,131 - INFO - I20250513 17:30:13.131592 2613483 feature_extraction.cc:258] Processed file [32/60]
+2025-05-13 17:30:13,132 - INFO - I20250513 17:30:13.131670 2613483 feature_extraction.cc:261]   Name:            frame_0028.png
+2025-05-13 17:30:13,132 - INFO - I20250513 17:30:13.131675 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,132 - INFO - I20250513 17:30:13.131680 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,132 - INFO - I20250513 17:30:13.131683 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,132 - INFO - I20250513 17:30:13.131700 2613483 feature_extraction.cc:280]   Features:        2281
+2025-05-13 17:30:13,192 - INFO - I20250513 17:30:13.192164 2613483 feature_extraction.cc:258] Processed file [33/60]
+2025-05-13 17:30:13,193 - INFO - I20250513 17:30:13.192265 2613483 feature_extraction.cc:261]   Name:            frame_0032.png
+2025-05-13 17:30:13,193 - INFO - I20250513 17:30:13.192273 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,194 - INFO - I20250513 17:30:13.192276 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,194 - INFO - I20250513 17:30:13.192282 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,194 - INFO - I20250513 17:30:13.192302 2613483 feature_extraction.cc:280]   Features:        2350
+2025-05-13 17:30:13,225 - INFO - I20250513 17:30:13.224886 2613483 feature_extraction.cc:258] Processed file [34/60]
+2025-05-13 17:30:13,226 - INFO - I20250513 17:30:13.224967 2613483 feature_extraction.cc:261]   Name:            frame_0031.png
+2025-05-13 17:30:13,226 - INFO - I20250513 17:30:13.224974 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,226 - INFO - I20250513 17:30:13.224978 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,227 - INFO - I20250513 17:30:13.224982 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,227 - INFO - I20250513 17:30:13.224996 2613483 feature_extraction.cc:280]   Features:        2393
+2025-05-13 17:30:13,249 - INFO - I20250513 17:30:13.244395 2613483 feature_extraction.cc:258] Processed file [35/60]
+2025-05-13 17:30:13,249 - INFO - I20250513 17:30:13.244477 2613483 feature_extraction.cc:261]   Name:            frame_0025.png
+2025-05-13 17:30:13,249 - INFO - I20250513 17:30:13.244486 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,249 - INFO - I20250513 17:30:13.244490 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,249 - INFO - I20250513 17:30:13.244494 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,249 - INFO - I20250513 17:30:13.244513 2613483 feature_extraction.cc:280]   Features:        2945
+2025-05-13 17:30:13,267 - INFO - I20250513 17:30:13.265976 2613483 feature_extraction.cc:258] Processed file [36/60]
+2025-05-13 17:30:13,267 - INFO - I20250513 17:30:13.266088 2613483 feature_extraction.cc:261]   Name:            frame_0027.png
+2025-05-13 17:30:13,267 - INFO - I20250513 17:30:13.266093 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:13,268 - INFO - I20250513 17:30:13.266098 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:13,268 - INFO - I20250513 17:30:13.266103 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:13,268 - INFO - I20250513 17:30:13.266119 2613483 feature_extraction.cc:280]   Features:        2665
+2025-05-13 17:30:14,609 - INFO - I20250513 17:30:14.606933 2613483 feature_extraction.cc:258] Processed file [37/60]
+2025-05-13 17:30:14,609 - INFO - I20250513 17:30:14.606971 2613483 feature_extraction.cc:261]   Name:            frame_0036.png
+2025-05-13 17:30:14,609 - INFO - I20250513 17:30:14.606974 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,609 - INFO - I20250513 17:30:14.606978 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,609 - INFO - I20250513 17:30:14.606982 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,609 - INFO - I20250513 17:30:14.606989 2613483 feature_extraction.cc:280]   Features:        1857
+2025-05-13 17:30:14,812 - INFO - I20250513 17:30:14.812578 2613483 feature_extraction.cc:258] Processed file [38/60]
+2025-05-13 17:30:14,813 - INFO - I20250513 17:30:14.812613 2613483 feature_extraction.cc:261]   Name:            frame_0037.png
+2025-05-13 17:30:14,813 - INFO - I20250513 17:30:14.812619 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,813 - INFO - I20250513 17:30:14.812623 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,813 - INFO - I20250513 17:30:14.812626 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,813 - INFO - I20250513 17:30:14.812634 2613483 feature_extraction.cc:280]   Features:        1980
+2025-05-13 17:30:14,891 - INFO - I20250513 17:30:14.891722 2613483 feature_extraction.cc:258] Processed file [39/60]
+2025-05-13 17:30:14,892 - INFO - I20250513 17:30:14.891763 2613483 feature_extraction.cc:261]   Name:            frame_0046.png
+2025-05-13 17:30:14,892 - INFO - I20250513 17:30:14.891767 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,892 - INFO - I20250513 17:30:14.891769 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,893 - INFO - I20250513 17:30:14.891773 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,893 - INFO - I20250513 17:30:14.891782 2613483 feature_extraction.cc:280]   Features:        1586
+2025-05-13 17:30:14,902 - INFO - I20250513 17:30:14.902231 2613483 feature_extraction.cc:258] Processed file [40/60]
+2025-05-13 17:30:14,903 - INFO - I20250513 17:30:14.902269 2613483 feature_extraction.cc:261]   Name:            frame_0038.png
+2025-05-13 17:30:14,903 - INFO - I20250513 17:30:14.902273 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,903 - INFO - I20250513 17:30:14.902276 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,903 - INFO - I20250513 17:30:14.902280 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,903 - INFO - I20250513 17:30:14.902288 2613483 feature_extraction.cc:280]   Features:        2000
+2025-05-13 17:30:14,920 - INFO - I20250513 17:30:14.919319 2613483 feature_extraction.cc:258] Processed file [41/60]
+2025-05-13 17:30:14,923 - INFO - I20250513 17:30:14.919387 2613483 feature_extraction.cc:261]   Name:            frame_0039.png
+2025-05-13 17:30:14,923 - INFO - I20250513 17:30:14.919399 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,923 - INFO - I20250513 17:30:14.919404 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,923 - INFO - I20250513 17:30:14.919409 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,923 - INFO - I20250513 17:30:14.919417 2613483 feature_extraction.cc:280]   Features:        1922
+2025-05-13 17:30:14,943 - INFO - I20250513 17:30:14.942953 2613483 feature_extraction.cc:258] Processed file [42/60]
+2025-05-13 17:30:14,943 - INFO - I20250513 17:30:14.943002 2613483 feature_extraction.cc:261]   Name:            frame_0041.png
+2025-05-13 17:30:14,943 - INFO - I20250513 17:30:14.943007 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,943 - INFO - I20250513 17:30:14.943010 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,943 - INFO - I20250513 17:30:14.943015 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,943 - INFO - I20250513 17:30:14.943024 2613483 feature_extraction.cc:280]   Features:        1684
+2025-05-13 17:30:14,957 - INFO - I20250513 17:30:14.957387 2613483 feature_extraction.cc:258] Processed file [43/60]
+2025-05-13 17:30:14,960 - INFO - I20250513 17:30:14.957432 2613483 feature_extraction.cc:261]   Name:            frame_0044.png
+2025-05-13 17:30:14,960 - INFO - I20250513 17:30:14.957438 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:14,960 - INFO - I20250513 17:30:14.957442 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:14,960 - INFO - I20250513 17:30:14.957448 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:14,960 - INFO - I20250513 17:30:14.957458 2613483 feature_extraction.cc:280]   Features:        1675
+2025-05-13 17:30:15,000 - INFO - I20250513 17:30:14.998978 2613483 feature_extraction.cc:258] Processed file [44/60]
+2025-05-13 17:30:15,000 - INFO - I20250513 17:30:14.999081 2613483 feature_extraction.cc:261]   Name:            frame_0040.png
+2025-05-13 17:30:15,000 - INFO - I20250513 17:30:14.999089 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:15,000 - INFO - I20250513 17:30:14.999092 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:15,001 - INFO - I20250513 17:30:14.999097 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:15,001 - INFO - I20250513 17:30:14.999110 2613483 feature_extraction.cc:280]   Features:        1939
+2025-05-13 17:30:15,014 - INFO - I20250513 17:30:15.013366 2613483 feature_extraction.cc:258] Processed file [45/60]
+2025-05-13 17:30:15,019 - INFO - I20250513 17:30:15.013428 2613483 feature_extraction.cc:261]   Name:            frame_0045.png
+2025-05-13 17:30:15,023 - INFO - I20250513 17:30:15.013432 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:15,023 - INFO - I20250513 17:30:15.013437 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:15,023 - INFO - I20250513 17:30:15.013440 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:15,023 - INFO - I20250513 17:30:15.013451 2613483 feature_extraction.cc:280]   Features:        1572
+2025-05-13 17:30:15,039 - INFO - I20250513 17:30:15.037977 2613483 feature_extraction.cc:258] Processed file [46/60]
+2025-05-13 17:30:15,040 - INFO - I20250513 17:30:15.038092 2613483 feature_extraction.cc:261]   Name:            frame_0047.png
+2025-05-13 17:30:15,040 - INFO - I20250513 17:30:15.038097 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:15,040 - INFO - I20250513 17:30:15.038100 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:15,040 - INFO - I20250513 17:30:15.038108 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:15,040 - INFO - I20250513 17:30:15.038132 2613483 feature_extraction.cc:280]   Features:        1697
+2025-05-13 17:30:15,059 - INFO - I20250513 17:30:15.057580 2613483 feature_extraction.cc:258] Processed file [47/60]
+2025-05-13 17:30:15,059 - INFO - I20250513 17:30:15.057669 2613483 feature_extraction.cc:261]   Name:            frame_0042.png
+2025-05-13 17:30:15,059 - INFO - I20250513 17:30:15.057677 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:15,059 - INFO - I20250513 17:30:15.057679 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:15,059 - INFO - I20250513 17:30:15.057686 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:15,059 - INFO - I20250513 17:30:15.057703 2613483 feature_extraction.cc:280]   Features:        1692
+2025-05-13 17:30:15,091 - INFO - I20250513 17:30:15.090972 2613483 feature_extraction.cc:258] Processed file [48/60]
+2025-05-13 17:30:15,092 - INFO - I20250513 17:30:15.091068 2613483 feature_extraction.cc:261]   Name:            frame_0043.png
+2025-05-13 17:30:15,095 - INFO - I20250513 17:30:15.091073 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:15,095 - INFO - I20250513 17:30:15.091076 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:15,095 - INFO - I20250513 17:30:15.091084 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:15,095 - INFO - I20250513 17:30:15.091100 2613483 feature_extraction.cc:280]   Features:        1741
+2025-05-13 17:30:16,183 - INFO - I20250513 17:30:16.183097 2613483 feature_extraction.cc:258] Processed file [49/60]
+2025-05-13 17:30:16,183 - INFO - I20250513 17:30:16.183633 2613483 feature_extraction.cc:261]   Name:            frame_0048.png
+2025-05-13 17:30:16,183 - INFO - I20250513 17:30:16.183970 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:16,184 - INFO - I20250513 17:30:16.184196 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:16,184 - INFO - I20250513 17:30:16.184398 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:16,184 - INFO - I20250513 17:30:16.184597 2613483 feature_extraction.cc:280]   Features:        1840
+2025-05-13 17:30:16,653 - INFO - I20250513 17:30:16.653255 2613483 feature_extraction.cc:258] Processed file [50/60]
+2025-05-13 17:30:16,653 - INFO - I20250513 17:30:16.653548 2613483 feature_extraction.cc:261]   Name:            frame_0049.png
+2025-05-13 17:30:16,653 - INFO - I20250513 17:30:16.653610 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:16,654 - INFO - I20250513 17:30:16.653651 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:16,654 - INFO - I20250513 17:30:16.653656 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:16,654 - INFO - I20250513 17:30:16.653663 2613483 feature_extraction.cc:280]   Features:        1971
+2025-05-13 17:30:16,795 - INFO - I20250513 17:30:16.795058 2613483 feature_extraction.cc:258] Processed file [51/60]
+2025-05-13 17:30:16,795 - INFO - I20250513 17:30:16.795094 2613483 feature_extraction.cc:261]   Name:            frame_0053.png
+2025-05-13 17:30:16,795 - INFO - I20250513 17:30:16.795099 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:16,795 - INFO - I20250513 17:30:16.795102 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:16,795 - INFO - I20250513 17:30:16.795106 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:16,795 - INFO - I20250513 17:30:16.795112 2613483 feature_extraction.cc:280]   Features:        2043
+2025-05-13 17:30:16,855 - INFO - I20250513 17:30:16.855811 2613483 feature_extraction.cc:258] Processed file [52/60]
+2025-05-13 17:30:16,856 - INFO - I20250513 17:30:16.855839 2613483 feature_extraction.cc:261]   Name:            frame_0050.png
+2025-05-13 17:30:16,856 - INFO - I20250513 17:30:16.855844 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:16,856 - INFO - I20250513 17:30:16.855846 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:16,856 - INFO - I20250513 17:30:16.855850 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:16,856 - INFO - I20250513 17:30:16.855857 2613483 feature_extraction.cc:280]   Features:        2014
+2025-05-13 17:30:16,899 - INFO - I20250513 17:30:16.899869 2613483 feature_extraction.cc:258] Processed file [53/60]
+2025-05-13 17:30:16,900 - INFO - I20250513 17:30:16.899909 2613483 feature_extraction.cc:261]   Name:            frame_0051.png
+2025-05-13 17:30:16,900 - INFO - I20250513 17:30:16.899912 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:16,900 - INFO - I20250513 17:30:16.899915 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:16,900 - INFO - I20250513 17:30:16.899919 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:16,900 - INFO - I20250513 17:30:16.899925 2613483 feature_extraction.cc:280]   Features:        2026
+2025-05-13 17:30:17,001 - INFO - I20250513 17:30:17.001864 2613483 feature_extraction.cc:258] Processed file [54/60]
+2025-05-13 17:30:17,002 - INFO - I20250513 17:30:17.001897 2613483 feature_extraction.cc:261]   Name:            frame_0052.png
+2025-05-13 17:30:17,002 - INFO - I20250513 17:30:17.001902 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,002 - INFO - I20250513 17:30:17.001907 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,002 - INFO - I20250513 17:30:17.001911 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,002 - INFO - I20250513 17:30:17.001919 2613483 feature_extraction.cc:280]   Features:        2022
+2025-05-13 17:30:17,029 - INFO - I20250513 17:30:17.029127 2613483 feature_extraction.cc:258] Processed file [55/60]
+2025-05-13 17:30:17,029 - INFO - I20250513 17:30:17.029155 2613483 feature_extraction.cc:261]   Name:            frame_0054.png
+2025-05-13 17:30:17,029 - INFO - I20250513 17:30:17.029158 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,029 - INFO - I20250513 17:30:17.029162 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,029 - INFO - I20250513 17:30:17.029165 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,029 - INFO - I20250513 17:30:17.029172 2613483 feature_extraction.cc:280]   Features:        2211
+2025-05-13 17:30:17,069 - INFO - I20250513 17:30:17.069080 2613483 feature_extraction.cc:258] Processed file [56/60]
+2025-05-13 17:30:17,069 - INFO - I20250513 17:30:17.069115 2613483 feature_extraction.cc:261]   Name:            frame_0055.png
+2025-05-13 17:30:17,069 - INFO - I20250513 17:30:17.069119 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,069 - INFO - I20250513 17:30:17.069123 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,069 - INFO - I20250513 17:30:17.069126 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,069 - INFO - I20250513 17:30:17.069133 2613483 feature_extraction.cc:280]   Features:        2152
+2025-05-13 17:30:17,104 - INFO - I20250513 17:30:17.104868 2613483 feature_extraction.cc:258] Processed file [57/60]
+2025-05-13 17:30:17,105 - INFO - I20250513 17:30:17.104902 2613483 feature_extraction.cc:261]   Name:            frame_0057.png
+2025-05-13 17:30:17,105 - INFO - I20250513 17:30:17.104905 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,105 - INFO - I20250513 17:30:17.104908 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,105 - INFO - I20250513 17:30:17.104912 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,105 - INFO - I20250513 17:30:17.104919 2613483 feature_extraction.cc:280]   Features:        2459
+2025-05-13 17:30:17,146 - INFO - I20250513 17:30:17.146186 2613483 feature_extraction.cc:258] Processed file [58/60]
+2025-05-13 17:30:17,146 - INFO - I20250513 17:30:17.146255 2613483 feature_extraction.cc:261]   Name:            frame_0056.png
+2025-05-13 17:30:17,146 - INFO - I20250513 17:30:17.146260 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,146 - INFO - I20250513 17:30:17.146263 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,146 - INFO - I20250513 17:30:17.146270 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,146 - INFO - I20250513 17:30:17.146281 2613483 feature_extraction.cc:280]   Features:        2355
+2025-05-13 17:30:17,213 - INFO - I20250513 17:30:17.212949 2613483 feature_extraction.cc:258] Processed file [59/60]
+2025-05-13 17:30:17,213 - INFO - I20250513 17:30:17.212975 2613483 feature_extraction.cc:261]   Name:            frame_0058.png
+2025-05-13 17:30:17,213 - INFO - I20250513 17:30:17.212980 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,213 - INFO - I20250513 17:30:17.212981 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,213 - INFO - I20250513 17:30:17.212985 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,213 - INFO - I20250513 17:30:17.212990 2613483 feature_extraction.cc:280]   Features:        2511
+2025-05-13 17:30:17,272 - INFO - I20250513 17:30:17.272818 2613483 feature_extraction.cc:258] Processed file [60/60]
+2025-05-13 17:30:17,273 - INFO - I20250513 17:30:17.272840 2613483 feature_extraction.cc:261]   Name:            frame_0059.png
+2025-05-13 17:30:17,273 - INFO - I20250513 17:30:17.272843 2613483 feature_extraction.cc:270]   Dimensions:      1280 x 720
+2025-05-13 17:30:17,273 - INFO - I20250513 17:30:17.272845 2613483 feature_extraction.cc:273]   Camera:          #1 - OPENCV
+2025-05-13 17:30:17,273 - INFO - I20250513 17:30:17.272848 2613483 feature_extraction.cc:276]   Focal Length:    1536.00px
+2025-05-13 17:30:17,273 - INFO - I20250513 17:30:17.272854 2613483 feature_extraction.cc:280]   Features:        2607
+2025-05-13 17:30:17,273 - INFO - I20250513 17:30:17.273391 2613458 timer.cc:91] Elapsed time: 0.193 [minutes]
+2025-05-13 17:30:17,296 - INFO - I20250513 17:30:17.296376 2613708 misc.cc:44]
+2025-05-13 17:30:17,296 - INFO - ==============================================================================
+2025-05-13 17:30:17,296 - INFO - Feature matching
+2025-05-13 17:30:17,296 - INFO - ==============================================================================
+2025-05-13 17:30:17,296 - INFO - I20250513 17:30:17.296622 2613709 sift.cc:1426] Creating SIFT GPU feature matcher
+2025-05-13 17:30:17,297 - INFO - I20250513 17:30:17.297252 2613723 sift.cc:1426] Creating SIFT GPU feature matcher
+2025-05-13 17:30:17,344 - INFO - I20250513 17:30:17.344105 2613708 pairing.cc:168] Generating exhaustive image pairs...
+2025-05-13 17:30:17,344 - INFO - I20250513 17:30:17.344125 2613708 pairing.cc:201] Matching block [1/2, 1/2]
+2025-05-13 17:30:18,648 - INFO - I20250513 17:30:18.648798 2613708 feature_matching.cc:46] in 1.305s
+2025-05-13 17:30:18,650 - INFO - I20250513 17:30:18.650067 2613708 pairing.cc:201] Matching block [1/2, 2/2]
+2025-05-13 17:30:18,720 - INFO - I20250513 17:30:18.720395 2613708 feature_matching.cc:46] in 0.070s
+2025-05-13 17:30:18,720 - INFO - I20250513 17:30:18.720789 2613708 pairing.cc:201] Matching block [2/2, 1/2]
+2025-05-13 17:30:19,169 - INFO - I20250513 17:30:19.169083 2613708 feature_matching.cc:46] in 0.448s
+2025-05-13 17:30:19,172 - INFO - I20250513 17:30:19.172336 2613708 pairing.cc:201] Matching block [2/2, 2/2]
+2025-05-13 17:30:19,226 - INFO - I20250513 17:30:19.225919 2613708 feature_matching.cc:46] in 0.054s
+2025-05-13 17:30:19,226 - INFO - I20250513 17:30:19.226179 2613708 timer.cc:91] Elapsed time: 0.032 [minutes]
+2025-05-13 17:30:19,262 - INFO - I20250513 17:30:19.262540 2613784 incremental_pipeline.cc:251] Loading database
+2025-05-13 17:30:19,263 - INFO - I20250513 17:30:19.263262 2613784 database_cache.cc:66] Loading cameras...
+2025-05-13 17:30:19,263 - INFO - I20250513 17:30:19.263283 2613784 database_cache.cc:76]  1 in 0.000s
+2025-05-13 17:30:19,263 - INFO - I20250513 17:30:19.263288 2613784 database_cache.cc:84] Loading matches...
+2025-05-13 17:30:19,266 - INFO - I20250513 17:30:19.266116 2613784 database_cache.cc:89]  1391 in 0.003s
+2025-05-13 17:30:19,266 - INFO - I20250513 17:30:19.266129 2613784 database_cache.cc:105] Loading images...
+2025-05-13 17:30:19,269 - INFO - I20250513 17:30:19.269536 2613784 database_cache.cc:153]  60 in 0.003s (connected 60)
+2025-05-13 17:30:19,269 - INFO - I20250513 17:30:19.269562 2613784 database_cache.cc:164] Loading pose priors...
+2025-05-13 17:30:19,269 - INFO - I20250513 17:30:19.269688 2613784 database_cache.cc:175]  0 in 0.000s
+2025-05-13 17:30:19,269 - INFO - I20250513 17:30:19.269696 2613784 database_cache.cc:184] Building correspondence graph...
+2025-05-13 17:30:19,292 - INFO - I20250513 17:30:19.292580 2613784 database_cache.cc:210]  in 0.023s (ignored 0)
+2025-05-13 17:30:19,292 - INFO - I20250513 17:30:19.292750 2613784 timer.cc:91] Elapsed time: 0.000 [minutes]
+2025-05-13 17:30:19,294 - INFO - I20250513 17:30:19.294369 2613784 incremental_pipeline.cc:297] Finding good initial image pair
+2025-05-13 17:30:19,342 - INFO - I20250513 17:30:19.342808 2613784 incremental_pipeline.cc:321] Initializing with image pair #1 and #6
+2025-05-13 17:30:19,344 - INFO - I20250513 17:30:19.344887 2613784 incremental_pipeline.cc:326] Global bundle adjustment
+2025-05-13 17:30:19,574 - INFO - I20250513 17:30:19.574029 2613784 incremental_pipeline.cc:405] Registering image #4 (3)
+2025-05-13 17:30:19,574 - INFO - I20250513 17:30:19.574046 2613784 incremental_pipeline.cc:408] => Image sees 544 / 2474 points
+2025-05-13 17:30:19,798 - INFO - I20250513 17:30:19.798081 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:20,286 - INFO - I20250513 17:30:20.286098 2613784 incremental_pipeline.cc:405] Registering image #2 (4)
+2025-05-13 17:30:20,286 - INFO - I20250513 17:30:20.286116 2613784 incremental_pipeline.cc:408] => Image sees 681 / 2618 points
+2025-05-13 17:30:20,884 - INFO - I20250513 17:30:20.884196 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:21,399 - INFO - I20250513 17:30:21.398949 2613784 incremental_pipeline.cc:405] Registering image #11 (5)
+2025-05-13 17:30:21,399 - INFO - I20250513 17:30:21.398968 2613784 incremental_pipeline.cc:408] => Image sees 1222 / 2455 points
+2025-05-13 17:30:22,101 - INFO - I20250513 17:30:22.101223 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:22,302 - INFO - I20250513 17:30:22.302011 2613784 incremental_pipeline.cc:405] Registering image #3 (6)
+2025-05-13 17:30:22,302 - INFO - I20250513 17:30:22.302028 2613784 incremental_pipeline.cc:408] => Image sees 1491 / 2418 points
+2025-05-13 17:30:23,466 - INFO - I20250513 17:30:23.466519 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:23,731 - INFO - I20250513 17:30:23.731206 2613784 incremental_pipeline.cc:405] Registering image #12 (7)
+2025-05-13 17:30:23,731 - INFO - I20250513 17:30:23.731228 2613784 incremental_pipeline.cc:408] => Image sees 1357 / 2512 points
+2025-05-13 17:30:23,980 - INFO - I20250513 17:30:23.980063 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:24,540 - INFO - I20250513 17:30:24.540477 2613784 incremental_pipeline.cc:405] Registering image #7 (8)
+2025-05-13 17:30:24,540 - INFO - I20250513 17:30:24.540498 2613784 incremental_pipeline.cc:408] => Image sees 1279 / 2439 points
+2025-05-13 17:30:24,983 - INFO - I20250513 17:30:24.983210 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:25,711 - INFO - I20250513 17:30:25.711671 2613784 incremental_pipeline.cc:405] Registering image #5 (9)
+2025-05-13 17:30:25,711 - INFO - I20250513 17:30:25.711689 2613784 incremental_pipeline.cc:408] => Image sees 1246 / 2359 points
+2025-05-13 17:30:26,052 - INFO - I20250513 17:30:26.052366 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:26,723 - INFO - I20250513 17:30:26.723728 2613784 incremental_pipeline.cc:405] Registering image #9 (10)
+2025-05-13 17:30:26,723 - INFO - I20250513 17:30:26.723745 2613784 incremental_pipeline.cc:408] => Image sees 1332 / 2259 points
+2025-05-13 17:30:27,181 - INFO - I20250513 17:30:27.181172 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:28,292 - INFO - I20250513 17:30:28.291945 2613784 incremental_pipeline.cc:405] Registering image #8 (11)
+2025-05-13 17:30:28,292 - INFO - I20250513 17:30:28.291962 2613784 incremental_pipeline.cc:408] => Image sees 1149 / 1989 points
+2025-05-13 17:30:28,657 - INFO - I20250513 17:30:28.656876 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:29,185 - INFO - I20250513 17:30:29.184880 2613784 incremental_pipeline.cc:405] Registering image #60 (12)
+2025-05-13 17:30:29,185 - INFO - I20250513 17:30:29.184897 2613784 incremental_pipeline.cc:408] => Image sees 1015 / 1791 points
+2025-05-13 17:30:29,563 - INFO - I20250513 17:30:29.562992 2613784 incremental_pipeline.cc:405] Registering image #59 (13)
+2025-05-13 17:30:29,563 - INFO - I20250513 17:30:29.563011 2613784 incremental_pipeline.cc:408] => Image sees 903 / 1878 points
+2025-05-13 17:30:30,071 - INFO - I20250513 17:30:30.071903 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:31,028 - INFO - I20250513 17:30:31.028736 2613784 incremental_pipeline.cc:405] Registering image #57 (14)
+2025-05-13 17:30:31,028 - INFO - I20250513 17:30:31.028756 2613784 incremental_pipeline.cc:408] => Image sees 1035 / 2023 points
+2025-05-13 17:30:31,500 - INFO - I20250513 17:30:31.499994 2613784 incremental_pipeline.cc:405] Registering image #58 (15)
+2025-05-13 17:30:31,500 - INFO - I20250513 17:30:31.500011 2613784 incremental_pipeline.cc:408] => Image sees 1167 / 1920 points
+2025-05-13 17:30:32,014 - INFO - I20250513 17:30:32.014001 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:32,511 - INFO - I20250513 17:30:32.511741 2613784 incremental_pipeline.cc:405] Registering image #56 (16)
+2025-05-13 17:30:32,511 - INFO - I20250513 17:30:32.511760 2613784 incremental_pipeline.cc:408] => Image sees 1172 / 1662 points
+2025-05-13 17:30:32,993 - INFO - I20250513 17:30:32.993265 2613784 incremental_pipeline.cc:405] Registering image #55 (17)
+2025-05-13 17:30:32,993 - INFO - I20250513 17:30:32.993285 2613784 incremental_pipeline.cc:408] => Image sees 931 / 1405 points
+2025-05-13 17:30:33,329 - INFO - I20250513 17:30:33.329190 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:33,627 - INFO - I20250513 17:30:33.627256 2613784 incremental_pipeline.cc:405] Registering image #10 (18)
+2025-05-13 17:30:33,627 - INFO - I20250513 17:30:33.627275 2613784 incremental_pipeline.cc:408] => Image sees 931 / 1852 points
+2025-05-13 17:30:34,075 - INFO - I20250513 17:30:34.075419 2613784 incremental_pipeline.cc:405] Registering image #14 (19)
+2025-05-13 17:30:34,075 - INFO - I20250513 17:30:34.075452 2613784 incremental_pipeline.cc:408] => Image sees 781 / 1925 points
+2025-05-13 17:30:34,413 - INFO - I20250513 17:30:34.412987 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:35,067 - INFO - I20250513 17:30:35.067643 2613784 incremental_pipeline.cc:405] Registering image #15 (20)
+2025-05-13 17:30:35,067 - INFO - I20250513 17:30:35.067662 2613784 incremental_pipeline.cc:408] => Image sees 905 / 1939 points
+2025-05-13 17:30:35,534 - INFO - I20250513 17:30:35.534713 2613784 incremental_pipeline.cc:405] Registering image #13 (21)
+2025-05-13 17:30:35,534 - INFO - I20250513 17:30:35.534736 2613784 incremental_pipeline.cc:408] => Image sees 1083 / 1846 points
+2025-05-13 17:30:35,916 - INFO - I20250513 17:30:35.916335 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:36,286 - INFO - I20250513 17:30:36.286273 2613784 incremental_pipeline.cc:405] Registering image #18 (22)
+2025-05-13 17:30:36,286 - INFO - I20250513 17:30:36.286293 2613784 incremental_pipeline.cc:408] => Image sees 1026 / 1763 points
+2025-05-13 17:30:36,731 - INFO - I20250513 17:30:36.731781 2613784 incremental_pipeline.cc:405] Registering image #16 (23)
+2025-05-13 17:30:36,732 - INFO - I20250513 17:30:36.731798 2613784 incremental_pipeline.cc:408] => Image sees 1018 / 1738 points
+2025-05-13 17:30:37,026 - INFO - I20250513 17:30:37.026167 2613784 incremental_pipeline.cc:405] Registering image #20 (24)
+2025-05-13 17:30:37,026 - INFO - I20250513 17:30:37.026187 2613784 incremental_pipeline.cc:408] => Image sees 994 / 1849 points
+2025-05-13 17:30:37,479 - INFO - I20250513 17:30:37.479075 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:38,251 - INFO - I20250513 17:30:38.251721 2613784 incremental_pipeline.cc:405] Registering image #19 (25)
+2025-05-13 17:30:38,251 - INFO - I20250513 17:30:38.251740 2613784 incremental_pipeline.cc:408] => Image sees 1058 / 1797 points
+2025-05-13 17:30:38,716 - INFO - I20250513 17:30:38.716522 2613784 incremental_pipeline.cc:405] Registering image #17 (26)
+2025-05-13 17:30:38,716 - INFO - I20250513 17:30:38.716542 2613784 incremental_pipeline.cc:408] => Image sees 1078 / 1649 points
+2025-05-13 17:30:39,149 - INFO - I20250513 17:30:39.149641 2613784 incremental_pipeline.cc:405] Registering image #21 (27)
+2025-05-13 17:30:39,149 - INFO - I20250513 17:30:39.149662 2613784 incremental_pipeline.cc:408] => Image sees 1057 / 1781 points
+2025-05-13 17:30:39,480 - INFO - I20250513 17:30:39.480799 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:39,945 - INFO - I20250513 17:30:39.945153 2613784 incremental_pipeline.cc:405] Registering image #22 (28)
+2025-05-13 17:30:39,945 - INFO - I20250513 17:30:39.945171 2613784 incremental_pipeline.cc:408] => Image sees 988 / 1918 points
+2025-05-13 17:30:40,383 - INFO - I20250513 17:30:40.382843 2613784 incremental_pipeline.cc:405] Registering image #23 (29)
+2025-05-13 17:30:40,383 - INFO - I20250513 17:30:40.382860 2613784 incremental_pipeline.cc:408] => Image sees 1030 / 2087 points
+2025-05-13 17:30:40,819 - INFO - I20250513 17:30:40.819288 2613784 incremental_pipeline.cc:405] Registering image #24 (30)
+2025-05-13 17:30:40,827 - INFO - I20250513 17:30:40.819306 2613784 incremental_pipeline.cc:408] => Image sees 1240 / 2266 points
+2025-05-13 17:30:41,294 - INFO - I20250513 17:30:41.294035 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:41,862 - INFO - I20250513 17:30:41.862645 2613784 incremental_pipeline.cc:405] Registering image #29 (31)
+2025-05-13 17:30:41,862 - INFO - I20250513 17:30:41.862665 2613784 incremental_pipeline.cc:408] => Image sees 1562 / 2409 points
+2025-05-13 17:30:42,388 - INFO - I20250513 17:30:42.388811 2613784 incremental_pipeline.cc:405] Registering image #35 (32)
+2025-05-13 17:30:42,389 - INFO - I20250513 17:30:42.388829 2613784 incremental_pipeline.cc:408] => Image sees 1537 / 2320 points
+2025-05-13 17:30:42,963 - INFO - I20250513 17:30:42.963877 2613784 incremental_pipeline.cc:405] Registering image #28 (33)
+2025-05-13 17:30:42,964 - INFO - I20250513 17:30:42.963896 2613784 incremental_pipeline.cc:408] => Image sees 1405 / 2199 points
+2025-05-13 17:30:43,556 - INFO - I20250513 17:30:43.556430 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:44,569 - INFO - I20250513 17:30:44.568972 2613784 incremental_pipeline.cc:405] Registering image #36 (34)
+2025-05-13 17:30:44,569 - INFO - I20250513 17:30:44.568994 2613784 incremental_pipeline.cc:408] => Image sees 1323 / 2116 points
+2025-05-13 17:30:45,138 - INFO - I20250513 17:30:45.137948 2613784 incremental_pipeline.cc:405] Registering image #32 (35)
+2025-05-13 17:30:45,138 - INFO - I20250513 17:30:45.137967 2613784 incremental_pipeline.cc:408] => Image sees 1138 / 1859 points
+2025-05-13 17:30:45,666 - INFO - I20250513 17:30:45.666296 2613784 incremental_pipeline.cc:405] Registering image #27 (36)
+2025-05-13 17:30:45,666 - INFO - I20250513 17:30:45.666316 2613784 incremental_pipeline.cc:408] => Image sees 1085 / 1806 points
+2025-05-13 17:30:46,148 - INFO - I20250513 17:30:46.148620 2613784 incremental_pipeline.cc:405] Registering image #31 (37)
+2025-05-13 17:30:46,148 - INFO - I20250513 17:30:46.148639 2613784 incremental_pipeline.cc:408] => Image sees 1274 / 1966 points
+2025-05-13 17:30:46,629 - INFO - I20250513 17:30:46.629559 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:47,991 - INFO - I20250513 17:30:47.991878 2613784 incremental_pipeline.cc:405] Registering image #34 (38)
+2025-05-13 17:30:47,992 - INFO - I20250513 17:30:47.991896 2613784 incremental_pipeline.cc:408] => Image sees 1259 / 1932 points
+2025-05-13 17:30:48,479 - INFO - I20250513 17:30:48.479427 2613784 incremental_pipeline.cc:405] Registering image #33 (39)
+2025-05-13 17:30:48,479 - INFO - I20250513 17:30:48.479446 2613784 incremental_pipeline.cc:408] => Image sees 1251 / 1907 points
+2025-05-13 17:30:48,968 - INFO - I20250513 17:30:48.968384 2613784 incremental_pipeline.cc:405] Registering image #25 (40)
+2025-05-13 17:30:48,968 - INFO - I20250513 17:30:48.968402 2613784 incremental_pipeline.cc:408] => Image sees 1156 / 1641 points
+2025-05-13 17:30:49,439 - INFO - I20250513 17:30:49.439692 2613784 incremental_pipeline.cc:405] Registering image #30 (41)
+2025-05-13 17:30:49,439 - INFO - I20250513 17:30:49.439711 2613784 incremental_pipeline.cc:408] => Image sees 1016 / 1494 points
+2025-05-13 17:30:49,888 - INFO - I20250513 17:30:49.887970 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:51,100 - INFO - I20250513 17:30:51.100806 2613784 incremental_pipeline.cc:405] Registering image #53 (42)
+2025-05-13 17:30:51,100 - INFO - I20250513 17:30:51.100826 2613784 incremental_pipeline.cc:408] => Image sees 877 / 1643 points
+2025-05-13 17:30:51,529 - INFO - I20250513 17:30:51.529649 2613784 incremental_pipeline.cc:405] Registering image #40 (43)
+2025-05-13 17:30:51,529 - INFO - I20250513 17:30:51.529667 2613784 incremental_pipeline.cc:408] => Image sees 771 / 1557 points
+2025-05-13 17:30:51,913 - INFO - I20250513 17:30:51.913802 2613784 incremental_pipeline.cc:405] Registering image #51 (44)
+2025-05-13 17:30:51,913 - INFO - I20250513 17:30:51.913820 2613784 incremental_pipeline.cc:408] => Image sees 802 / 1296 points
+2025-05-13 17:30:52,288 - INFO - I20250513 17:30:52.288213 2613784 incremental_pipeline.cc:405] Registering image #54 (45)
+2025-05-13 17:30:52,288 - INFO - I20250513 17:30:52.288230 2613784 incremental_pipeline.cc:408] => Image sees 904 / 1493 points
+2025-05-13 17:30:52,668 - INFO - I20250513 17:30:52.668234 2613784 incremental_pipeline.cc:405] Registering image #52 (46)
+2025-05-13 17:30:52,668 - INFO - I20250513 17:30:52.668252 2613784 incremental_pipeline.cc:408] => Image sees 1069 / 1566 points
+2025-05-13 17:30:53,026 - INFO - I20250513 17:30:53.026749 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:54,493 - INFO - I20250513 17:30:54.493237 2613784 incremental_pipeline.cc:405] Registering image #50 (47)
+2025-05-13 17:30:54,493 - INFO - I20250513 17:30:54.493256 2613784 incremental_pipeline.cc:408] => Image sees 1024 / 1471 points
+2025-05-13 17:30:54,884 - INFO - I20250513 17:30:54.884670 2613784 incremental_pipeline.cc:405] Registering image #49 (48)
+2025-05-13 17:30:54,884 - INFO - I20250513 17:30:54.884691 2613784 incremental_pipeline.cc:408] => Image sees 997 / 1295 points
+2025-05-13 17:30:55,288 - INFO - I20250513 17:30:55.288290 2613784 incremental_pipeline.cc:405] Registering image #26 (49)
+2025-05-13 17:30:55,288 - INFO - I20250513 17:30:55.288313 2613784 incremental_pipeline.cc:408] => Image sees 857 / 1397 points
+2025-05-13 17:30:55,732 - INFO - I20250513 17:30:55.732424 2613784 incremental_pipeline.cc:405] Registering image #38 (50)
+2025-05-13 17:30:55,732 - INFO - I20250513 17:30:55.732482 2613784 incremental_pipeline.cc:408] => Image sees 833 / 1603 points
+2025-05-13 17:30:56,123 - INFO - I20250513 17:30:56.123611 2613784 incremental_pipeline.cc:405] Registering image #37 (51)
+2025-05-13 17:30:56,123 - INFO - I20250513 17:30:56.123631 2613784 incremental_pipeline.cc:408] => Image sees 1094 / 1475 points
+2025-05-13 17:30:56,538 - INFO - I20250513 17:30:56.538839 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:30:58,468 - INFO - I20250513 17:30:58.468802 2613784 incremental_pipeline.cc:405] Registering image #41 (52)
+2025-05-13 17:30:58,469 - INFO - I20250513 17:30:58.468822 2613784 incremental_pipeline.cc:408] => Image sees 873 / 1314 points
+2025-05-13 17:30:58,843 - INFO - I20250513 17:30:58.843549 2613784 incremental_pipeline.cc:405] Registering image #42 (53)
+2025-05-13 17:30:58,843 - INFO - I20250513 17:30:58.843568 2613784 incremental_pipeline.cc:408] => Image sees 768 / 1239 points
+2025-05-13 17:30:59,236 - INFO - I20250513 17:30:59.236066 2613784 incremental_pipeline.cc:405] Registering image #47 (54)
+2025-05-13 17:30:59,236 - INFO - I20250513 17:30:59.236085 2613784 incremental_pipeline.cc:408] => Image sees 832 / 1361 points
+2025-05-13 17:30:59,661 - INFO - I20250513 17:30:59.661830 2613784 incremental_pipeline.cc:405] Registering image #44 (55)
+2025-05-13 17:30:59,662 - INFO - I20250513 17:30:59.661849 2613784 incremental_pipeline.cc:408] => Image sees 839 / 1132 points
+2025-05-13 17:31:00,014 - INFO - I20250513 17:31:00.014185 2613784 incremental_pipeline.cc:405] Registering image #48 (56)
+2025-05-13 17:31:00,014 - INFO - I20250513 17:31:00.014205 2613784 incremental_pipeline.cc:408] => Image sees 888 / 1361 points
+2025-05-13 17:31:00,353 - INFO - I20250513 17:31:00.353587 2613784 incremental_pipeline.cc:405] Registering image #43 (57)
+2025-05-13 17:31:00,353 - INFO - I20250513 17:31:00.353605 2613784 incremental_pipeline.cc:408] => Image sees 853 / 1271 points
+2025-05-13 17:31:00,640 - INFO - I20250513 17:31:00.640084 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:31:03,068 - INFO - I20250513 17:31:03.068151 2613784 incremental_pipeline.cc:405] Registering image #45 (58)
+2025-05-13 17:31:03,068 - INFO - I20250513 17:31:03.068171 2613784 incremental_pipeline.cc:408] => Image sees 754 / 1105 points
+2025-05-13 17:31:03,377 - INFO - I20250513 17:31:03.377647 2613784 incremental_pipeline.cc:405] Registering image #46 (59)
+2025-05-13 17:31:03,377 - INFO - I20250513 17:31:03.377667 2613784 incremental_pipeline.cc:408] => Image sees 647 / 870 points
+2025-05-13 17:31:03,596 - INFO - I20250513 17:31:03.596400 2613784 incremental_pipeline.cc:405] Registering image #39 (60)
+2025-05-13 17:31:03,596 - INFO - I20250513 17:31:03.596418 2613784 incremental_pipeline.cc:408] => Image sees 668 / 882 points
+2025-05-13 17:31:03,829 - INFO - I20250513 17:31:03.829375 2613784 incremental_pipeline.cc:42] Retriangulation and Global bundle adjustment
+2025-05-13 17:31:04,964 - INFO - I20250513 17:31:04.964002 2613784 incremental_pipeline.cc:554] Keeping successful reconstruction
+2025-05-13 17:31:04,979 - INFO - I20250513 17:31:04.979084 2613784 timer.cc:91] Elapsed time: 0.762 [minutes]
+2025-05-13 17:31:05,014 - INFO - I20250513 17:31:05.014042 2614637 misc.cc:44]
+2025-05-13 17:31:05,014 - INFO - ==============================================================================
+2025-05-13 17:31:05,014 - INFO - Global bundle adjustment
+2025-05-13 17:31:05,014 - INFO - ==============================================================================
+2025-05-13 17:31:07,378 - INFO - I20250513 17:31:07.378171 2614637 bundle_adjustment.cc:1175] Bundle adjustment report
+2025-05-13 17:31:07,378 - INFO - Residuals : 173490
+2025-05-13 17:31:07,378 - INFO - Parameters : 51364
+2025-05-13 17:31:07,378 - INFO - Iterations : 26
+2025-05-13 17:31:07,378 - INFO - Time : 2.30387 [s]
+2025-05-13 17:31:07,378 - INFO - Initial cost : 0.660088 [px]
+2025-05-13 17:31:07,378 - INFO - Final cost : 0.659897 [px]
+2025-05-13 17:31:07,378 - INFO - Termination : Convergence
+2025-05-13 17:31:07,378 - INFO - 
+2025-05-13 17:31:07,378 - INFO - I20250513 17:31:07.378520 2614637 timer.cc:91] Elapsed time: 0.039 [minutes]
+2025-05-13 17:31:08,680 - INFO - running colmap with:
+2025-05-13 17:31:08,680 - INFO - db=colmap.db
+2025-05-13 17:31:08,680 - INFO - images="/home/doan/VA_0223/20250411_Final/Reconstruction_3D/data/processed_images/xe_F1_khan_60"
+2025-05-13 17:31:08,680 - INFO - sparse=colmap_sparse
+2025-05-13 17:31:08,680 - INFO - text=colmap_text
+2025-05-13 17:31:08,680 - INFO - ==== running: colmap feature_extractor --ImageReader.camera_model OPENCV --ImageReader.camera_params "" --SiftExtraction.estimate_affine_shape=true --SiftExtraction.domain_size_pooling=true --ImageReader.single_camera 1 --database_path colmap.db --image_path "/home/doan/VA_0223/20250411_Final/Reconstruction_3D/data/processed_images/xe_F1_khan_60"
+2025-05-13 17:31:08,680 - INFO - ==== running: colmap exhaustive_matcher --SiftMatching.guided_matching=true --database_path colmap.db
+2025-05-13 17:31:08,680 - INFO - ==== running: mkdir colmap_sparse
+2025-05-13 17:31:08,681 - INFO - ==== running: colmap mapper --database_path colmap.db --image_path "/home/doan/VA_0223/20250411_Final/Reconstruction_3D/data/processed_images/xe_F1_khan_60" --output_path colmap_sparse
+2025-05-13 17:31:08,681 - INFO - ==== running: colmap bundle_adjuster --input_path colmap_sparse/0 --output_path colmap_sparse/0 --BundleAdjustment.refine_principal_point 1
+2025-05-13 17:31:08,681 - INFO - ==== running: mkdir colmap_text
+2025-05-13 17:31:08,681 - INFO - ==== running: colmap model_converter --input_path colmap_sparse/0 --output_path colmap_text --output_type TXT
+2025-05-13 17:31:08,681 - INFO - outputting to /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/transforms.json...
+2025-05-13 17:31:08,681 - INFO - camera 1:
+2025-05-13 17:31:08,681 - INFO - res=(1280.0, 720.0)
+2025-05-13 17:31:08,681 - INFO - center=(630.2302697216089, 365.51648116649335)
+2025-05-13 17:31:08,681 - INFO - focal=(1119.0703150787695, 1114.6726488577488)
+2025-05-13 17:31:08,681 - INFO - fov=(59.53076288055381, 35.79725790670579)
+2025-05-13 17:31:08,681 - INFO - k=(0.1563640817799552, -0.5173042133095284) p=(-0.0032582858455165505, -0.003642839035885577)
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0001.png sharpness= 155.79241319444444
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0002.png sharpness= 161.53502821180555
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0004.png sharpness= 125.5653103298611
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0000.png sharpness= 206.5707834201389
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0008.png sharpness= 141.10631510416667
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0005.png sharpness= 97.89021701388889
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0007.png sharpness= 124.82744574652777
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0010.png sharpness= 109.62595811452853
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0009.png sharpness= 116.11959201388889
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0011.png sharpness= 80.11810763888889
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0003.png sharpness= 117.18413845486111
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0006.png sharpness= 128.9098589409722
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0014.png sharpness= 118.00666232638889
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0012.png sharpness= 126.82590494791667
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0013.png sharpness= 124.75753255208333
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0016.png sharpness= 114.16235026041667
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0019.png sharpness= 160.7204470486111
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0015.png sharpness= 101.49046489572405
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0018.png sharpness= 96.41584201388889
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0017.png sharpness= 138.2004448784722
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0020.png sharpness= 121.78007378472222
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0021.png sharpness= 117.62366536458333
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0022.png sharpness= 109.62551648987181
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0023.png sharpness= 143.05478949228913
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0033.png sharpness= 95.40395182291667
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0035.png sharpness= 67.63312934027778
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0029.png sharpness= 105.31108072916666
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0026.png sharpness= 106.2005642361111
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0024.png sharpness= 117.13220052083334
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0034.png sharpness= 89.03743272569444
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0030.png sharpness= 127.1162282986111
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0028.png sharpness= 128.87399305555556
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0032.png sharpness= 101.17302734375
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0031.png sharpness= 102.44732421875
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0025.png sharpness= 118.74982855902778
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0027.png sharpness= 91.51266710069444
+2025-05-13 17:31:08,681 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0036.png sharpness= 67.61731119791666
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0037.png sharpness= 58.03898003472222
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0046.png sharpness= 51.885852864583335
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0038.png sharpness= 66.93690538194444
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0039.png sharpness= 49.63302517361111
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0041.png sharpness= 61.23530815972222
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0044.png sharpness= 52.84517795138889
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0040.png sharpness= 48.49886935763889
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0045.png sharpness= 54.24761284722222
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0047.png sharpness= 45.23052083333334
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0042.png sharpness= 42.688226996527774
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0043.png sharpness= 50.98399305555556
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0048.png sharpness= 54.809162326388886
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0049.png sharpness= 71.16319661458333
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0053.png sharpness= 106.43125434027777
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0050.png sharpness= 82.98523003472222
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0051.png sharpness= 108.54566189236111
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0052.png sharpness= 107.10355251736111
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0054.png sharpness= 90.2632790798611
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0055.png sharpness= 104.99532335069445
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0057.png sharpness= 120.19382595486111
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0056.png sharpness= 128.50245008680557
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0058.png sharpness= 100.51001953125
+2025-05-13 17:31:08,682 - INFO - ./../data/processed_images/xe_F1_khan_60/frame_0059.png sharpness= 104.02496310763888
+2025-05-13 17:31:08,682 - INFO - up vector was [-0.71976895 -0.01202701  0.69410951]
+2025-05-13 17:31:08,682 - INFO - computing center of attention...
+2025-05-13 17:31:08,682 - INFO - [-0.27006285 -0.23320907 -3.14020832]
+2025-05-13 17:31:08,682 - INFO - avg camera distance from origin 4.882163977485863
+2025-05-13 17:31:08,682 - INFO - 60 frames
+2025-05-13 17:31:08,682 - INFO - writing /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/transforms.json
+2025-05-13 17:31:08,693 - INFO - Executing NeRF training: /home/doan/VA_0223/20250411_Final/Reconstruction_3D/instant-ngp/.venv/bin/python3 scripts/run.py --save_mesh /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/output.ply --n_steps 5000 /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/transforms.json
+2025-05-13 17:31:09,202 - INFO - [0m17:31:09 [0;32mSUCCESS  [0mInitialized CUDA 12.6. Active GPU is #0: NVIDIA GeForce RTX 3060 [86][K[0m
+2025-05-13 17:31:09,203 - INFO - 17:31:09 [0;36mINFO     [0mLoading NeRF dataset from[K[0m
+2025-05-13 17:31:09,203 - INFO - 17:31:09 [0;36mINFO     [0m  /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/transforms.json[K[0m
+2025-05-13 17:31:09,301 - INFO - 17:31:09 [0;36mINFO     [0m  cam_aabb=[min=[-0.405401,-0.526869,1.21993], max=[1.42936,1.59034,1.46418]][K[0m
+2025-05-13 17:31:09,378 - INFO - 
+2025-05-13 17:31:09,379 - INFO - Training:   0%|          | 0/5000 [00:00<?, ?steps/s]17:31:09 [0;36mINFO     [0mLoading network config from: /home/doan/VA_0223/20250411_Final/Reconstruction_3D/instant-ngp/configs/nerf/base.json[K[0m
+2025-05-13 17:31:09,379 - INFO - 17:31:09 [0;36mINFO     [0mGridEncoding:  Nmin=16 b=2.43803 F=4 T=2^19 L=8[K[0m
+2025-05-13 17:31:09,379 - INFO - 17:31:09 [0;36mINFO     [0mDensity model: 3--[HashGrid]-->32--[FullyFusedMLP(neurons=64,layers=3)]-->1[K[0m
+2025-05-13 17:31:09,379 - INFO - 17:31:09 [0;36mINFO     [0mColor model:   3--[Composite]-->16+16--[FullyFusedMLP(neurons=64,layers=4)]-->3[K[0m
+2025-05-13 17:31:09,379 - INFO - 17:31:09 [0;36mINFO     [0m  total_encoding_params=12855296 total_network_params=10240[K[0m
+2025-05-13 17:31:09,575 - INFO - 
+2025-05-13 17:31:09,575 - INFO - Training:   0%|          | 0/5000 [00:00<?, ?steps/s]
+2025-05-13 17:31:09,716 - INFO - Training:   0%|          | 1/5000 [00:00<00:00, 7073.03steps/s, loss=0.0431]
+2025-05-13 17:31:09,717 - INFO - Training:   0%|          | 4/5000 [00:00<02:57, 28.19steps/s, loss=0.0431]
+2025-05-13 17:31:09,845 - INFO - Training:   0%|          | 4/5000 [00:00<02:57, 28.19steps/s, loss=0.0431]
+2025-05-13 17:31:09,845 - INFO - Training:   0%|          | 7/5000 [00:00<03:16, 25.43steps/s, loss=0.0431]
+2025-05-13 17:31:09,976 - INFO - Training:   0%|          | 7/5000 [00:00<03:16, 25.43steps/s, loss=0.0431]
+2025-05-13 17:31:09,976 - INFO - Training:   0%|          | 10/5000 [00:00<03:24, 24.35steps/s, loss=0.0431]
+2025-05-13 17:31:10,102 - INFO - Training:   0%|          | 10/5000 [00:00<03:24, 24.35steps/s, loss=0.0431]
+2025-05-13 17:31:10,102 - INFO - Training:   0%|          | 13/5000 [00:00<03:26, 24.13steps/s, loss=0.0431]
+2025-05-13 17:31:10,229 - INFO - Training:   0%|          | 13/5000 [00:00<03:26, 24.13steps/s, loss=0.0431]
+2025-05-13 17:31:10,229 - INFO - Training:   0%|          | 16/5000 [00:00<03:28, 23.92steps/s, loss=0.0431]
+2025-05-13 17:31:10,354 - INFO - Training:   0%|          | 16/5000 [00:00<03:28, 23.92steps/s, loss=0.0431]
+2025-05-13 17:31:10,354 - INFO - Training:   0%|          | 19/5000 [00:00<03:27, 23.95steps/s, loss=0.0431]
+2025-05-13 17:31:10,491 - INFO - Training:   0%|          | 19/5000 [00:00<03:27, 23.95steps/s, loss=0.00742]
+2025-05-13 17:31:10,491 - INFO - Training:   0%|          | 22/5000 [00:00<03:33, 23.28steps/s, loss=0.00742]
+2025-05-13 17:31:10,615 - INFO - Training:   0%|          | 22/5000 [00:00<03:33, 23.28steps/s, loss=0.00742]
+2025-05-13 17:31:10,615 - INFO - Training:   0%|          | 25/5000 [00:01<03:31, 23.54steps/s, loss=0.00742]
+2025-05-13 17:31:10,738 - INFO - Training:   0%|          | 25/5000 [00:01<03:31, 23.54steps/s, loss=0.00742]
+2025-05-13 17:31:10,738 - INFO - Training:   1%|          | 28/5000 [00:01<03:28, 23.81steps/s, loss=0.00742]
+2025-05-13 17:31:10,863 - INFO - Training:   1%|          | 28/5000 [00:01<03:28, 23.81steps/s, loss=0.00742]
+2025-05-13 17:31:10,863 - INFO - Training:   1%|          | 31/5000 [00:01<03:28, 23.86steps/s, loss=0.00742]
+2025-05-13 17:31:10,998 - INFO - Training:   1%|          | 31/5000 [00:01<03:28, 23.86steps/s, loss=0.00742]
+2025-05-13 17:31:10,998 - INFO - Training:   1%|          | 35/5000 [00:01<03:13, 25.70steps/s, loss=0.00742]
+2025-05-13 17:31:11,104 - INFO - Training:   1%|          | 35/5000 [00:01<03:13, 25.70steps/s, loss=0.0081]
+2025-05-13 17:31:11,104 - INFO - Training:   1%|          | 39/5000 [00:01<02:51, 28.93steps/s, loss=0.0081]
+2025-05-13 17:31:11,208 - INFO - Training:   1%|          | 39/5000 [00:01<02:51, 28.93steps/s, loss=0.0081]
+2025-05-13 17:31:11,208 - INFO - Training:   1%|          | 43/5000 [00:01<02:37, 31.46steps/s, loss=0.0081]
+2025-05-13 17:31:11,314 - INFO - Training:   1%|          | 43/5000 [00:01<02:37, 31.46steps/s, loss=0.0081]
+2025-05-13 17:31:11,314 - INFO - Training:   1%|          | 47/5000 [00:01<02:28, 33.28steps/s, loss=0.0081]
+2025-05-13 17:31:11,427 - INFO - Training:   1%|          | 47/5000 [00:01<02:28, 33.28steps/s, loss=0.0081]
+2025-05-13 17:31:11,427 - INFO - Training:   1%|          | 52/5000 [00:01<02:15, 36.52steps/s, loss=0.0081]
+2025-05-13 17:31:11,550 - INFO - Training:   1%|          | 52/5000 [00:01<02:15, 36.52steps/s, loss=0.00331]
+2025-05-13 17:31:11,550 - INFO - Training:   1%|          | 58/5000 [00:01<02:02, 40.46steps/s, loss=0.00331]
+2025-05-13 17:31:11,672 - INFO - Training:   1%|          | 58/5000 [00:01<02:02, 40.46steps/s, loss=0.00331]
+2025-05-13 17:31:11,672 - INFO - Training:   1%|▏         | 64/5000 [00:02<01:54, 43.17steps/s, loss=0.00331]
+2025-05-13 17:31:11,784 - INFO - Training:   1%|▏         | 64/5000 [00:02<01:54, 43.17steps/s, loss=0.00331]
+2025-05-13 17:31:11,784 - INFO - Training:   1%|▏         | 69/5000 [00:02<01:53, 43.58steps/s, loss=0.00331]
+2025-05-13 17:31:11,887 - INFO - Training:   1%|▏         | 69/5000 [00:02<01:53, 43.58steps/s, loss=0.00224]
+2025-05-13 17:31:11,887 - INFO - Training:   2%|▏         | 76/5000 [00:02<01:37, 50.33steps/s, loss=0.00224]
+2025-05-13 17:31:11,999 - INFO - Training:   2%|▏         | 76/5000 [00:02<01:37, 50.33steps/s, loss=0.00224]
+2025-05-13 17:31:12,103 - INFO - Training:   2%|▏         | 81/5000 [00:02<01:37, 50.33steps/s, loss=0.00181]
+2025-05-13 17:31:12,104 - INFO - Training:   2%|▏         | 88/5000 [00:02<01:33, 52.63steps/s, loss=0.00181]
+2025-05-13 17:31:12,210 - INFO - Training:   2%|▏         | 88/5000 [00:02<01:33, 52.63steps/s, loss=0.00181]
+2025-05-13 17:31:12,210 - INFO - Training:   2%|▏         | 95/5000 [00:02<01:27, 55.78steps/s, loss=0.00181]
+2025-05-13 17:31:12,313 - INFO - Training:   2%|▏         | 95/5000 [00:02<01:27, 55.78steps/s, loss=0.00181]
+2025-05-13 17:31:12,419 - INFO - Training:   2%|▏         | 99/5000 [00:02<01:27, 55.78steps/s, loss=0.0014]
+2025-05-13 17:31:12,419 - INFO - Training:   2%|▏         | 106/5000 [00:02<01:29, 54.51steps/s, loss=0.0014]
+2025-05-13 17:31:12,554 - INFO - Training:   2%|▏         | 106/5000 [00:02<01:29, 54.51steps/s, loss=0.0014]
+2025-05-13 17:31:12,555 - INFO - Training:   2%|▏         | 113/5000 [00:02<01:30, 53.74steps/s, loss=0.0014]
+2025-05-13 17:31:12,659 - INFO - Training:   2%|▏         | 113/5000 [00:02<01:30, 53.74steps/s, loss=0.00127]
+2025-05-13 17:31:12,659 - INFO - Training:   2%|▏         | 120/5000 [00:03<01:25, 56.82steps/s, loss=0.00127]
+2025-05-13 17:31:12,763 - INFO - Training:   2%|▏         | 120/5000 [00:03<01:25, 56.82steps/s, loss=0.00127]
+2025-05-13 17:31:12,763 - INFO - Training:   3%|▎         | 127/5000 [00:03<01:22, 59.36steps/s, loss=0.00127]
+2025-05-13 17:31:12,868 - INFO - Training:   3%|▎         | 127/5000 [00:03<01:22, 59.36steps/s, loss=0.00127]
+2025-05-13 17:31:12,869 - INFO - Training:   3%|▎         | 134/5000 [00:03<01:19, 61.23steps/s, loss=0.00127]
+2025-05-13 17:31:12,973 - INFO - Training:   3%|▎         | 134/5000 [00:03<01:19, 61.23steps/s, loss=0.00116]
+2025-05-13 17:31:12,973 - INFO - Training:   3%|▎         | 141/5000 [00:03<01:17, 62.74steps/s, loss=0.00116]
+2025-05-13 17:31:13,078 - INFO - Training:   3%|▎         | 141/5000 [00:03<01:17, 62.74steps/s, loss=0.00116]
+2025-05-13 17:31:13,078 - INFO - Training:   3%|▎         | 148/5000 [00:03<01:16, 63.80steps/s, loss=0.00116]
+2025-05-13 17:31:13,185 - INFO - Training:   3%|▎         | 148/5000 [00:03<01:16, 63.80steps/s, loss=0.00112]
+2025-05-13 17:31:13,186 - INFO - Training:   3%|▎         | 155/5000 [00:03<01:15, 64.28steps/s, loss=0.00112]
+2025-05-13 17:31:13,294 - INFO - Training:   3%|▎         | 155/5000 [00:03<01:15, 64.28steps/s, loss=0.00112]
+2025-05-13 17:31:13,295 - INFO - Training:   3%|▎         | 162/5000 [00:03<01:15, 64.24steps/s, loss=0.00112]
+2025-05-13 17:31:13,423 - INFO - Training:   3%|▎         | 162/5000 [00:03<01:15, 64.24steps/s, loss=0.000982]
+2025-05-13 17:31:13,423 - INFO - Training:   3%|▎         | 171/5000 [00:03<01:12, 66.19steps/s, loss=0.000982]
+2025-05-13 17:31:13,528 - INFO - Training:   3%|▎         | 171/5000 [00:03<01:12, 66.19steps/s, loss=0.000982]
+2025-05-13 17:31:13,528 - INFO - Training:   4%|▎         | 178/5000 [00:03<01:12, 66.25steps/s, loss=0.000982]
+2025-05-13 17:31:13,665 - INFO - Training:   4%|▎         | 178/5000 [00:03<01:12, 66.25steps/s, loss=0.000929]
+2025-05-13 17:31:13,665 - INFO - Training:   4%|▍         | 188/5000 [00:04<01:10, 68.56steps/s, loss=0.000929]
+2025-05-13 17:31:13,771 - INFO - Training:   4%|▍         | 188/5000 [00:04<01:10, 68.56steps/s, loss=0.000929]
+2025-05-13 17:31:13,771 - INFO - Training:   4%|▍         | 195/5000 [00:04<01:10, 67.86steps/s, loss=0.000929]
+2025-05-13 17:31:13,909 - INFO - Training:   4%|▍         | 195/5000 [00:04<01:10, 67.86steps/s, loss=0.000858]
+2025-05-13 17:31:13,909 - INFO - Training:   4%|▍         | 205/5000 [00:04<01:09, 69.49steps/s, loss=0.000858]
+2025-05-13 17:31:14,015 - INFO - Training:   4%|▍         | 205/5000 [00:04<01:09, 69.49steps/s, loss=0.000858]
+2025-05-13 17:31:14,015 - INFO - Training:   4%|▍         | 212/5000 [00:04<01:09, 68.55steps/s, loss=0.000858]
+2025-05-13 17:31:14,153 - INFO - Training:   4%|▍         | 212/5000 [00:04<01:09, 68.55steps/s, loss=0.000843]
+2025-05-13 17:31:14,153 - INFO - Training:   4%|▍         | 222/5000 [00:04<01:08, 69.79steps/s, loss=0.000843]
+2025-05-13 17:31:14,260 - INFO - Training:   4%|▍         | 222/5000 [00:04<01:08, 69.79steps/s, loss=0.000843]
+2025-05-13 17:31:14,260 - INFO - Training:   5%|▍         | 229/5000 [00:04<01:09, 68.70steps/s, loss=0.000843]
+2025-05-13 17:31:14,398 - INFO - Training:   5%|▍         | 229/5000 [00:04<01:09, 68.70steps/s, loss=0.00081]
+2025-05-13 17:31:14,398 - INFO - Training:   5%|▍         | 239/5000 [00:04<01:08, 69.84steps/s, loss=0.00081]
+2025-05-13 17:31:14,506 - INFO - Training:   5%|▍         | 239/5000 [00:04<01:08, 69.84steps/s, loss=0.00081]
+2025-05-13 17:31:14,506 - INFO - Training:   5%|▍         | 246/5000 [00:04<01:09, 68.59steps/s, loss=0.00081]
+2025-05-13 17:31:14,645 - INFO - Training:   5%|▍         | 246/5000 [00:04<01:09, 68.59steps/s, loss=0.000793]
+2025-05-13 17:31:14,645 - INFO - Training:   5%|▌         | 256/5000 [00:05<01:08, 69.72steps/s, loss=0.000793]
+2025-05-13 17:31:14,752 - INFO - Training:   5%|▌         | 256/5000 [00:05<01:08, 69.72steps/s, loss=0.000793]
+2025-05-13 17:31:14,752 - INFO - Training:   5%|▌         | 264/5000 [00:05<01:06, 71.05steps/s, loss=0.000793]
+2025-05-13 17:31:14,870 - INFO - Training:   5%|▌         | 264/5000 [00:05<01:06, 71.05steps/s, loss=0.000729]
+2025-05-13 17:31:14,870 - INFO - Training:   5%|▌         | 273/5000 [00:05<01:05, 72.62steps/s, loss=0.000729]
+2025-05-13 17:31:14,970 - INFO - Training:   5%|▌         | 273/5000 [00:05<01:05, 72.62steps/s, loss=0.000702]
+2025-05-13 17:31:14,970 - INFO - Training:   6%|▌         | 282/5000 [00:05<01:01, 77.11steps/s, loss=0.000702]
+2025-05-13 17:31:15,078 - INFO - Training:   6%|▌         | 282/5000 [00:05<01:01, 77.11steps/s, loss=0.000702]
+2025-05-13 17:31:15,078 - INFO - Training:   6%|▌         | 290/5000 [00:05<01:01, 76.32steps/s, loss=0.000702]
+2025-05-13 17:31:15,179 - INFO - Training:   6%|▌         | 290/5000 [00:05<01:01, 76.32steps/s, loss=0.000609]
+2025-05-13 17:31:15,179 - INFO - Training:   6%|▌         | 299/5000 [00:05<00:58, 79.90steps/s, loss=0.000609]
+2025-05-13 17:31:15,287 - INFO - Training:   6%|▌         | 299/5000 [00:05<00:58, 79.90steps/s, loss=0.000609]
+2025-05-13 17:31:15,389 - INFO - Training:   6%|▌         | 307/5000 [00:05<00:58, 79.90steps/s, loss=0.000662]
+2025-05-13 17:31:15,389 - INFO - Training:   6%|▋         | 316/5000 [00:05<00:58, 80.41steps/s, loss=0.000662]
+2025-05-13 17:31:15,498 - INFO - Training:   6%|▋         | 316/5000 [00:05<00:58, 80.41steps/s, loss=0.000662]
+2025-05-13 17:31:15,600 - INFO - Training:   6%|▋         | 324/5000 [00:05<00:58, 80.41steps/s, loss=0.000598]
+2025-05-13 17:31:15,600 - INFO - Training:   7%|▋         | 333/5000 [00:06<00:58, 80.43steps/s, loss=0.000598]
+2025-05-13 17:31:15,710 - INFO - Training:   7%|▋         | 333/5000 [00:06<00:58, 80.43steps/s, loss=0.000598]
+2025-05-13 17:31:15,812 - INFO - Training:   7%|▋         | 341/5000 [00:06<00:57, 80.43steps/s, loss=0.000588]
+2025-05-13 17:31:15,812 - INFO - Training:   7%|▋         | 350/5000 [00:06<00:57, 80.31steps/s, loss=0.000588]
+2025-05-13 17:31:15,922 - INFO - Training:   7%|▋         | 350/5000 [00:06<00:57, 80.31steps/s, loss=0.000588]
+2025-05-13 17:31:16,023 - INFO - Training:   7%|▋         | 358/5000 [00:06<00:57, 80.31steps/s, loss=0.000561]
+2025-05-13 17:31:16,023 - INFO - Training:   7%|▋         | 367/5000 [00:06<00:57, 80.35steps/s, loss=0.000561]
+2025-05-13 17:31:16,132 - INFO - Training:   7%|▋         | 367/5000 [00:06<00:57, 80.35steps/s, loss=0.000561]
+2025-05-13 17:31:16,234 - INFO - Training:   8%|▊         | 375/5000 [00:06<00:57, 80.35steps/s, loss=0.000583]
+2025-05-13 17:31:16,235 - INFO - Training:   8%|▊         | 384/5000 [00:06<00:57, 80.41steps/s, loss=0.000583]
+2025-05-13 17:31:16,336 - INFO - Training:   8%|▊         | 384/5000 [00:06<00:57, 80.41steps/s, loss=0.000583]
+2025-05-13 17:31:16,442 - INFO - Training:   8%|▊         | 391/5000 [00:06<00:57, 80.41steps/s, loss=0.000559]
+2025-05-13 17:31:16,442 - INFO - Training:   8%|▊         | 400/5000 [00:06<00:57, 79.34steps/s, loss=0.000559]
+2025-05-13 17:31:16,544 - INFO - Training:   8%|▊         | 400/5000 [00:06<00:57, 79.34steps/s, loss=0.000559]
+2025-05-13 17:31:16,651 - INFO - Training:   8%|▊         | 407/5000 [00:06<00:57, 79.34steps/s, loss=0.000537]
+2025-05-13 17:31:16,651 - INFO - Training:   8%|▊         | 416/5000 [00:07<00:58, 78.56steps/s, loss=0.000537]
+2025-05-13 17:31:16,761 - INFO - Training:   8%|▊         | 416/5000 [00:07<00:58, 78.56steps/s, loss=0.000537]
+2025-05-13 17:31:16,762 - INFO - Training:   8%|▊         | 424/5000 [00:07<00:59, 77.35steps/s, loss=0.000537]
+2025-05-13 17:31:16,882 - INFO - Training:   8%|▊         | 424/5000 [00:07<00:59, 77.35steps/s, loss=0.000517]
+2025-05-13 17:31:16,882 - INFO - Training:   9%|▊         | 433/5000 [00:07<00:59, 76.72steps/s, loss=0.000517]
+2025-05-13 17:31:16,988 - INFO - Training:   9%|▊         | 433/5000 [00:07<00:59, 76.72steps/s, loss=0.000523]
+2025-05-13 17:31:16,988 - INFO - Training:   9%|▉         | 442/5000 [00:07<00:57, 78.59steps/s, loss=0.000523]
+2025-05-13 17:31:17,089 - INFO - Training:   9%|▉         | 442/5000 [00:07<00:57, 78.59steps/s, loss=0.000523]
+2025-05-13 17:31:17,195 - INFO - Training:   9%|▉         | 449/5000 [00:07<00:57, 78.59steps/s, loss=0.000508]
+2025-05-13 17:31:17,195 - INFO - Training:   9%|▉         | 458/5000 [00:07<00:58, 78.05steps/s, loss=0.000508]
+2025-05-13 17:31:17,304 - INFO - Training:   9%|▉         | 458/5000 [00:07<00:58, 78.05steps/s, loss=0.000508]
+2025-05-13 17:31:17,304 - INFO - Training:   9%|▉         | 466/5000 [00:07<00:58, 76.94steps/s, loss=0.000508]
+2025-05-13 17:31:17,409 - INFO - Training:   9%|▉         | 466/5000 [00:07<00:58, 76.94steps/s, loss=0.000494]
+2025-05-13 17:31:17,409 - INFO - Training:  10%|▉         | 475/5000 [00:07<00:57, 79.10steps/s, loss=0.000494]
+2025-05-13 17:31:17,510 - INFO - Training:  10%|▉         | 475/5000 [00:07<00:57, 79.10steps/s, loss=0.000494]
+2025-05-13 17:31:17,613 - INFO - Training:  10%|▉         | 482/5000 [00:07<00:57, 79.10steps/s, loss=0.000513]
+2025-05-13 17:31:17,613 - INFO - Training:  10%|▉         | 491/5000 [00:08<00:57, 78.78steps/s, loss=0.000513]
+2025-05-13 17:31:17,723 - INFO - Training:  10%|▉         | 491/5000 [00:08<00:57, 78.78steps/s, loss=0.000513]
+2025-05-13 17:31:17,723 - INFO - Training:  10%|▉         | 499/5000 [00:08<00:58, 77.46steps/s, loss=0.000513]
+2025-05-13 17:31:17,827 - INFO - Training:  10%|▉         | 499/5000 [00:08<00:58, 77.46steps/s, loss=0.00051]
+2025-05-13 17:31:17,827 - INFO - Training:  10%|█         | 508/5000 [00:08<00:56, 79.56steps/s, loss=0.00051]
+2025-05-13 17:31:17,938 - INFO - Training:  10%|█         | 508/5000 [00:08<00:56, 79.56steps/s, loss=0.00051]
+2025-05-13 17:31:18,044 - INFO - Training:  10%|█         | 516/5000 [00:08<00:56, 79.56steps/s, loss=0.000497]
+2025-05-13 17:31:18,044 - INFO - Training:  10%|█         | 525/5000 [00:08<00:56, 79.05steps/s, loss=0.000497]
+2025-05-13 17:31:18,148 - INFO - Training:  10%|█         | 525/5000 [00:08<00:56, 79.05steps/s, loss=0.000497]
+2025-05-13 17:31:18,254 - INFO - Training:  11%|█         | 532/5000 [00:08<00:56, 79.05steps/s, loss=0.00051]
+2025-05-13 17:31:18,254 - INFO - Training:  11%|█         | 541/5000 [00:08<00:57, 77.97steps/s, loss=0.00051]
+2025-05-13 17:31:18,356 - INFO - Training:  11%|█         | 541/5000 [00:08<00:57, 77.97steps/s, loss=0.00051]
+2025-05-13 17:31:18,463 - INFO - Training:  11%|█         | 548/5000 [00:08<00:57, 77.97steps/s, loss=0.000474]
+2025-05-13 17:31:18,463 - INFO - Training:  11%|█         | 557/5000 [00:08<00:57, 77.58steps/s, loss=0.000474]
+2025-05-13 17:31:18,564 - INFO - Training:  11%|█         | 557/5000 [00:08<00:57, 77.58steps/s, loss=0.000474]
+2025-05-13 17:31:18,670 - INFO - Training:  11%|█▏        | 564/5000 [00:08<00:57, 77.58steps/s, loss=0.00046]
+2025-05-13 17:31:18,670 - INFO - Training:  11%|█▏        | 573/5000 [00:09<00:57, 77.47steps/s, loss=0.00046]
+2025-05-13 17:31:18,770 - INFO - Training:  11%|█▏        | 573/5000 [00:09<00:57, 77.47steps/s, loss=0.00046]
+2025-05-13 17:31:18,876 - INFO - Training:  12%|█▏        | 580/5000 [00:09<00:57, 77.47steps/s, loss=0.000473]
+2025-05-13 17:31:18,876 - INFO - Training:  12%|█▏        | 589/5000 [00:09<00:56, 77.56steps/s, loss=0.000473]
+2025-05-13 17:31:18,986 - INFO - Training:  12%|█▏        | 589/5000 [00:09<00:56, 77.56steps/s, loss=0.000473]
+2025-05-13 17:31:18,986 - INFO - Training:  12%|█▏        | 597/5000 [00:09<00:57, 76.62steps/s, loss=0.000473]
+2025-05-13 17:31:19,089 - INFO - Training:  12%|█▏        | 597/5000 [00:09<00:57, 76.62steps/s, loss=0.000439]
+2025-05-13 17:31:19,089 - INFO - Training:  12%|█▏        | 606/5000 [00:09<00:55, 78.81steps/s, loss=0.000439]
+2025-05-13 17:31:19,198 - INFO - Training:  12%|█▏        | 606/5000 [00:09<00:55, 78.81steps/s, loss=0.000439]
+2025-05-13 17:31:19,198 - INFO - Training:  12%|█▏        | 614/5000 [00:09<00:56, 77.41steps/s, loss=0.000439]
+2025-05-13 17:31:19,301 - INFO - Training:  12%|█▏        | 614/5000 [00:09<00:56, 77.41steps/s, loss=0.000435]
+2025-05-13 17:31:19,302 - INFO - Training:  12%|█▏        | 623/5000 [00:09<00:54, 79.82steps/s, loss=0.000435]
+2025-05-13 17:31:19,411 - INFO - Training:  12%|█▏        | 623/5000 [00:09<00:54, 79.82steps/s, loss=0.000435]
+2025-05-13 17:31:19,515 - INFO - Training:  13%|█▎        | 631/5000 [00:09<00:54, 79.82steps/s, loss=0.00047]
+2025-05-13 17:31:19,515 - INFO - Training:  13%|█▎        | 640/5000 [00:09<00:54, 79.80steps/s, loss=0.00047]
+2025-05-13 17:31:19,624 - INFO - Training:  13%|█▎        | 640/5000 [00:09<00:54, 79.80steps/s, loss=0.00047]
+2025-05-13 17:31:19,731 - INFO - Training:  13%|█▎        | 647/5000 [00:10<00:54, 79.80steps/s, loss=0.000459]
+2025-05-13 17:31:19,731 - INFO - Training:  13%|█▎        | 655/5000 [00:10<00:57, 75.88steps/s, loss=0.000459]
+2025-05-13 17:31:19,836 - INFO - Training:  13%|█▎        | 655/5000 [00:10<00:57, 75.88steps/s, loss=0.000459]
+2025-05-13 17:31:19,836 - INFO - Training:  13%|█▎        | 663/5000 [00:10<00:57, 75.94steps/s, loss=0.000459]
+2025-05-13 17:31:19,962 - INFO - Training:  13%|█▎        | 663/5000 [00:10<00:57, 75.94steps/s, loss=0.00138]
+2025-05-13 17:31:19,962 - INFO - Training:  13%|█▎        | 673/5000 [00:10<00:56, 76.74steps/s, loss=0.00138]
+2025-05-13 17:31:20,070 - INFO - Training:  13%|█▎        | 673/5000 [00:10<00:56, 76.74steps/s, loss=0.00091]
+2025-05-13 17:31:20,070 - INFO - Training:  14%|█▎        | 683/5000 [00:10<00:53, 80.72steps/s, loss=0.00091]
+2025-05-13 17:31:20,174 - INFO - Training:  14%|█▎        | 683/5000 [00:10<00:53, 80.72steps/s, loss=0.00091]
+2025-05-13 17:31:20,282 - INFO - Training:  14%|█▍        | 691/5000 [00:10<00:53, 80.72steps/s, loss=0.00065]
+2025-05-13 17:31:20,282 - INFO - Training:  14%|█▍        | 701/5000 [00:10<00:52, 82.35steps/s, loss=0.00065]
+2025-05-13 17:31:20,387 - INFO - Training:  14%|█▍        | 701/5000 [00:10<00:52, 82.35steps/s, loss=0.00065]
+2025-05-13 17:31:20,496 - INFO - Training:  14%|█▍        | 709/5000 [00:10<00:52, 82.35steps/s, loss=0.000647]
+2025-05-13 17:31:20,496 - INFO - Training:  14%|█▍        | 719/5000 [00:10<00:51, 83.01steps/s, loss=0.000647]
+2025-05-13 17:31:20,601 - INFO - Training:  14%|█▍        | 719/5000 [00:10<00:51, 83.01steps/s, loss=0.000647]
+2025-05-13 17:31:20,727 - INFO - Training:  15%|█▍        | 727/5000 [00:11<00:51, 83.01steps/s, loss=0.000536]
+2025-05-13 17:31:20,728 - INFO - Training:  15%|█▍        | 737/5000 [00:11<00:52, 81.10steps/s, loss=0.000536]
+2025-05-13 17:31:20,836 - INFO - Training:  15%|█▍        | 737/5000 [00:11<00:52, 81.10steps/s, loss=0.000518]
+2025-05-13 17:31:20,836 - INFO - Training:  15%|█▍        | 747/5000 [00:11<00:51, 83.23steps/s, loss=0.000518]
+2025-05-13 17:31:20,942 - INFO - Training:  15%|█▍        | 747/5000 [00:11<00:51, 83.23steps/s, loss=0.000518]
+2025-05-13 17:31:21,050 - INFO - Training:  15%|█▌        | 755/5000 [00:11<00:51, 83.23steps/s, loss=0.000524]
+2025-05-13 17:31:21,050 - INFO - Training:  15%|█▌        | 765/5000 [00:11<00:50, 83.51steps/s, loss=0.000524]
+2025-05-13 17:31:21,156 - INFO - Training:  15%|█▌        | 765/5000 [00:11<00:50, 83.51steps/s, loss=0.000524]
+2025-05-13 17:31:21,265 - INFO - Training:  15%|█▌        | 773/5000 [00:11<00:50, 83.51steps/s, loss=0.000535]
+2025-05-13 17:31:21,265 - INFO - Training:  16%|█▌        | 783/5000 [00:11<00:50, 83.70steps/s, loss=0.000535]
+2025-05-13 17:31:21,370 - INFO - Training:  16%|█▌        | 783/5000 [00:11<00:50, 83.70steps/s, loss=0.000535]
+2025-05-13 17:31:21,497 - INFO - Training:  16%|█▌        | 791/5000 [00:11<00:50, 83.70steps/s, loss=0.0005]
+2025-05-13 17:31:21,497 - INFO - Training:  16%|█▌        | 801/5000 [00:11<00:51, 81.59steps/s, loss=0.0005]
+2025-05-13 17:31:21,605 - INFO - Training:  16%|█▌        | 801/5000 [00:11<00:51, 81.59steps/s, loss=0.000499]
+2025-05-13 17:31:21,605 - INFO - Training:  16%|█▌        | 811/5000 [00:12<00:50, 83.54steps/s, loss=0.000499]
+2025-05-13 17:31:21,711 - INFO - Training:  16%|█▌        | 811/5000 [00:12<00:50, 83.54steps/s, loss=0.000499]
+2025-05-13 17:31:21,819 - INFO - Training:  16%|█▋        | 819/5000 [00:12<00:50, 83.54steps/s, loss=0.00051]
+2025-05-13 17:31:21,820 - INFO - Training:  17%|█▋        | 829/5000 [00:12<00:49, 83.72steps/s, loss=0.00051]
+2025-05-13 17:31:21,925 - INFO - Training:  17%|█▋        | 829/5000 [00:12<00:49, 83.72steps/s, loss=0.00051]
+2025-05-13 17:31:22,034 - INFO - Training:  17%|█▋        | 837/5000 [00:12<00:49, 83.72steps/s, loss=0.00055]
+2025-05-13 17:31:22,034 - INFO - Training:  17%|█▋        | 847/5000 [00:12<00:49, 83.77steps/s, loss=0.00055]
+2025-05-13 17:31:22,142 - INFO - Training:  17%|█▋        | 847/5000 [00:12<00:49, 83.77steps/s, loss=0.00055]
+2025-05-13 17:31:22,272 - INFO - Training:  17%|█▋        | 855/5000 [00:12<00:49, 83.77steps/s, loss=0.000456]
+2025-05-13 17:31:22,272 - INFO - Training:  17%|█▋        | 865/5000 [00:12<00:51, 81.00steps/s, loss=0.000456]
+2025-05-13 17:31:22,374 - INFO - Training:  17%|█▋        | 865/5000 [00:12<00:51, 81.00steps/s, loss=0.00047]
+2025-05-13 17:31:22,374 - INFO - Training:  17%|█▋        | 874/5000 [00:12<00:50, 82.32steps/s, loss=0.00047]
+2025-05-13 17:31:22,480 - INFO - Training:  17%|█▋        | 874/5000 [00:12<00:50, 82.32steps/s, loss=0.00047]
+2025-05-13 17:31:22,590 - INFO - Training:  18%|█▊        | 882/5000 [00:12<00:50, 82.32steps/s, loss=0.000456]
+2025-05-13 17:31:22,590 - INFO - Training:  18%|█▊        | 892/5000 [00:13<00:49, 82.54steps/s, loss=0.000456]
+2025-05-13 17:31:22,699 - INFO - Training:  18%|█▊        | 892/5000 [00:13<00:49, 82.54steps/s, loss=0.000456]
+2025-05-13 17:31:22,802 - INFO - Training:  18%|█▊        | 900/5000 [00:13<00:49, 82.54steps/s, loss=0.000459]
+2025-05-13 17:31:22,802 - INFO - Training:  18%|█▊        | 909/5000 [00:13<00:49, 81.90steps/s, loss=0.000459]
+2025-05-13 17:31:22,909 - INFO - Training:  18%|█▊        | 909/5000 [00:13<00:49, 81.90steps/s, loss=0.000459]
+2025-05-13 17:31:23,019 - INFO - Training:  18%|█▊        | 917/5000 [00:13<00:49, 81.90steps/s, loss=0.00044]
+2025-05-13 17:31:23,019 - INFO - Training:  19%|█▊        | 927/5000 [00:13<00:49, 82.16steps/s, loss=0.00044]
+2025-05-13 17:31:23,126 - INFO - Training:  19%|█▊        | 927/5000 [00:13<00:49, 82.16steps/s, loss=0.00044]
+2025-05-13 17:31:23,226 - INFO - Training:  19%|█▊        | 935/5000 [00:13<00:49, 82.16steps/s, loss=0.000476]
+2025-05-13 17:31:23,226 - INFO - Training:  19%|█▉        | 944/5000 [00:13<00:49, 82.11steps/s, loss=0.000476]
+2025-05-13 17:31:23,334 - INFO - Training:  19%|█▉        | 944/5000 [00:13<00:49, 82.11steps/s, loss=0.000476]
+2025-05-13 17:31:23,452 - INFO - Training:  19%|█▉        | 952/5000 [00:13<00:49, 82.11steps/s, loss=0.000444]
+2025-05-13 17:31:23,452 - INFO - Training:  19%|█▉        | 961/5000 [00:13<00:50, 79.89steps/s, loss=0.000444]
+2025-05-13 17:31:23,552 - INFO - Training:  19%|█▉        | 961/5000 [00:13<00:50, 79.89steps/s, loss=0.000452]
+2025-05-13 17:31:23,553 - INFO - Training:  19%|█▉        | 970/5000 [00:13<00:49, 81.59steps/s, loss=0.000452]
+2025-05-13 17:31:23,660 - INFO - Training:  19%|█▉        | 970/5000 [00:13<00:49, 81.59steps/s, loss=0.000452]
+2025-05-13 17:31:23,760 - INFO - Training:  20%|█▉        | 978/5000 [00:14<00:49, 81.59steps/s, loss=0.000455]
+2025-05-13 17:31:23,760 - INFO - Training:  20%|█▉        | 987/5000 [00:14<00:49, 81.65steps/s, loss=0.000455]
+2025-05-13 17:31:23,868 - INFO - Training:  20%|█▉        | 987/5000 [00:14<00:49, 81.65steps/s, loss=0.000455]
+2025-05-13 17:31:23,968 - INFO - Training:  20%|█▉        | 995/5000 [00:14<00:49, 81.65steps/s, loss=0.000434]
+2025-05-13 17:31:23,968 - INFO - Training:  20%|██        | 1004/5000 [00:14<00:48, 81.72steps/s, loss=0.000434]
+2025-05-13 17:31:24,075 - INFO - Training:  20%|██        | 1004/5000 [00:14<00:48, 81.72steps/s, loss=0.000434]
+2025-05-13 17:31:24,176 - INFO - Training:  20%|██        | 1012/5000 [00:14<00:48, 81.72steps/s, loss=0.000422]
+2025-05-13 17:31:24,176 - INFO - Training:  20%|██        | 1021/5000 [00:14<00:48, 81.74steps/s, loss=0.000422]
+2025-05-13 17:31:24,284 - INFO - Training:  20%|██        | 1021/5000 [00:14<00:48, 81.74steps/s, loss=0.000422]
+2025-05-13 17:31:24,387 - INFO - Training:  21%|██        | 1029/5000 [00:14<00:48, 81.74steps/s, loss=0.000437]
+2025-05-13 17:31:24,388 - INFO - Training:  21%|██        | 1038/5000 [00:14<00:48, 81.29steps/s, loss=0.000437]
+2025-05-13 17:31:24,489 - INFO - Training:  21%|██        | 1038/5000 [00:14<00:48, 81.29steps/s, loss=0.000437]
+2025-05-13 17:31:24,592 - INFO - Training:  21%|██        | 1045/5000 [00:14<00:48, 81.29steps/s, loss=0.000401]
+2025-05-13 17:31:24,592 - INFO - Training:  21%|██        | 1054/5000 [00:15<00:49, 80.36steps/s, loss=0.000401]
+2025-05-13 17:31:24,703 - INFO - Training:  21%|██        | 1054/5000 [00:15<00:49, 80.36steps/s, loss=0.000401]
+2025-05-13 17:31:24,806 - INFO - Training:  21%|██        | 1062/5000 [00:15<00:49, 80.36steps/s, loss=0.000402]
+2025-05-13 17:31:24,807 - INFO - Training:  21%|██▏       | 1071/5000 [00:15<00:49, 80.03steps/s, loss=0.000402]
+2025-05-13 17:31:24,918 - INFO - Training:  21%|██▏       | 1071/5000 [00:15<00:49, 80.03steps/s, loss=0.000402]
+2025-05-13 17:31:25,019 - INFO - Training:  22%|██▏       | 1079/5000 [00:15<00:48, 80.03steps/s, loss=0.000413]
+2025-05-13 17:31:25,019 - INFO - Training:  22%|██▏       | 1088/5000 [00:15<00:48, 80.03steps/s, loss=0.000413]
+2025-05-13 17:31:25,128 - INFO - Training:  22%|██▏       | 1088/5000 [00:15<00:48, 80.03steps/s, loss=0.000413]
+2025-05-13 17:31:25,247 - INFO - Training:  22%|██▏       | 1096/5000 [00:15<00:48, 80.03steps/s, loss=0.000385]
+2025-05-13 17:31:25,247 - INFO - Training:  22%|██▏       | 1105/5000 [00:15<00:49, 78.30steps/s, loss=0.000385]
+2025-05-13 17:31:25,348 - INFO - Training:  22%|██▏       | 1105/5000 [00:15<00:49, 78.30steps/s, loss=0.00041]
+2025-05-13 17:31:25,348 - INFO - Training:  22%|██▏       | 1114/5000 [00:15<00:48, 80.08steps/s, loss=0.00041]
+2025-05-13 17:31:25,457 - INFO - Training:  22%|██▏       | 1114/5000 [00:15<00:48, 80.08steps/s, loss=0.00041]
+2025-05-13 17:31:25,559 - INFO - Training:  22%|██▏       | 1122/5000 [00:15<00:48, 80.08steps/s, loss=0.000394]
+2025-05-13 17:31:25,559 - INFO - Training:  23%|██▎       | 1131/5000 [00:15<00:48, 80.30steps/s, loss=0.000394]
+2025-05-13 17:31:25,667 - INFO - Training:  23%|██▎       | 1131/5000 [00:15<00:48, 80.30steps/s, loss=0.000394]
+2025-05-13 17:31:25,768 - INFO - Training:  23%|██▎       | 1139/5000 [00:16<00:48, 80.30steps/s, loss=0.000404]
+2025-05-13 17:31:25,768 - INFO - Training:  23%|██▎       | 1148/5000 [00:16<00:47, 80.54steps/s, loss=0.000404]
+2025-05-13 17:31:25,877 - INFO - Training:  23%|██▎       | 1148/5000 [00:16<00:47, 80.54steps/s, loss=0.000404]
+2025-05-13 17:31:25,978 - INFO - Training:  23%|██▎       | 1156/5000 [00:16<00:47, 80.54steps/s, loss=0.0004]
+2025-05-13 17:31:25,978 - INFO - Training:  23%|██▎       | 1165/5000 [00:16<00:47, 80.68steps/s, loss=0.0004]
+2025-05-13 17:31:26,091 - INFO - Training:  23%|██▎       | 1165/5000 [00:16<00:47, 80.68steps/s, loss=0.0004]
+2025-05-13 17:31:26,205 - INFO - Training:  23%|██▎       | 1173/5000 [00:16<00:47, 80.68steps/s, loss=0.000405]
+2025-05-13 17:31:26,206 - INFO - Training:  24%|██▎       | 1180/5000 [00:16<00:50, 75.90steps/s, loss=0.000405]
+2025-05-13 17:31:26,309 - INFO - Training:  24%|██▎       | 1180/5000 [00:16<00:50, 75.90steps/s, loss=0.000405]
+2025-05-13 17:31:26,416 - INFO - Training:  24%|██▎       | 1186/5000 [00:16<00:50, 75.90steps/s, loss=0.00167]
+2025-05-13 17:31:26,417 - INFO - Training:  24%|██▍       | 1196/5000 [00:16<00:50, 75.90steps/s, loss=0.00167]
+2025-05-13 17:31:26,523 - INFO - Training:  24%|██▍       | 1196/5000 [00:16<00:50, 75.90steps/s, loss=0.00167]
+2025-05-13 17:31:26,523 - INFO - Training:  24%|██▍       | 1204/5000 [00:16<00:50, 75.73steps/s, loss=0.00167]
+2025-05-13 17:31:26,628 - INFO - Training:  24%|██▍       | 1204/5000 [00:16<00:50, 75.73steps/s, loss=0.00112]
+2025-05-13 17:31:26,628 - INFO - Training:  24%|██▍       | 1214/5000 [00:17<00:47, 79.61steps/s, loss=0.00112]
+2025-05-13 17:31:26,731 - INFO - Training:  24%|██▍       | 1214/5000 [00:17<00:47, 79.61steps/s, loss=0.00112]
+2025-05-13 17:31:26,837 - INFO - Training:  24%|██▍       | 1222/5000 [00:17<00:47, 79.61steps/s, loss=0.000727]
+2025-05-13 17:31:26,837 - INFO - Training:  25%|██▍       | 1232/5000 [00:17<00:45, 82.01steps/s, loss=0.000727]
+2025-05-13 17:31:26,942 - INFO - Training:  25%|██▍       | 1232/5000 [00:17<00:45, 82.01steps/s, loss=0.000727]
+2025-05-13 17:31:27,058 - INFO - Training:  25%|██▍       | 1240/5000 [00:17<00:45, 82.01steps/s, loss=0.000543]
+2025-05-13 17:31:27,058 - INFO - Training:  25%|██▍       | 1249/5000 [00:17<00:46, 80.19steps/s, loss=0.000543]
+2025-05-13 17:31:27,165 - INFO - Training:  25%|██▍       | 1249/5000 [00:17<00:46, 80.19steps/s, loss=0.000509]
+2025-05-13 17:31:27,165 - INFO - Training:  25%|██▌       | 1259/5000 [00:17<00:45, 82.86steps/s, loss=0.000509]
+2025-05-13 17:31:27,269 - INFO - Training:  25%|██▌       | 1259/5000 [00:17<00:45, 82.86steps/s, loss=0.000509]
+2025-05-13 17:31:27,376 - INFO - Training:  25%|██▌       | 1267/5000 [00:17<00:45, 82.86steps/s, loss=0.000451]
+2025-05-13 17:31:27,376 - INFO - Training:  26%|██▌       | 1277/5000 [00:17<00:44, 83.72steps/s, loss=0.000451]
+2025-05-13 17:31:27,480 - INFO - Training:  26%|██▌       | 1277/5000 [00:17<00:44, 83.72steps/s, loss=0.000451]
+2025-05-13 17:31:27,589 - INFO - Training:  26%|██▌       | 1285/5000 [00:17<00:44, 83.72steps/s, loss=0.00042]
+2025-05-13 17:31:27,589 - INFO - Training:  26%|██▌       | 1295/5000 [00:18<00:44, 83.98steps/s, loss=0.00042]
+2025-05-13 17:31:27,695 - INFO - Training:  26%|██▌       | 1295/5000 [00:18<00:44, 83.98steps/s, loss=0.00042]
+2025-05-13 17:31:27,822 - INFO - Training:  26%|██▌       | 1303/5000 [00:18<00:44, 83.98steps/s, loss=0.000432]
+2025-05-13 17:31:27,822 - INFO - Training:  26%|██▋       | 1313/5000 [00:18<00:45, 81.68steps/s, loss=0.000432]
+2025-05-13 17:31:27,923 - INFO - Training:  26%|██▋       | 1313/5000 [00:18<00:45, 81.68steps/s, loss=0.000437]
+2025-05-13 17:31:27,923 - INFO - Training:  26%|██▋       | 1322/5000 [00:18<00:44, 83.00steps/s, loss=0.000437]
+2025-05-13 17:31:28,028 - INFO - Training:  26%|██▋       | 1322/5000 [00:18<00:44, 83.00steps/s, loss=0.000437]
+2025-05-13 17:31:28,137 - INFO - Training:  27%|██▋       | 1330/5000 [00:18<00:44, 83.00steps/s, loss=0.000437]
+2025-05-13 17:31:28,137 - INFO - Training:  27%|██▋       | 1340/5000 [00:18<00:43, 83.33steps/s, loss=0.000437]
+2025-05-13 17:31:28,249 - INFO - Training:  27%|██▋       | 1340/5000 [00:18<00:43, 83.33steps/s, loss=0.000437]
+2025-05-13 17:31:28,361 - INFO - Training:  27%|██▋       | 1348/5000 [00:18<00:43, 83.33steps/s, loss=0.000412]
+2025-05-13 17:31:28,361 - INFO - Training:  27%|██▋       | 1356/5000 [00:18<00:45, 79.29steps/s, loss=0.000412]
+2025-05-13 17:31:28,467 - INFO - Training:  27%|██▋       | 1356/5000 [00:18<00:45, 79.29steps/s, loss=0.000412]
+2025-05-13 17:31:28,578 - INFO - Training:  27%|██▋       | 1363/5000 [00:18<00:45, 79.29steps/s, loss=0.00114]
+2025-05-13 17:31:28,578 - INFO - Training:  27%|██▋       | 1373/5000 [00:19<00:45, 78.98steps/s, loss=0.00114]
+2025-05-13 17:31:28,688 - INFO - Training:  27%|██▋       | 1373/5000 [00:19<00:45, 78.98steps/s, loss=0.00114]
+2025-05-13 17:31:28,688 - INFO - Training:  28%|██▊       | 1381/5000 [00:19<00:46, 77.79steps/s, loss=0.00114]
+2025-05-13 17:31:28,796 - INFO - Training:  28%|██▊       | 1381/5000 [00:19<00:46, 77.79steps/s, loss=0.000849]
+2025-05-13 17:31:28,797 - INFO - Training:  28%|██▊       | 1391/5000 [00:19<00:44, 80.79steps/s, loss=0.000849]
+2025-05-13 17:31:28,901 - INFO - Training:  28%|██▊       | 1391/5000 [00:19<00:44, 80.79steps/s, loss=0.000849]
+2025-05-13 17:31:29,025 - INFO - Training:  28%|██▊       | 1399/5000 [00:19<00:44, 80.79steps/s, loss=0.000597]
+2025-05-13 17:31:29,026 - INFO - Training:  28%|██▊       | 1409/5000 [00:19<00:44, 79.94steps/s, loss=0.000597]
+2025-05-13 17:31:29,133 - INFO - Training:  28%|██▊       | 1409/5000 [00:19<00:44, 79.94steps/s, loss=0.000506]
+2025-05-13 17:31:29,133 - INFO - Training:  28%|██▊       | 1419/5000 [00:19<00:43, 82.64steps/s, loss=0.000506]
+2025-05-13 17:31:29,241 - INFO - Training:  28%|██▊       | 1419/5000 [00:19<00:43, 82.64steps/s, loss=0.000506]
+2025-05-13 17:31:29,352 - INFO - Training:  29%|██▊       | 1427/5000 [00:19<00:43, 82.64steps/s, loss=0.000493]
+2025-05-13 17:31:29,352 - INFO - Training:  29%|██▊       | 1437/5000 [00:19<00:43, 82.48steps/s, loss=0.000493]
+2025-05-13 17:31:29,462 - INFO - Training:  29%|██▊       | 1437/5000 [00:19<00:43, 82.48steps/s, loss=0.000493]
+2025-05-13 17:31:29,563 - INFO - Training:  29%|██▉       | 1445/5000 [00:19<00:43, 82.48steps/s, loss=0.000451]
+2025-05-13 17:31:29,563 - INFO - Training:  29%|██▉       | 1454/5000 [00:19<00:43, 81.91steps/s, loss=0.000451]
+2025-05-13 17:31:29,670 - INFO - Training:  29%|██▉       | 1454/5000 [00:19<00:43, 81.91steps/s, loss=0.000451]
+2025-05-13 17:31:29,779 - INFO - Training:  29%|██▉       | 1462/5000 [00:20<00:43, 81.91steps/s, loss=0.000451]
+2025-05-13 17:31:29,779 - INFO - Training:  29%|██▉       | 1472/5000 [00:20<00:42, 82.27steps/s, loss=0.000451]
+2025-05-13 17:31:29,885 - INFO - Training:  29%|██▉       | 1472/5000 [00:20<00:42, 82.27steps/s, loss=0.000451]
+2025-05-13 17:31:30,002 - INFO - Training:  30%|██▉       | 1480/5000 [00:20<00:42, 82.27steps/s, loss=0.000489]
+2025-05-13 17:31:30,002 - INFO - Training:  30%|██▉       | 1489/5000 [00:20<00:43, 80.39steps/s, loss=0.000489]
+2025-05-13 17:31:30,111 - INFO - Training:  30%|██▉       | 1489/5000 [00:20<00:43, 80.39steps/s, loss=0.000529]
+2025-05-13 17:31:30,111 - INFO - Training:  30%|██▉       | 1499/5000 [00:20<00:42, 82.44steps/s, loss=0.000529]
+2025-05-13 17:31:30,221 - INFO - Training:  30%|██▉       | 1499/5000 [00:20<00:42, 82.44steps/s, loss=0.000529]
+2025-05-13 17:31:30,323 - INFO - Training:  30%|███       | 1507/5000 [00:20<00:42, 82.44steps/s, loss=0.000458]
+2025-05-13 17:31:30,323 - INFO - Training:  30%|███       | 1516/5000 [00:20<00:42, 81.73steps/s, loss=0.000458]
+2025-05-13 17:31:30,430 - INFO - Training:  30%|███       | 1516/5000 [00:20<00:42, 81.73steps/s, loss=0.000458]
+2025-05-13 17:31:30,530 - INFO - Training:  30%|███       | 1524/5000 [00:20<00:42, 81.73steps/s, loss=0.000413]
+2025-05-13 17:31:30,531 - INFO - Training:  31%|███       | 1533/5000 [00:20<00:42, 81.75steps/s, loss=0.000413]
+2025-05-13 17:31:30,637 - INFO - Training:  31%|███       | 1533/5000 [00:20<00:42, 81.75steps/s, loss=0.000413]
+2025-05-13 17:31:30,746 - INFO - Training:  31%|███       | 1541/5000 [00:21<00:42, 81.75steps/s, loss=0.0004]
+2025-05-13 17:31:30,746 - INFO - Training:  31%|███       | 1551/5000 [00:21<00:41, 82.31steps/s, loss=0.0004]
+2025-05-13 17:31:30,850 - INFO - Training:  31%|███       | 1551/5000 [00:21<00:41, 82.31steps/s, loss=0.0004]
+2025-05-13 17:31:30,976 - INFO - Training:  31%|███       | 1559/5000 [00:21<00:41, 82.31steps/s, loss=0.000392]
+2025-05-13 17:31:30,977 - INFO - Training:  31%|███▏      | 1569/5000 [00:21<00:42, 80.90steps/s, loss=0.000392]
+2025-05-13 17:31:31,085 - INFO - Training:  31%|███▏      | 1569/5000 [00:21<00:42, 80.90steps/s, loss=0.000415]
+2025-05-13 17:31:31,085 - INFO - Training:  32%|███▏      | 1579/5000 [00:21<00:41, 82.95steps/s, loss=0.000415]
+2025-05-13 17:31:31,191 - INFO - Training:  32%|███▏      | 1579/5000 [00:21<00:41, 82.95steps/s, loss=0.000415]
+2025-05-13 17:31:31,301 - INFO - Training:  32%|███▏      | 1587/5000 [00:21<00:41, 82.95steps/s, loss=0.000432]
+2025-05-13 17:31:31,301 - INFO - Training:  32%|███▏      | 1597/5000 [00:21<00:40, 83.07steps/s, loss=0.000432]
+2025-05-13 17:31:31,410 - INFO - Training:  32%|███▏      | 1597/5000 [00:21<00:40, 83.07steps/s, loss=0.000432]
+2025-05-13 17:31:31,513 - INFO - Training:  32%|███▏      | 1605/5000 [00:21<00:40, 83.07steps/s, loss=0.000419]
+2025-05-13 17:31:31,513 - INFO - Training:  32%|███▏      | 1614/5000 [00:21<00:41, 82.13steps/s, loss=0.000419]
+2025-05-13 17:31:31,622 - INFO - Training:  32%|███▏      | 1614/5000 [00:21<00:41, 82.13steps/s, loss=0.000419]
+2025-05-13 17:31:31,731 - INFO - Training:  32%|███▏      | 1622/5000 [00:22<00:41, 82.13steps/s, loss=0.000401]
+2025-05-13 17:31:31,732 - INFO - Training:  33%|███▎      | 1632/5000 [00:22<00:40, 82.24steps/s, loss=0.000401]
+2025-05-13 17:31:31,838 - INFO - Training:  33%|███▎      | 1632/5000 [00:22<00:40, 82.24steps/s, loss=0.000401]
+2025-05-13 17:31:31,960 - INFO - Training:  33%|███▎      | 1640/5000 [00:22<00:40, 82.24steps/s, loss=0.000401]
+2025-05-13 17:31:31,960 - INFO - Training:  33%|███▎      | 1649/5000 [00:22<00:42, 79.72steps/s, loss=0.000401]
+2025-05-13 17:31:32,062 - INFO - Training:  33%|███▎      | 1649/5000 [00:22<00:42, 79.72steps/s, loss=0.000376]
+2025-05-13 17:31:32,062 - INFO - Training:  33%|███▎      | 1658/5000 [00:22<00:41, 81.18steps/s, loss=0.000376]
+2025-05-13 17:31:32,171 - INFO - Training:  33%|███▎      | 1658/5000 [00:22<00:41, 81.18steps/s, loss=0.000376]
+2025-05-13 17:31:32,282 - INFO - Training:  33%|███▎      | 1666/5000 [00:22<00:41, 81.18steps/s, loss=0.000375]
+2025-05-13 17:31:32,282 - INFO - Training:  34%|███▎      | 1676/5000 [00:22<00:40, 81.36steps/s, loss=0.000375]
+2025-05-13 17:31:32,389 - INFO - Training:  34%|███▎      | 1676/5000 [00:22<00:40, 81.36steps/s, loss=0.000375]
+2025-05-13 17:31:32,493 - INFO - Training:  34%|███▎      | 1684/5000 [00:22<00:40, 81.36steps/s, loss=0.000404]
+2025-05-13 17:31:32,493 - INFO - Training:  34%|███▍      | 1693/5000 [00:22<00:40, 81.10steps/s, loss=0.000404]
+2025-05-13 17:31:32,604 - INFO - Training:  34%|███▍      | 1693/5000 [00:22<00:40, 81.10steps/s, loss=0.000404]
+2025-05-13 17:31:32,707 - INFO - Training:  34%|███▍      | 1701/5000 [00:23<00:40, 81.10steps/s, loss=0.000371]
+2025-05-13 17:31:32,707 - INFO - Training:  34%|███▍      | 1710/5000 [00:23<00:40, 80.54steps/s, loss=0.000371]
+2025-05-13 17:31:32,818 - INFO - Training:  34%|███▍      | 1710/5000 [00:23<00:40, 80.54steps/s, loss=0.000371]
+2025-05-13 17:31:32,920 - INFO - Training:  34%|███▍      | 1718/5000 [00:23<00:40, 80.54steps/s, loss=0.000376]
+2025-05-13 17:31:32,920 - INFO - Training:  35%|███▍      | 1727/5000 [00:23<00:40, 80.32steps/s, loss=0.000376]
+2025-05-13 17:31:33,028 - INFO - Training:  35%|███▍      | 1727/5000 [00:23<00:40, 80.32steps/s, loss=0.000376]
+2025-05-13 17:31:33,131 - INFO - Training:  35%|███▍      | 1735/5000 [00:23<00:40, 80.32steps/s, loss=0.000378]
+2025-05-13 17:31:33,131 - INFO - Training:  35%|███▍      | 1744/5000 [00:23<00:40, 80.48steps/s, loss=0.000378]
+2025-05-13 17:31:33,240 - INFO - Training:  35%|███▍      | 1744/5000 [00:23<00:40, 80.48steps/s, loss=0.000378]
+2025-05-13 17:31:33,364 - INFO - Training:  35%|███▌      | 1752/5000 [00:23<00:40, 80.48steps/s, loss=0.000403]
+2025-05-13 17:31:33,364 - INFO - Training:  35%|███▌      | 1761/5000 [00:23<00:41, 77.94steps/s, loss=0.000403]
+2025-05-13 17:31:33,470 - INFO - Training:  35%|███▌      | 1761/5000 [00:23<00:41, 77.94steps/s, loss=0.000377]
+2025-05-13 17:31:33,470 - INFO - Training:  35%|███▌      | 1770/5000 [00:23<00:40, 79.23steps/s, loss=0.000377]
+2025-05-13 17:31:33,570 - INFO - Training:  35%|███▌      | 1770/5000 [00:23<00:40, 79.23steps/s, loss=0.000377]
+2025-05-13 17:31:33,673 - INFO - Training:  36%|███▌      | 1777/5000 [00:23<00:40, 79.23steps/s, loss=0.000358]
+2025-05-13 17:31:33,673 - INFO - Training:  36%|███▌      | 1786/5000 [00:24<00:40, 79.06steps/s, loss=0.000358]
+2025-05-13 17:31:33,784 - INFO - Training:  36%|███▌      | 1786/5000 [00:24<00:40, 79.06steps/s, loss=0.000358]
+2025-05-13 17:31:33,784 - INFO - Training:  36%|███▌      | 1794/5000 [00:24<00:41, 77.70steps/s, loss=0.000358]
+2025-05-13 17:31:33,885 - INFO - Training:  36%|███▌      | 1794/5000 [00:24<00:41, 77.70steps/s, loss=0.000382]
+2025-05-13 17:31:33,885 - INFO - Training:  36%|███▌      | 1803/5000 [00:24<00:39, 80.05steps/s, loss=0.000382]
+2025-05-13 17:31:33,994 - INFO - Training:  36%|███▌      | 1803/5000 [00:24<00:39, 80.05steps/s, loss=0.000382]
+2025-05-13 17:31:34,096 - INFO - Training:  36%|███▌      | 1811/5000 [00:24<00:39, 80.05steps/s, loss=0.000372]
+2025-05-13 17:31:34,096 - INFO - Training:  36%|███▋      | 1820/5000 [00:24<00:39, 80.25steps/s, loss=0.000372]
+2025-05-13 17:31:34,206 - INFO - Training:  36%|███▋      | 1820/5000 [00:24<00:39, 80.25steps/s, loss=0.000372]
+2025-05-13 17:31:34,307 - INFO - Training:  37%|███▋      | 1828/5000 [00:24<00:39, 80.25steps/s, loss=0.000341]
+2025-05-13 17:31:34,307 - INFO - Training:  37%|███▋      | 1837/5000 [00:24<00:39, 80.34steps/s, loss=0.000341]
+2025-05-13 17:31:34,416 - INFO - Training:  37%|███▋      | 1837/5000 [00:24<00:39, 80.34steps/s, loss=0.000341]
+2025-05-13 17:31:34,518 - INFO - Training:  37%|███▋      | 1845/5000 [00:24<00:39, 80.34steps/s, loss=0.000352]
+2025-05-13 17:31:34,518 - INFO - Training:  37%|███▋      | 1854/5000 [00:24<00:39, 80.47steps/s, loss=0.000352]
+2025-05-13 17:31:34,625 - INFO - Training:  37%|███▋      | 1854/5000 [00:24<00:39, 80.47steps/s, loss=0.000352]
+2025-05-13 17:31:34,726 - INFO - Training:  37%|███▋      | 1862/5000 [00:25<00:38, 80.47steps/s, loss=0.000343]
+2025-05-13 17:31:34,727 - INFO - Training:  37%|███▋      | 1871/5000 [00:25<00:38, 80.77steps/s, loss=0.000343]
+2025-05-13 17:31:34,835 - INFO - Training:  37%|███▋      | 1871/5000 [00:25<00:38, 80.77steps/s, loss=0.000343]
+2025-05-13 17:31:34,940 - INFO - Training:  38%|███▊      | 1879/5000 [00:25<00:38, 80.77steps/s, loss=0.000372]
+2025-05-13 17:31:34,940 - INFO - Training:  38%|███▊      | 1888/5000 [00:25<00:38, 80.46steps/s, loss=0.000372]
+2025-05-13 17:31:35,041 - INFO - Training:  38%|███▊      | 1888/5000 [00:25<00:38, 80.46steps/s, loss=0.000372]
+2025-05-13 17:31:35,145 - INFO - Training:  38%|███▊      | 1895/5000 [00:25<00:38, 80.46steps/s, loss=0.000384]
+2025-05-13 17:31:35,145 - INFO - Training:  38%|███▊      | 1904/5000 [00:25<00:38, 79.69steps/s, loss=0.000384]
+2025-05-13 17:31:35,253 - INFO - Training:  38%|███▊      | 1904/5000 [00:25<00:38, 79.69steps/s, loss=0.000384]
+2025-05-13 17:31:35,253 - INFO - Training:  38%|███▊      | 1912/5000 [00:25<00:39, 78.57steps/s, loss=0.000384]
+2025-05-13 17:31:35,372 - INFO - Training:  38%|███▊      | 1912/5000 [00:25<00:39, 78.57steps/s, loss=0.000329]
+2025-05-13 17:31:35,372 - INFO - Training:  38%|███▊      | 1921/5000 [00:25<00:39, 77.90steps/s, loss=0.000329]
+2025-05-13 17:31:35,474 - INFO - Training:  38%|███▊      | 1921/5000 [00:25<00:39, 77.90steps/s, loss=0.000367]
+2025-05-13 17:31:35,474 - INFO - Training:  39%|███▊      | 1930/5000 [00:25<00:38, 80.19steps/s, loss=0.000367]
+2025-05-13 17:31:35,582 - INFO - Training:  39%|███▊      | 1930/5000 [00:25<00:38, 80.19steps/s, loss=0.000367]
+2025-05-13 17:31:35,686 - INFO - Training:  39%|███▉      | 1938/5000 [00:26<00:38, 80.19steps/s, loss=0.000357]
+2025-05-13 17:31:35,686 - INFO - Training:  39%|███▉      | 1947/5000 [00:26<00:38, 80.16steps/s, loss=0.000357]
+2025-05-13 17:31:35,798 - INFO - Training:  39%|███▉      | 1947/5000 [00:26<00:38, 80.16steps/s, loss=0.000357]
+2025-05-13 17:31:35,901 - INFO - Training:  39%|███▉      | 1955/5000 [00:26<00:37, 80.16steps/s, loss=0.000315]
+2025-05-13 17:31:35,901 - INFO - Training:  39%|███▉      | 1964/5000 [00:26<00:38, 79.83steps/s, loss=0.000315]
+2025-05-13 17:31:36,009 - INFO - Training:  39%|███▉      | 1964/5000 [00:26<00:38, 79.83steps/s, loss=0.000315]
+2025-05-13 17:31:36,111 - INFO - Training:  39%|███▉      | 1972/5000 [00:26<00:37, 79.83steps/s, loss=0.000352]
+2025-05-13 17:31:36,111 - INFO - Training:  40%|███▉      | 1981/5000 [00:26<00:37, 80.23steps/s, loss=0.000352]
+2025-05-13 17:31:36,218 - INFO - Training:  40%|███▉      | 1981/5000 [00:26<00:37, 80.23steps/s, loss=0.000352]
+2025-05-13 17:31:36,319 - INFO - Training:  40%|███▉      | 1989/5000 [00:26<00:37, 80.23steps/s, loss=0.000355]
+2025-05-13 17:31:36,319 - INFO - Training:  40%|███▉      | 1998/5000 [00:26<00:37, 80.65steps/s, loss=0.000355]
+2025-05-13 17:31:36,419 - INFO - Training:  40%|███▉      | 1998/5000 [00:26<00:37, 80.65steps/s, loss=0.000355]
+2025-05-13 17:31:36,523 - INFO - Training:  40%|████      | 2005/5000 [00:26<00:37, 80.65steps/s, loss=0.000328]
+2025-05-13 17:31:36,524 - INFO - Training:  40%|████      | 2014/5000 [00:26<00:37, 79.93steps/s, loss=0.000328]
+2025-05-13 17:31:36,634 - INFO - Training:  40%|████      | 2014/5000 [00:26<00:37, 79.93steps/s, loss=0.000328]
+2025-05-13 17:31:36,735 - INFO - Training:  40%|████      | 2022/5000 [00:27<00:37, 79.93steps/s, loss=0.000334]
+2025-05-13 17:31:36,735 - INFO - Training:  41%|████      | 2031/5000 [00:27<00:37, 80.10steps/s, loss=0.000334]
+2025-05-13 17:31:36,843 - INFO - Training:  41%|████      | 2031/5000 [00:27<00:37, 80.10steps/s, loss=0.000334]
+2025-05-13 17:31:36,944 - INFO - Training:  41%|████      | 2039/5000 [00:27<00:36, 80.10steps/s, loss=0.000371]
+2025-05-13 17:31:36,944 - INFO - Training:  41%|████      | 2048/5000 [00:27<00:36, 80.47steps/s, loss=0.000371]
+2025-05-13 17:31:37,054 - INFO - Training:  41%|████      | 2048/5000 [00:27<00:36, 80.47steps/s, loss=0.000371]
+2025-05-13 17:31:37,177 - INFO - Training:  41%|████      | 2056/5000 [00:27<00:36, 80.47steps/s, loss=0.00033]
+2025-05-13 17:31:37,177 - INFO - Training:  41%|████▏     | 2065/5000 [00:27<00:37, 77.98steps/s, loss=0.00033]
+2025-05-13 17:31:37,280 - INFO - Training:  41%|████▏     | 2065/5000 [00:27<00:37, 77.98steps/s, loss=0.00031]
+2025-05-13 17:31:37,280 - INFO - Training:  41%|████▏     | 2074/5000 [00:27<00:36, 79.54steps/s, loss=0.00031]
+2025-05-13 17:31:37,390 - INFO - Training:  41%|████▏     | 2074/5000 [00:27<00:36, 79.54steps/s, loss=0.00031]
+2025-05-13 17:31:37,494 - INFO - Training:  42%|████▏     | 2082/5000 [00:27<00:36, 79.54steps/s, loss=0.000319]
+2025-05-13 17:31:37,495 - INFO - Training:  42%|████▏     | 2091/5000 [00:27<00:36, 79.52steps/s, loss=0.000319]
+2025-05-13 17:31:37,595 - INFO - Training:  42%|████▏     | 2091/5000 [00:27<00:36, 79.52steps/s, loss=0.000319]
+2025-05-13 17:31:37,697 - INFO - Training:  42%|████▏     | 2098/5000 [00:28<00:36, 79.52steps/s, loss=0.000333]
+2025-05-13 17:31:37,697 - INFO - Training:  42%|████▏     | 2107/5000 [00:28<00:36, 79.29steps/s, loss=0.000333]
+2025-05-13 17:31:37,808 - INFO - Training:  42%|████▏     | 2107/5000 [00:28<00:36, 79.29steps/s, loss=0.000333]
+2025-05-13 17:31:37,808 - INFO - Training:  42%|████▏     | 2115/5000 [00:28<00:37, 77.96steps/s, loss=0.000333]
+2025-05-13 17:31:37,912 - INFO - Training:  42%|████▏     | 2115/5000 [00:28<00:37, 77.96steps/s, loss=0.00028]
+2025-05-13 17:31:37,912 - INFO - Training:  42%|████▏     | 2124/5000 [00:28<00:36, 79.64steps/s, loss=0.00028]
+2025-05-13 17:31:38,012 - INFO - Training:  42%|████▏     | 2124/5000 [00:28<00:36, 79.64steps/s, loss=0.00028]
+2025-05-13 17:31:38,117 - INFO - Training:  43%|████▎     | 2131/5000 [00:28<00:36, 79.64steps/s, loss=0.000317]
+2025-05-13 17:31:38,117 - INFO - Training:  43%|████▎     | 2140/5000 [00:28<00:36, 79.06steps/s, loss=0.000317]
+2025-05-13 17:31:38,219 - INFO - Training:  43%|████▎     | 2140/5000 [00:28<00:36, 79.06steps/s, loss=0.000317]
+2025-05-13 17:31:38,323 - INFO - Training:  43%|████▎     | 2147/5000 [00:28<00:36, 79.06steps/s, loss=0.000345]
+2025-05-13 17:31:38,323 - INFO - Training:  43%|████▎     | 2156/5000 [00:28<00:36, 78.65steps/s, loss=0.000345]
+2025-05-13 17:31:38,433 - INFO - Training:  43%|████▎     | 2156/5000 [00:28<00:36, 78.65steps/s, loss=0.000345]
+2025-05-13 17:31:38,433 - INFO - Training:  43%|████▎     | 2164/5000 [00:28<00:36, 77.35steps/s, loss=0.000345]
+2025-05-13 17:31:38,537 - INFO - Training:  43%|████▎     | 2164/5000 [00:28<00:36, 77.35steps/s, loss=0.000339]
+2025-05-13 17:31:38,537 - INFO - Training:  43%|████▎     | 2173/5000 [00:28<00:35, 79.45steps/s, loss=0.000339]
+2025-05-13 17:31:38,646 - INFO - Training:  43%|████▎     | 2173/5000 [00:28<00:35, 79.45steps/s, loss=0.000339]
+2025-05-13 17:31:38,748 - INFO - Training:  44%|████▎     | 2181/5000 [00:29<00:35, 79.45steps/s, loss=0.000314]
+2025-05-13 17:31:38,748 - INFO - Training:  44%|████▍     | 2190/5000 [00:29<00:35, 79.86steps/s, loss=0.000314]
+2025-05-13 17:31:38,859 - INFO - Training:  44%|████▍     | 2190/5000 [00:29<00:35, 79.86steps/s, loss=0.000314]
+2025-05-13 17:31:38,964 - INFO - Training:  44%|████▍     | 2198/5000 [00:29<00:35, 79.86steps/s, loss=0.000328]
+2025-05-13 17:31:38,964 - INFO - Training:  44%|████▍     | 2207/5000 [00:29<00:35, 79.48steps/s, loss=0.000328]
+2025-05-13 17:31:39,065 - INFO - Training:  44%|████▍     | 2207/5000 [00:29<00:35, 79.48steps/s, loss=0.000328]
+2025-05-13 17:31:39,169 - INFO - Training:  44%|████▍     | 2214/5000 [00:29<00:35, 79.48steps/s, loss=0.000325]
+2025-05-13 17:31:39,169 - INFO - Training:  44%|████▍     | 2223/5000 [00:29<00:35, 78.97steps/s, loss=0.000325]
+2025-05-13 17:31:39,280 - INFO - Training:  44%|████▍     | 2223/5000 [00:29<00:35, 78.97steps/s, loss=0.000325]
+2025-05-13 17:31:39,280 - INFO - Training:  45%|████▍     | 2231/5000 [00:29<00:35, 77.49steps/s, loss=0.000325]
+2025-05-13 17:31:39,384 - INFO - Training:  45%|████▍     | 2231/5000 [00:29<00:35, 77.49steps/s, loss=0.000331]
+2025-05-13 17:31:39,384 - INFO - Training:  45%|████▍     | 2240/5000 [00:29<00:34, 79.50steps/s, loss=0.000331]
+2025-05-13 17:31:39,485 - INFO - Training:  45%|████▍     | 2240/5000 [00:29<00:34, 79.50steps/s, loss=0.000331]
+2025-05-13 17:31:39,587 - INFO - Training:  45%|████▍     | 2247/5000 [00:29<00:34, 79.50steps/s, loss=0.000347]
+2025-05-13 17:31:39,588 - INFO - Training:  45%|████▌     | 2256/5000 [00:30<00:34, 79.19steps/s, loss=0.000347]
+2025-05-13 17:31:39,698 - INFO - Training:  45%|████▌     | 2256/5000 [00:30<00:34, 79.19steps/s, loss=0.000347]
+2025-05-13 17:31:39,698 - INFO - Training:  45%|████▌     | 2264/5000 [00:30<00:35, 77.69steps/s, loss=0.000347]
+2025-05-13 17:31:39,820 - INFO - Training:  45%|████▌     | 2264/5000 [00:30<00:35, 77.69steps/s, loss=0.000321]
+2025-05-13 17:31:39,821 - INFO - Training:  45%|████▌     | 2273/5000 [00:30<00:35, 76.54steps/s, loss=0.000321]
+2025-05-13 17:31:39,922 - INFO - Training:  45%|████▌     | 2273/5000 [00:30<00:35, 76.54steps/s, loss=0.000332]
+2025-05-13 17:31:39,923 - INFO - Training:  46%|████▌     | 2282/5000 [00:30<00:34, 79.29steps/s, loss=0.000332]
+2025-05-13 17:31:40,031 - INFO - Training:  46%|████▌     | 2282/5000 [00:30<00:34, 79.29steps/s, loss=0.000332]
+2025-05-13 17:31:40,031 - INFO - Training:  46%|████▌     | 2290/5000 [00:30<00:34, 77.78steps/s, loss=0.000332]
+2025-05-13 17:31:40,133 - INFO - Training:  46%|████▌     | 2290/5000 [00:30<00:34, 77.78steps/s, loss=0.000345]
+2025-05-13 17:31:40,133 - INFO - Training:  46%|████▌     | 2299/5000 [00:30<00:33, 80.58steps/s, loss=0.000345]
+2025-05-13 17:31:40,233 - INFO - Training:  46%|████▌     | 2299/5000 [00:30<00:33, 80.58steps/s, loss=0.000345]
+2025-05-13 17:31:40,340 - INFO - Training:  46%|████▌     | 2306/5000 [00:30<00:33, 80.58steps/s, loss=0.000337]
+2025-05-13 17:31:40,340 - INFO - Training:  46%|████▋     | 2315/5000 [00:30<00:33, 79.19steps/s, loss=0.000337]
+2025-05-13 17:31:40,442 - INFO - Training:  46%|████▋     | 2315/5000 [00:30<00:33, 79.19steps/s, loss=0.000337]
+2025-05-13 17:31:40,547 - INFO - Training:  46%|████▋     | 2322/5000 [00:30<00:33, 79.19steps/s, loss=0.000334]
+2025-05-13 17:31:40,547 - INFO - Training:  47%|████▋     | 2331/5000 [00:30<00:33, 78.53steps/s, loss=0.000334]
+2025-05-13 17:31:40,656 - INFO - Training:  47%|████▋     | 2331/5000 [00:30<00:33, 78.53steps/s, loss=0.000334]
+2025-05-13 17:31:40,656 - INFO - Training:  47%|████▋     | 2339/5000 [00:31<00:34, 77.26steps/s, loss=0.000334]
+2025-05-13 17:31:40,762 - INFO - Training:  47%|████▋     | 2339/5000 [00:31<00:34, 77.26steps/s, loss=0.000324]
+2025-05-13 17:31:40,762 - INFO - Training:  47%|████▋     | 2348/5000 [00:31<00:33, 79.04steps/s, loss=0.000324]
+2025-05-13 17:31:40,874 - INFO - Training:  47%|████▋     | 2348/5000 [00:31<00:33, 79.04steps/s, loss=0.000324]
+2025-05-13 17:31:40,874 - INFO - Training:  47%|████▋     | 2356/5000 [00:31<00:34, 77.08steps/s, loss=0.000324]
+2025-05-13 17:31:40,981 - INFO - Training:  47%|████▋     | 2356/5000 [00:31<00:34, 77.08steps/s, loss=0.000303]
+2025-05-13 17:31:40,981 - INFO - Training:  47%|████▋     | 2365/5000 [00:31<00:33, 78.91steps/s, loss=0.000303]
+2025-05-13 17:31:41,082 - INFO - Training:  47%|████▋     | 2365/5000 [00:31<00:33, 78.91steps/s, loss=0.000303]
+2025-05-13 17:31:41,185 - INFO - Training:  47%|████▋     | 2372/5000 [00:31<00:33, 78.91steps/s, loss=0.00032]
+2025-05-13 17:31:41,185 - INFO - Training:  48%|████▊     | 2381/5000 [00:31<00:33, 78.79steps/s, loss=0.00032]
+2025-05-13 17:31:41,294 - INFO - Training:  48%|████▊     | 2381/5000 [00:31<00:33, 78.79steps/s, loss=0.00032]
+2025-05-13 17:31:41,294 - INFO - Training:  48%|████▊     | 2389/5000 [00:31<00:33, 77.47steps/s, loss=0.00032]
+2025-05-13 17:31:41,400 - INFO - Training:  48%|████▊     | 2389/5000 [00:31<00:33, 77.47steps/s, loss=0.00035]
+2025-05-13 17:31:41,400 - INFO - Training:  48%|████▊     | 2398/5000 [00:31<00:32, 79.37steps/s, loss=0.00035]
+2025-05-13 17:31:41,510 - INFO - Training:  48%|████▊     | 2398/5000 [00:31<00:32, 79.37steps/s, loss=0.00035]
+2025-05-13 17:31:41,510 - INFO - Training:  48%|████▊     | 2406/5000 [00:31<00:33, 77.58steps/s, loss=0.00035]
+2025-05-13 17:31:41,613 - INFO - Training:  48%|████▊     | 2406/5000 [00:31<00:33, 77.58steps/s, loss=0.000323]
+2025-05-13 17:31:41,613 - INFO - Training:  48%|████▊     | 2415/5000 [00:32<00:32, 80.12steps/s, loss=0.000323]
+2025-05-13 17:31:41,718 - INFO - Training:  48%|████▊     | 2415/5000 [00:32<00:32, 80.12steps/s, loss=0.000323]
+2025-05-13 17:31:41,824 - INFO - Training:  48%|████▊     | 2422/5000 [00:32<00:32, 80.12steps/s, loss=0.000335]
+2025-05-13 17:31:41,824 - INFO - Training:  49%|████▊     | 2431/5000 [00:32<00:32, 78.20steps/s, loss=0.000335]
+2025-05-13 17:31:41,928 - INFO - Training:  49%|████▊     | 2431/5000 [00:32<00:32, 78.20steps/s, loss=0.000335]
+2025-05-13 17:31:42,031 - INFO - Training:  49%|████▉     | 2438/5000 [00:32<00:32, 78.20steps/s, loss=0.000325]
+2025-05-13 17:31:42,031 - INFO - Training:  49%|████▉     | 2447/5000 [00:32<00:32, 77.92steps/s, loss=0.000325]
+2025-05-13 17:31:42,139 - INFO - Training:  49%|████▉     | 2447/5000 [00:32<00:32, 77.92steps/s, loss=0.000325]
+2025-05-13 17:31:42,139 - INFO - Training:  49%|████▉     | 2455/5000 [00:32<00:33, 76.97steps/s, loss=0.000325]
+2025-05-13 17:31:42,241 - INFO - Training:  49%|████▉     | 2455/5000 [00:32<00:33, 76.97steps/s, loss=0.000312]
+2025-05-13 17:31:42,242 - INFO - Training:  49%|████▉     | 2464/5000 [00:32<00:31, 79.53steps/s, loss=0.000312]
+2025-05-13 17:31:42,350 - INFO - Training:  49%|████▉     | 2464/5000 [00:32<00:31, 79.53steps/s, loss=0.000312]
+2025-05-13 17:31:42,470 - INFO - Training:  49%|████▉     | 2472/5000 [00:32<00:31, 79.53steps/s, loss=0.000313]
+2025-05-13 17:31:42,470 - INFO - Training:  50%|████▉     | 2481/5000 [00:32<00:32, 77.34steps/s, loss=0.000313]
+2025-05-13 17:31:42,571 - INFO - Training:  50%|████▉     | 2481/5000 [00:32<00:32, 77.34steps/s, loss=0.000309]
+2025-05-13 17:31:42,571 - INFO - Training:  50%|████▉     | 2490/5000 [00:32<00:31, 79.82steps/s, loss=0.000309]
+2025-05-13 17:31:42,680 - INFO - Training:  50%|████▉     | 2490/5000 [00:32<00:31, 79.82steps/s, loss=0.000309]
+2025-05-13 17:31:42,781 - INFO - Training:  50%|████▉     | 2498/5000 [00:33<00:31, 79.82steps/s, loss=0.000304]
+2025-05-13 17:31:42,782 - INFO - Training:  50%|█████     | 2507/5000 [00:33<00:31, 80.22steps/s, loss=0.000304]
+2025-05-13 17:31:42,889 - INFO - Training:  50%|█████     | 2507/5000 [00:33<00:31, 80.22steps/s, loss=0.000304]
+2025-05-13 17:31:42,991 - INFO - Training:  50%|█████     | 2515/5000 [00:33<00:30, 80.22steps/s, loss=0.000308]
+2025-05-13 17:31:42,991 - INFO - Training:  50%|█████     | 2524/5000 [00:33<00:30, 80.56steps/s, loss=0.000308]
+2025-05-13 17:31:43,099 - INFO - Training:  50%|█████     | 2524/5000 [00:33<00:30, 80.56steps/s, loss=0.000308]
+2025-05-13 17:31:43,200 - INFO - Training:  51%|█████     | 2532/5000 [00:33<00:30, 80.56steps/s, loss=0.000327]
+2025-05-13 17:31:43,200 - INFO - Training:  51%|█████     | 2541/5000 [00:33<00:30, 80.79steps/s, loss=0.000327]
+2025-05-13 17:31:43,308 - INFO - Training:  51%|█████     | 2541/5000 [00:33<00:30, 80.79steps/s, loss=0.000327]
+2025-05-13 17:31:43,413 - INFO - Training:  51%|█████     | 2549/5000 [00:33<00:30, 80.79steps/s, loss=0.000299]
+2025-05-13 17:31:43,413 - INFO - Training:  51%|█████     | 2558/5000 [00:33<00:30, 80.50steps/s, loss=0.000299]
+2025-05-13 17:31:43,516 - INFO - Training:  51%|█████     | 2558/5000 [00:33<00:30, 80.50steps/s, loss=0.000299]
+2025-05-13 17:31:43,624 - INFO - Training:  51%|█████▏    | 2565/5000 [00:33<00:30, 80.50steps/s, loss=0.000319]
+2025-05-13 17:31:43,624 - INFO - Training:  51%|█████▏    | 2574/5000 [00:34<00:30, 79.07steps/s, loss=0.000319]
+2025-05-13 17:31:43,727 - INFO - Training:  51%|█████▏    | 2574/5000 [00:34<00:30, 79.07steps/s, loss=0.000319]
+2025-05-13 17:31:43,835 - INFO - Training:  52%|█████▏    | 2581/5000 [00:34<00:30, 79.07steps/s, loss=0.000286]
+2025-05-13 17:31:43,835 - INFO - Training:  52%|█████▏    | 2590/5000 [00:34<00:30, 78.16steps/s, loss=0.000286]
+2025-05-13 17:31:43,938 - INFO - Training:  52%|█████▏    | 2590/5000 [00:34<00:30, 78.16steps/s, loss=0.000286]
+2025-05-13 17:31:44,046 - INFO - Training:  52%|█████▏    | 2597/5000 [00:34<00:30, 78.16steps/s, loss=0.000322]
+2025-05-13 17:31:44,046 - INFO - Training:  52%|█████▏    | 2606/5000 [00:34<00:30, 77.24steps/s, loss=0.000322]
+2025-05-13 17:31:44,149 - INFO - Training:  52%|█████▏    | 2606/5000 [00:34<00:30, 77.24steps/s, loss=0.000322]
+2025-05-13 17:31:44,258 - INFO - Training:  52%|█████▏    | 2613/5000 [00:34<00:30, 77.24steps/s, loss=0.000307]
+2025-05-13 17:31:44,258 - INFO - Training:  52%|█████▏    | 2622/5000 [00:34<00:30, 76.76steps/s, loss=0.000307]
+2025-05-13 17:31:44,360 - INFO - Training:  52%|█████▏    | 2622/5000 [00:34<00:30, 76.76steps/s, loss=0.000307]
+2025-05-13 17:31:44,465 - INFO - Training:  53%|█████▎    | 2629/5000 [00:34<00:30, 76.76steps/s, loss=0.00029]
+2025-05-13 17:31:44,466 - INFO - Training:  53%|█████▎    | 2638/5000 [00:34<00:30, 76.86steps/s, loss=0.00029]
+2025-05-13 17:31:44,568 - INFO - Training:  53%|█████▎    | 2638/5000 [00:34<00:30, 76.86steps/s, loss=0.00029]
+2025-05-13 17:31:44,676 - INFO - Training:  53%|█████▎    | 2645/5000 [00:34<00:30, 76.86steps/s, loss=0.000298]
+2025-05-13 17:31:44,676 - INFO - Training:  53%|█████▎    | 2654/5000 [00:35<00:30, 76.54steps/s, loss=0.000298]
+2025-05-13 17:31:44,778 - INFO - Training:  53%|█████▎    | 2654/5000 [00:35<00:30, 76.54steps/s, loss=0.000298]
+2025-05-13 17:31:44,887 - INFO - Training:  53%|█████▎    | 2661/5000 [00:35<00:30, 76.54steps/s, loss=0.00031]
+2025-05-13 17:31:44,887 - INFO - Training:  53%|█████▎    | 2670/5000 [00:35<00:30, 76.41steps/s, loss=0.00031]
+2025-05-13 17:31:44,989 - INFO - Training:  53%|█████▎    | 2670/5000 [00:35<00:30, 76.41steps/s, loss=0.00031]
+2025-05-13 17:31:45,092 - INFO - Training:  54%|█████▎    | 2677/5000 [00:35<00:30, 76.41steps/s, loss=0.000281]
+2025-05-13 17:31:45,092 - INFO - Training:  54%|█████▎    | 2686/5000 [00:35<00:30, 76.84steps/s, loss=0.000281]
+2025-05-13 17:31:45,201 - INFO - Training:  54%|█████▎    | 2686/5000 [00:35<00:30, 76.84steps/s, loss=0.000281]
+2025-05-13 17:31:45,201 - INFO - Training:  54%|█████▍    | 2694/5000 [00:35<00:30, 76.24steps/s, loss=0.000281]
+2025-05-13 17:31:45,301 - INFO - Training:  54%|█████▍    | 2694/5000 [00:35<00:30, 76.24steps/s, loss=0.000317]
+2025-05-13 17:31:45,302 - INFO - Training:  54%|█████▍    | 2703/5000 [00:35<00:29, 78.81steps/s, loss=0.000317]
+2025-05-13 17:31:45,410 - INFO - Training:  54%|█████▍    | 2703/5000 [00:35<00:29, 78.81steps/s, loss=0.000317]
+2025-05-13 17:31:45,410 - INFO - Training:  54%|█████▍    | 2711/5000 [00:35<00:29, 77.71steps/s, loss=0.000317]
+2025-05-13 17:31:45,511 - INFO - Training:  54%|█████▍    | 2711/5000 [00:35<00:29, 77.71steps/s, loss=0.000311]
+2025-05-13 17:31:45,511 - INFO - Training:  54%|█████▍    | 2720/5000 [00:35<00:28, 80.35steps/s, loss=0.000311]
+2025-05-13 17:31:45,620 - INFO - Training:  54%|█████▍    | 2720/5000 [00:35<00:28, 80.35steps/s, loss=0.000311]
+2025-05-13 17:31:45,739 - INFO - Training:  55%|█████▍    | 2728/5000 [00:36<00:28, 80.35steps/s, loss=0.00031]
+2025-05-13 17:31:45,739 - INFO - Training:  55%|█████▍    | 2737/5000 [00:36<00:29, 77.77steps/s, loss=0.00031]
+2025-05-13 17:31:45,840 - INFO - Training:  55%|█████▍    | 2737/5000 [00:36<00:29, 77.77steps/s, loss=0.000327]
+2025-05-13 17:31:45,840 - INFO - Training:  55%|█████▍    | 2746/5000 [00:36<00:28, 80.25steps/s, loss=0.000327]
+2025-05-13 17:31:45,948 - INFO - Training:  55%|█████▍    | 2746/5000 [00:36<00:28, 80.25steps/s, loss=0.000327]
+2025-05-13 17:31:46,049 - INFO - Training:  55%|█████▌    | 2754/5000 [00:36<00:27, 80.25steps/s, loss=0.000281]
+2025-05-13 17:31:46,049 - INFO - Training:  55%|█████▌    | 2763/5000 [00:36<00:27, 80.73steps/s, loss=0.000281]
+2025-05-13 17:31:46,158 - INFO - Training:  55%|█████▌    | 2763/5000 [00:36<00:27, 80.73steps/s, loss=0.000281]
+2025-05-13 17:31:46,258 - INFO - Training:  55%|█████▌    | 2771/5000 [00:36<00:27, 80.73steps/s, loss=0.000324]
+2025-05-13 17:31:46,258 - INFO - Training:  56%|█████▌    | 2780/5000 [00:36<00:27, 80.86steps/s, loss=0.000324]
+2025-05-13 17:31:46,366 - INFO - Training:  56%|█████▌    | 2780/5000 [00:36<00:27, 80.86steps/s, loss=0.000324]
+2025-05-13 17:31:46,467 - INFO - Training:  56%|█████▌    | 2788/5000 [00:36<00:27, 80.86steps/s, loss=0.000295]
+2025-05-13 17:31:46,467 - INFO - Training:  56%|█████▌    | 2797/5000 [00:36<00:27, 81.07steps/s, loss=0.000295]
+2025-05-13 17:31:46,575 - INFO - Training:  56%|█████▌    | 2797/5000 [00:36<00:27, 81.07steps/s, loss=0.000295]
+2025-05-13 17:31:46,678 - INFO - Training:  56%|█████▌    | 2805/5000 [00:37<00:27, 81.07steps/s, loss=0.000297]
+2025-05-13 17:31:46,678 - INFO - Training:  56%|█████▋    | 2814/5000 [00:37<00:27, 80.93steps/s, loss=0.000297]
+2025-05-13 17:31:46,778 - INFO - Training:  56%|█████▋    | 2814/5000 [00:37<00:27, 80.93steps/s, loss=0.000297]
+2025-05-13 17:31:46,884 - INFO - Training:  56%|█████▋    | 2821/5000 [00:37<00:26, 80.93steps/s, loss=0.00029]
+2025-05-13 17:31:46,884 - INFO - Training:  57%|█████▋    | 2829/5000 [00:37<00:27, 78.32steps/s, loss=0.00029]
+2025-05-13 17:31:46,993 - INFO - Training:  57%|█████▋    | 2829/5000 [00:37<00:27, 78.32steps/s, loss=0.00029]
+2025-05-13 17:31:46,993 - INFO - Training:  57%|█████▋    | 2837/5000 [00:37<00:27, 77.39steps/s, loss=0.00029]
+2025-05-13 17:31:47,098 - INFO - Training:  57%|█████▋    | 2837/5000 [00:37<00:27, 77.39steps/s, loss=0.000767]
+2025-05-13 17:31:47,098 - INFO - Training:  57%|█████▋    | 2847/5000 [00:37<00:26, 81.11steps/s, loss=0.000767]
+2025-05-13 17:31:47,201 - INFO - Training:  57%|█████▋    | 2847/5000 [00:37<00:26, 81.11steps/s, loss=0.000767]
+2025-05-13 17:31:47,323 - INFO - Training:  57%|█████▋    | 2855/5000 [00:37<00:26, 81.11steps/s, loss=0.000499]
+2025-05-13 17:31:47,323 - INFO - Training:  57%|█████▋    | 2865/5000 [00:37<00:26, 80.68steps/s, loss=0.000499]
+2025-05-13 17:31:47,428 - INFO - Training:  57%|█████▋    | 2865/5000 [00:37<00:26, 80.68steps/s, loss=0.000309]
+2025-05-13 17:31:47,428 - INFO - Training:  57%|█████▊    | 2875/5000 [00:37<00:25, 83.68steps/s, loss=0.000309]
+2025-05-13 17:31:47,531 - INFO - Training:  57%|█████▊    | 2875/5000 [00:37<00:25, 83.68steps/s, loss=0.000309]
+2025-05-13 17:31:47,638 - INFO - Training:  58%|█████▊    | 2883/5000 [00:37<00:25, 83.68steps/s, loss=0.000299]
+2025-05-13 17:31:47,638 - INFO - Training:  58%|█████▊    | 2893/5000 [00:38<00:24, 84.47steps/s, loss=0.000299]
+2025-05-13 17:31:47,742 - INFO - Training:  58%|█████▊    | 2893/5000 [00:38<00:24, 84.47steps/s, loss=0.000299]
+2025-05-13 17:31:47,848 - INFO - Training:  58%|█████▊    | 2901/5000 [00:38<00:24, 84.47steps/s, loss=0.000308]
+2025-05-13 17:31:47,848 - INFO - Training:  58%|█████▊    | 2911/5000 [00:38<00:24, 84.94steps/s, loss=0.000308]
+2025-05-13 17:31:47,952 - INFO - Training:  58%|█████▊    | 2911/5000 [00:38<00:24, 84.94steps/s, loss=0.000308]
+2025-05-13 17:31:48,077 - INFO - Training:  58%|█████▊    | 2919/5000 [00:38<00:24, 84.94steps/s, loss=0.000334]
+2025-05-13 17:31:48,077 - INFO - Training:  59%|█████▊    | 2929/5000 [00:38<00:25, 82.73steps/s, loss=0.000334]
+2025-05-13 17:31:48,184 - INFO - Training:  59%|█████▊    | 2929/5000 [00:38<00:25, 82.73steps/s, loss=0.000324]
+2025-05-13 17:31:48,184 - INFO - Training:  59%|█████▉    | 2939/5000 [00:38<00:24, 84.67steps/s, loss=0.000324]
+2025-05-13 17:31:48,288 - INFO - Training:  59%|█████▉    | 2939/5000 [00:38<00:24, 84.67steps/s, loss=0.000324]
+2025-05-13 17:31:48,395 - INFO - Training:  59%|█████▉    | 2947/5000 [00:38<00:24, 84.67steps/s, loss=0.000299]
+2025-05-13 17:31:48,395 - INFO - Training:  59%|█████▉    | 2957/5000 [00:38<00:24, 84.93steps/s, loss=0.000299]
+2025-05-13 17:31:48,500 - INFO - Training:  59%|█████▉    | 2957/5000 [00:38<00:24, 84.93steps/s, loss=0.000299]
+2025-05-13 17:31:48,608 - INFO - Training:  59%|█████▉    | 2965/5000 [00:38<00:23, 84.93steps/s, loss=0.000315]
+2025-05-13 17:31:48,609 - INFO - Training:  60%|█████▉    | 2975/5000 [00:39<00:23, 84.72steps/s, loss=0.000315]
+2025-05-13 17:31:48,715 - INFO - Training:  60%|█████▉    | 2975/5000 [00:39<00:23, 84.72steps/s, loss=0.000315]
+2025-05-13 17:31:48,841 - INFO - Training:  60%|█████▉    | 2983/5000 [00:39<00:23, 84.72steps/s, loss=0.000286]
+2025-05-13 17:31:48,841 - INFO - Training:  60%|█████▉    | 2993/5000 [00:39<00:24, 82.16steps/s, loss=0.000286]
+2025-05-13 17:31:48,951 - INFO - Training:  60%|█████▉    | 2993/5000 [00:39<00:24, 82.16steps/s, loss=0.000304]
+2025-05-13 17:31:48,951 - INFO - Training:  60%|██████    | 3003/5000 [00:39<00:23, 83.83steps/s, loss=0.000304]
+2025-05-13 17:31:49,057 - INFO - Training:  60%|██████    | 3003/5000 [00:39<00:23, 83.83steps/s, loss=0.000304]
+2025-05-13 17:31:49,167 - INFO - Training:  60%|██████    | 3011/5000 [00:39<00:23, 83.83steps/s, loss=0.000295]
+2025-05-13 17:31:49,167 - INFO - Training:  60%|██████    | 3021/5000 [00:39<00:23, 83.66steps/s, loss=0.000295]
+2025-05-13 17:31:49,277 - INFO - Training:  60%|██████    | 3021/5000 [00:39<00:23, 83.66steps/s, loss=0.000295]
+2025-05-13 17:31:49,378 - INFO - Training:  61%|██████    | 3029/5000 [00:39<00:23, 83.66steps/s, loss=0.000296]
+2025-05-13 17:31:49,378 - INFO - Training:  61%|██████    | 3036/5000 [00:39<00:24, 79.62steps/s, loss=0.000296]
+2025-05-13 17:31:49,478 - INFO - Training:  61%|██████    | 3036/5000 [00:39<00:24, 79.62steps/s, loss=0.000296]
+2025-05-13 17:31:49,580 - INFO - Training:  61%|██████    | 3043/5000 [00:39<00:24, 79.62steps/s, loss=0.00233]
+2025-05-13 17:31:49,580 - INFO - Training:  61%|██████    | 3053/5000 [00:40<00:24, 81.03steps/s, loss=0.00233]
+2025-05-13 17:31:49,689 - INFO - Training:  61%|██████    | 3053/5000 [00:40<00:24, 81.03steps/s, loss=0.00233]
+2025-05-13 17:31:49,689 - INFO - Training:  61%|██████    | 3062/5000 [00:40<00:23, 81.25steps/s, loss=0.00233]
+2025-05-13 17:31:49,790 - INFO - Training:  61%|██████    | 3062/5000 [00:40<00:23, 81.25steps/s, loss=0.000615]
+2025-05-13 17:31:49,790 - INFO - Training:  61%|██████▏   | 3072/5000 [00:40<00:22, 84.92steps/s, loss=0.000615]
+2025-05-13 17:31:49,894 - INFO - Training:  61%|██████▏   | 3072/5000 [00:40<00:22, 84.92steps/s, loss=0.000615]
+2025-05-13 17:31:50,012 - INFO - Training:  62%|██████▏   | 3080/5000 [00:40<00:22, 84.92steps/s, loss=0.000408]
+2025-05-13 17:31:50,012 - INFO - Training:  62%|██████▏   | 3089/5000 [00:40<00:23, 81.64steps/s, loss=0.000408]
+2025-05-13 17:31:50,116 - INFO - Training:  62%|██████▏   | 3089/5000 [00:40<00:23, 81.64steps/s, loss=0.00174]
+2025-05-13 17:31:50,116 - INFO - Training:  62%|██████▏   | 3099/5000 [00:40<00:22, 84.76steps/s, loss=0.00174]
+2025-05-13 17:31:50,217 - INFO - Training:  62%|██████▏   | 3099/5000 [00:40<00:22, 84.76steps/s, loss=0.00174]
+2025-05-13 17:31:50,320 - INFO - Training:  62%|██████▏   | 3107/5000 [00:40<00:22, 84.76steps/s, loss=0.00107]
+2025-05-13 17:31:50,320 - INFO - Training:  62%|██████▏   | 3117/5000 [00:40<00:21, 85.96steps/s, loss=0.00107]
+2025-05-13 17:31:50,421 - INFO - Training:  62%|██████▏   | 3117/5000 [00:40<00:21, 85.96steps/s, loss=0.00107]
+2025-05-13 17:31:50,523 - INFO - Training:  62%|██████▎   | 3125/5000 [00:40<00:21, 85.96steps/s, loss=0.00061]
+2025-05-13 17:31:50,523 - INFO - Training:  63%|██████▎   | 3135/5000 [00:40<00:21, 86.82steps/s, loss=0.00061]
+2025-05-13 17:31:50,626 - INFO - Training:  63%|██████▎   | 3135/5000 [00:40<00:21, 86.82steps/s, loss=0.00061]
+2025-05-13 17:31:50,746 - INFO - Training:  63%|██████▎   | 3143/5000 [00:41<00:21, 86.82steps/s, loss=0.000441]
+2025-05-13 17:31:50,746 - INFO - Training:  63%|██████▎   | 3153/5000 [00:41<00:21, 84.71steps/s, loss=0.000441]
+2025-05-13 17:31:50,849 - INFO - Training:  63%|██████▎   | 3153/5000 [00:41<00:21, 84.71steps/s, loss=0.000421]
+2025-05-13 17:31:50,849 - INFO - Training:  63%|██████▎   | 3163/5000 [00:41<00:21, 87.04steps/s, loss=0.000421]
+2025-05-13 17:31:50,950 - INFO - Training:  63%|██████▎   | 3163/5000 [00:41<00:21, 87.04steps/s, loss=0.000421]
+2025-05-13 17:31:51,055 - INFO - Training:  63%|██████▎   | 3171/5000 [00:41<00:21, 87.04steps/s, loss=0.000384]
+2025-05-13 17:31:51,055 - INFO - Training:  64%|██████▎   | 3180/5000 [00:41<00:21, 85.42steps/s, loss=0.000384]
+2025-05-13 17:31:51,162 - INFO - Training:  64%|██████▎   | 3180/5000 [00:41<00:21, 85.42steps/s, loss=0.000384]
+2025-05-13 17:31:51,265 - INFO - Training:  64%|██████▎   | 3187/5000 [00:41<00:21, 85.42steps/s, loss=0.00301]
+2025-05-13 17:31:51,265 - INFO - Training:  64%|██████▍   | 3197/5000 [00:41<00:21, 83.99steps/s, loss=0.00301]
+2025-05-13 17:31:51,375 - INFO - Training:  64%|██████▍   | 3197/5000 [00:41<00:21, 83.99steps/s, loss=0.00301]
+2025-05-13 17:31:51,375 - INFO - Training:  64%|██████▍   | 3206/5000 [00:41<00:21, 83.59steps/s, loss=0.00301]
+2025-05-13 17:31:51,478 - INFO - Training:  64%|██████▍   | 3206/5000 [00:41<00:21, 83.59steps/s, loss=0.00189]
+2025-05-13 17:31:51,478 - INFO - Training:  64%|██████▍   | 3216/5000 [00:41<00:20, 86.42steps/s, loss=0.00189]
+2025-05-13 17:31:51,579 - INFO - Training:  64%|██████▍   | 3216/5000 [00:41<00:20, 86.42steps/s, loss=0.00189]
+2025-05-13 17:31:51,690 - INFO - Training:  64%|██████▍   | 3224/5000 [00:42<00:20, 86.42steps/s, loss=0.000845]
+2025-05-13 17:31:51,690 - INFO - Training:  65%|██████▍   | 3233/5000 [00:42<00:21, 84.00steps/s, loss=0.000845]
+2025-05-13 17:31:51,792 - INFO - Training:  65%|██████▍   | 3233/5000 [00:42<00:21, 84.00steps/s, loss=0.000591]
+2025-05-13 17:31:51,792 - INFO - Training:  65%|██████▍   | 3243/5000 [00:42<00:20, 86.98steps/s, loss=0.000591]
+2025-05-13 17:31:51,901 - INFO - Training:  65%|██████▍   | 3243/5000 [00:42<00:20, 86.98steps/s, loss=0.000591]
+2025-05-13 17:31:51,901 - INFO - Training:  65%|██████▌   | 3252/5000 [00:42<00:20, 85.80steps/s, loss=0.000591]
+2025-05-13 17:31:52,003 - INFO - Training:  65%|██████▌   | 3252/5000 [00:42<00:20, 85.80steps/s, loss=0.000437]
+2025-05-13 17:31:52,003 - INFO - Training:  65%|██████▌   | 3262/5000 [00:42<00:19, 88.88steps/s, loss=0.000437]
+2025-05-13 17:31:52,104 - INFO - Training:  65%|██████▌   | 3262/5000 [00:42<00:19, 88.88steps/s, loss=0.000437]
+2025-05-13 17:31:52,206 - INFO - Training:  65%|██████▌   | 3270/5000 [00:42<00:19, 88.88steps/s, loss=0.000418]
+2025-05-13 17:31:52,206 - INFO - Training:  66%|██████▌   | 3280/5000 [00:42<00:19, 88.78steps/s, loss=0.000418]
+2025-05-13 17:31:52,315 - INFO - Training:  66%|██████▌   | 3280/5000 [00:42<00:19, 88.78steps/s, loss=0.000418]
+2025-05-13 17:31:52,425 - INFO - Training:  66%|██████▌   | 3289/5000 [00:42<00:19, 88.78steps/s, loss=0.000344]
+2025-05-13 17:31:52,425 - INFO - Training:  66%|██████▌   | 3298/5000 [00:42<00:19, 86.20steps/s, loss=0.000344]
+2025-05-13 17:31:52,528 - INFO - Training:  66%|██████▌   | 3298/5000 [00:42<00:19, 86.20steps/s, loss=0.000358]
+2025-05-13 17:31:52,528 - INFO - Training:  66%|██████▌   | 3308/5000 [00:42<00:19, 88.47steps/s, loss=0.000358]
+2025-05-13 17:31:52,630 - INFO - Training:  66%|██████▌   | 3308/5000 [00:42<00:19, 88.47steps/s, loss=0.000358]
+2025-05-13 17:31:52,733 - INFO - Training:  66%|██████▋   | 3316/5000 [00:43<00:19, 88.47steps/s, loss=0.000354]
+2025-05-13 17:31:52,733 - INFO - Training:  67%|██████▋   | 3326/5000 [00:43<00:18, 88.29steps/s, loss=0.000354]
+2025-05-13 17:31:52,833 - INFO - Training:  67%|██████▋   | 3326/5000 [00:43<00:18, 88.29steps/s, loss=0.000354]
+2025-05-13 17:31:52,936 - INFO - Training:  67%|██████▋   | 3334/5000 [00:43<00:18, 88.29steps/s, loss=0.000336]
+2025-05-13 17:31:52,936 - INFO - Training:  67%|██████▋   | 3344/5000 [00:43<00:18, 88.34steps/s, loss=0.000336]
+2025-05-13 17:31:53,037 - INFO - Training:  67%|██████▋   | 3344/5000 [00:43<00:18, 88.34steps/s, loss=0.000336]
+2025-05-13 17:31:53,150 - INFO - Training:  67%|██████▋   | 3352/5000 [00:43<00:18, 88.34steps/s, loss=0.000312]
+2025-05-13 17:31:53,150 - INFO - Training:  67%|██████▋   | 3361/5000 [00:43<00:19, 85.31steps/s, loss=0.000312]
+2025-05-13 17:31:53,254 - INFO - Training:  67%|██████▋   | 3361/5000 [00:43<00:19, 85.31steps/s, loss=0.000307]
+2025-05-13 17:31:53,254 - INFO - Training:  67%|██████▋   | 3371/5000 [00:43<00:18, 87.44steps/s, loss=0.000307]
+2025-05-13 17:31:53,355 - INFO - Training:  67%|██████▋   | 3371/5000 [00:43<00:18, 87.44steps/s, loss=0.000307]
+2025-05-13 17:31:53,460 - INFO - Training:  68%|██████▊   | 3379/5000 [00:43<00:18, 87.44steps/s, loss=0.000352]
+2025-05-13 17:31:53,460 - INFO - Training:  68%|██████▊   | 3389/5000 [00:43<00:18, 87.35steps/s, loss=0.000352]
+2025-05-13 17:31:53,562 - INFO - Training:  68%|██████▊   | 3389/5000 [00:43<00:18, 87.35steps/s, loss=0.000352]
+2025-05-13 17:31:53,669 - INFO - Training:  68%|██████▊   | 3397/5000 [00:43<00:18, 87.35steps/s, loss=0.000355]
+2025-05-13 17:31:53,669 - INFO - Training:  68%|██████▊   | 3407/5000 [00:44<00:18, 87.02steps/s, loss=0.000355]
+2025-05-13 17:31:53,772 - INFO - Training:  68%|██████▊   | 3407/5000 [00:44<00:18, 87.02steps/s, loss=0.000355]
+2025-05-13 17:31:53,895 - INFO - Training:  68%|██████▊   | 3415/5000 [00:44<00:18, 87.02steps/s, loss=0.000285]
+2025-05-13 17:31:53,895 - INFO - Training:  68%|██████▊   | 3425/5000 [00:44<00:18, 84.47steps/s, loss=0.000285]
+2025-05-13 17:31:54,001 - INFO - Training:  68%|██████▊   | 3425/5000 [00:44<00:18, 84.47steps/s, loss=0.00032]
+2025-05-13 17:31:54,001 - INFO - Training:  69%|██████▊   | 3435/5000 [00:44<00:18, 86.34steps/s, loss=0.00032]
+2025-05-13 17:31:54,106 - INFO - Training:  69%|██████▊   | 3435/5000 [00:44<00:18, 86.34steps/s, loss=0.00032]
+2025-05-13 17:31:54,212 - INFO - Training:  69%|██████▉   | 3443/5000 [00:44<00:18, 86.34steps/s, loss=0.000326]
+2025-05-13 17:31:54,212 - INFO - Training:  69%|██████▉   | 3453/5000 [00:44<00:18, 85.94steps/s, loss=0.000326]
+2025-05-13 17:31:54,316 - INFO - Training:  69%|██████▉   | 3453/5000 [00:44<00:18, 85.94steps/s, loss=0.000326]
+2025-05-13 17:31:54,423 - INFO - Training:  69%|██████▉   | 3461/5000 [00:44<00:17, 85.94steps/s, loss=0.000335]
+2025-05-13 17:31:54,423 - INFO - Training:  69%|██████▉   | 3471/5000 [00:44<00:17, 85.81steps/s, loss=0.000335]
+2025-05-13 17:31:54,527 - INFO - Training:  69%|██████▉   | 3471/5000 [00:44<00:17, 85.81steps/s, loss=0.000335]
+2025-05-13 17:31:54,653 - INFO - Training:  70%|██████▉   | 3479/5000 [00:44<00:17, 85.81steps/s, loss=0.000313]
+2025-05-13 17:31:54,654 - INFO - Training:  70%|██████▉   | 3489/5000 [00:45<00:18, 83.12steps/s, loss=0.000313]
+2025-05-13 17:31:54,761 - INFO - Training:  70%|██████▉   | 3489/5000 [00:45<00:18, 83.12steps/s, loss=0.000287]
+2025-05-13 17:31:54,761 - INFO - Training:  70%|██████▉   | 3499/5000 [00:45<00:17, 84.98steps/s, loss=0.000287]
+2025-05-13 17:31:54,866 - INFO - Training:  70%|██████▉   | 3499/5000 [00:45<00:17, 84.98steps/s, loss=0.000287]
+2025-05-13 17:31:54,973 - INFO - Training:  70%|███████   | 3507/5000 [00:45<00:17, 84.98steps/s, loss=0.000307]
+2025-05-13 17:31:54,974 - INFO - Training:  70%|███████   | 3517/5000 [00:45<00:17, 84.85steps/s, loss=0.000307]
+2025-05-13 17:31:55,079 - INFO - Training:  70%|███████   | 3517/5000 [00:45<00:17, 84.85steps/s, loss=0.000307]
+2025-05-13 17:31:55,188 - INFO - Training:  70%|███████   | 3525/5000 [00:45<00:17, 84.85steps/s, loss=0.000313]
+2025-05-13 17:31:55,188 - INFO - Training:  71%|███████   | 3535/5000 [00:45<00:17, 84.51steps/s, loss=0.000313]
+2025-05-13 17:31:55,294 - INFO - Training:  71%|███████   | 3535/5000 [00:45<00:17, 84.51steps/s, loss=0.000313]
+2025-05-13 17:31:55,420 - INFO - Training:  71%|███████   | 3543/5000 [00:45<00:17, 84.51steps/s, loss=0.000308]
+2025-05-13 17:31:55,420 - INFO - Training:  71%|███████   | 3553/5000 [00:45<00:17, 82.19steps/s, loss=0.000308]
+2025-05-13 17:31:55,529 - INFO - Training:  71%|███████   | 3553/5000 [00:45<00:17, 82.19steps/s, loss=0.000301]
+2025-05-13 17:31:55,529 - INFO - Training:  71%|███████▏  | 3563/5000 [00:45<00:17, 83.90steps/s, loss=0.000301]
+2025-05-13 17:31:55,637 - INFO - Training:  71%|███████▏  | 3563/5000 [00:45<00:17, 83.90steps/s, loss=0.000301]
+2025-05-13 17:31:55,747 - INFO - Training:  71%|███████▏  | 3571/5000 [00:46<00:17, 83.90steps/s, loss=0.000327]
+2025-05-13 17:31:55,747 - INFO - Training:  72%|███████▏  | 3581/5000 [00:46<00:16, 83.56steps/s, loss=0.000327]
+2025-05-13 17:31:55,853 - INFO - Training:  72%|███████▏  | 3581/5000 [00:46<00:16, 83.56steps/s, loss=0.000327]
+2025-05-13 17:31:55,962 - INFO - Training:  72%|███████▏  | 3589/5000 [00:46<00:16, 83.56steps/s, loss=0.000306]
+2025-05-13 17:31:55,962 - INFO - Training:  72%|███████▏  | 3599/5000 [00:46<00:16, 83.56steps/s, loss=0.000306]
+2025-05-13 17:31:56,068 - INFO - Training:  72%|███████▏  | 3599/5000 [00:46<00:16, 83.56steps/s, loss=0.000306]
+2025-05-13 17:31:56,196 - INFO - Training:  72%|███████▏  | 3607/5000 [00:46<00:16, 83.56steps/s, loss=0.000308]
+2025-05-13 17:31:56,196 - INFO - Training:  72%|███████▏  | 3617/5000 [00:46<00:17, 81.26steps/s, loss=0.000308]
+2025-05-13 17:31:56,307 - INFO - Training:  72%|███████▏  | 3617/5000 [00:46<00:17, 81.26steps/s, loss=0.000289]
+2025-05-13 17:31:56,307 - INFO - Training:  73%|███████▎  | 3627/5000 [00:46<00:16, 82.97steps/s, loss=0.000289]
+2025-05-13 17:31:56,414 - INFO - Training:  73%|███████▎  | 3627/5000 [00:46<00:16, 82.97steps/s, loss=0.000289]
+2025-05-13 17:31:56,514 - INFO - Training:  73%|███████▎  | 3635/5000 [00:46<00:16, 82.97steps/s, loss=0.000293]
+2025-05-13 17:31:56,514 - INFO - Training:  73%|███████▎  | 3644/5000 [00:46<00:16, 82.70steps/s, loss=0.000293]
+2025-05-13 17:31:56,622 - INFO - Training:  73%|███████▎  | 3644/5000 [00:46<00:16, 82.70steps/s, loss=0.000293]
+2025-05-13 17:31:56,733 - INFO - Training:  73%|███████▎  | 3652/5000 [00:47<00:16, 82.70steps/s, loss=0.000297]
+2025-05-13 17:31:56,733 - INFO - Training:  73%|███████▎  | 3662/5000 [00:47<00:16, 82.55steps/s, loss=0.000297]
+2025-05-13 17:31:56,840 - INFO - Training:  73%|███████▎  | 3662/5000 [00:47<00:16, 82.55steps/s, loss=0.000297]
+2025-05-13 17:31:56,950 - INFO - Training:  73%|███████▎  | 3670/5000 [00:47<00:16, 82.55steps/s, loss=0.000306]
+2025-05-13 17:31:56,950 - INFO - Training:  74%|███████▎  | 3680/5000 [00:47<00:15, 82.58steps/s, loss=0.000306]
+2025-05-13 17:31:57,060 - INFO - Training:  74%|███████▎  | 3680/5000 [00:47<00:15, 82.58steps/s, loss=0.000306]
+2025-05-13 17:31:57,164 - INFO - Training:  74%|███████▎  | 3687/5000 [00:47<00:15, 82.58steps/s, loss=0.000274]
+2025-05-13 17:31:57,164 - INFO - Training:  74%|███████▍  | 3693/5000 [00:47<00:17, 75.89steps/s, loss=0.000274]
+2025-05-13 17:31:57,278 - INFO - Training:  74%|███████▍  | 3693/5000 [00:47<00:17, 75.89steps/s, loss=0.000274]
+2025-05-13 17:31:57,384 - INFO - Training:  74%|███████▍  | 3698/5000 [00:47<00:17, 75.89steps/s, loss=0.00276]
+2025-05-13 17:31:57,384 - INFO - Training:  74%|███████▍  | 3707/5000 [00:47<00:17, 72.03steps/s, loss=0.00276]
+2025-05-13 17:31:57,485 - INFO - Training:  74%|███████▍  | 3707/5000 [00:47<00:17, 72.03steps/s, loss=0.00276]
+2025-05-13 17:31:57,485 - INFO - Training:  74%|███████▍  | 3715/5000 [00:47<00:17, 73.23steps/s, loss=0.00276]
+2025-05-13 17:31:57,588 - INFO - Training:  74%|███████▍  | 3715/5000 [00:47<00:17, 73.23steps/s, loss=0.00251]
+2025-05-13 17:31:57,588 - INFO - Training:  74%|███████▍  | 3725/5000 [00:48<00:16, 78.03steps/s, loss=0.00251]
+2025-05-13 17:31:57,696 - INFO - Training:  74%|███████▍  | 3725/5000 [00:48<00:16, 78.03steps/s, loss=0.00251]
+2025-05-13 17:31:57,696 - INFO - Training:  75%|███████▍  | 3734/5000 [00:48<00:16, 79.12steps/s, loss=0.00251]
+2025-05-13 17:31:57,797 - INFO - Training:  75%|███████▍  | 3734/5000 [00:48<00:16, 79.12steps/s, loss=0.00139]
+2025-05-13 17:31:57,797 - INFO - Training:  75%|███████▍  | 3744/5000 [00:48<00:14, 83.94steps/s, loss=0.00139]
+2025-05-13 17:31:57,904 - INFO - Training:  75%|███████▍  | 3744/5000 [00:48<00:14, 83.94steps/s, loss=0.00139]
+2025-05-13 17:31:57,904 - INFO - Training:  75%|███████▌  | 3753/5000 [00:48<00:14, 83.83steps/s, loss=0.00139]
+2025-05-13 17:31:58,011 - INFO - Training:  75%|███████▌  | 3753/5000 [00:48<00:14, 83.83steps/s, loss=0.000881]
+2025-05-13 17:31:58,012 - INFO - Training:  75%|███████▌  | 3762/5000 [00:48<00:14, 83.86steps/s, loss=0.000881]
+2025-05-13 17:31:58,112 - INFO - Training:  75%|███████▌  | 3762/5000 [00:48<00:14, 83.86steps/s, loss=0.000616]
+2025-05-13 17:31:58,112 - INFO - Training:  75%|███████▌  | 3772/5000 [00:48<00:13, 88.10steps/s, loss=0.000616]
+2025-05-13 17:31:58,219 - INFO - Training:  75%|███████▌  | 3772/5000 [00:48<00:13, 88.10steps/s, loss=0.000616]
+2025-05-13 17:31:58,219 - INFO - Training:  76%|███████▌  | 3781/5000 [00:48<00:14, 86.89steps/s, loss=0.000616]
+2025-05-13 17:31:58,327 - INFO - Training:  76%|███████▌  | 3781/5000 [00:48<00:14, 86.89steps/s, loss=0.000536]
+2025-05-13 17:31:58,328 - INFO - Training:  76%|███████▌  | 3792/5000 [00:48<00:13, 91.17steps/s, loss=0.000536]
+2025-05-13 17:31:58,434 - INFO - Training:  76%|███████▌  | 3792/5000 [00:48<00:13, 91.17steps/s, loss=0.000536]
+2025-05-13 17:31:58,540 - INFO - Training:  76%|███████▌  | 3801/5000 [00:48<00:13, 91.17steps/s, loss=0.000457]
+2025-05-13 17:31:58,540 - INFO - Training:  76%|███████▌  | 3810/5000 [00:48<00:13, 88.23steps/s, loss=0.000457]
+2025-05-13 17:31:58,640 - INFO - Training:  76%|███████▌  | 3810/5000 [00:48<00:13, 88.23steps/s, loss=0.000345]
+2025-05-13 17:31:58,641 - INFO - Training:  76%|███████▋  | 3820/5000 [00:49<00:12, 90.93steps/s, loss=0.000345]
+2025-05-13 17:31:58,747 - INFO - Training:  76%|███████▋  | 3820/5000 [00:49<00:12, 90.93steps/s, loss=0.000345]
+2025-05-13 17:31:58,854 - INFO - Training:  77%|███████▋  | 3829/5000 [00:49<00:12, 90.93steps/s, loss=0.000363]
+2025-05-13 17:31:58,854 - INFO - Training:  77%|███████▋  | 3840/5000 [00:49<00:12, 92.06steps/s, loss=0.000363]
+2025-05-13 17:31:58,960 - INFO - Training:  77%|███████▋  | 3840/5000 [00:49<00:12, 92.06steps/s, loss=0.000363]
+2025-05-13 17:31:59,065 - INFO - Training:  77%|███████▋  | 3849/5000 [00:49<00:12, 92.06steps/s, loss=0.000411]
+2025-05-13 17:31:59,065 - INFO - Training:  77%|███████▋  | 3858/5000 [00:49<00:12, 89.49steps/s, loss=0.000411]
+2025-05-13 17:31:59,172 - INFO - Training:  77%|███████▋  | 3858/5000 [00:49<00:12, 89.49steps/s, loss=0.00038]
+2025-05-13 17:31:59,172 - INFO - Training:  77%|███████▋  | 3869/5000 [00:49<00:12, 92.29steps/s, loss=0.00038]
+2025-05-13 17:31:59,278 - INFO - Training:  77%|███████▋  | 3869/5000 [00:49<00:12, 92.29steps/s, loss=0.00038]
+2025-05-13 17:31:59,403 - INFO - Training:  78%|███████▊  | 3878/5000 [00:49<00:12, 92.29steps/s, loss=0.000442]
+2025-05-13 17:31:59,403 - INFO - Training:  78%|███████▊  | 3889/5000 [00:49<00:12, 90.15steps/s, loss=0.000442]
+2025-05-13 17:31:59,510 - INFO - Training:  78%|███████▊  | 3889/5000 [00:49<00:12, 90.15steps/s, loss=0.000351]
+2025-05-13 17:31:59,510 - INFO - Training:  78%|███████▊  | 3900/5000 [00:49<00:11, 92.66steps/s, loss=0.000351]
+2025-05-13 17:31:59,618 - INFO - Training:  78%|███████▊  | 3900/5000 [00:49<00:11, 92.66steps/s, loss=0.000351]
+2025-05-13 17:31:59,725 - INFO - Training:  78%|███████▊  | 3909/5000 [00:50<00:11, 92.66steps/s, loss=0.000386]
+2025-05-13 17:31:59,725 - INFO - Training:  78%|███████▊  | 3920/5000 [00:50<00:11, 92.82steps/s, loss=0.000386]
+2025-05-13 17:31:59,831 - INFO - Training:  78%|███████▊  | 3920/5000 [00:50<00:11, 92.82steps/s, loss=0.000386]
+2025-05-13 17:31:59,937 - INFO - Training:  79%|███████▊  | 3929/5000 [00:50<00:11, 92.82steps/s, loss=0.000323]
+2025-05-13 17:31:59,937 - INFO - Training:  79%|███████▉  | 3938/5000 [00:50<00:11, 90.09steps/s, loss=0.000323]
+2025-05-13 17:32:00,046 - INFO - Training:  79%|███████▉  | 3938/5000 [00:50<00:11, 90.09steps/s, loss=0.00036]
+2025-05-13 17:32:00,046 - INFO - Training:  79%|███████▉  | 3949/5000 [00:50<00:11, 92.39steps/s, loss=0.00036]
+2025-05-13 17:32:00,153 - INFO - Training:  79%|███████▉  | 3949/5000 [00:50<00:11, 92.39steps/s, loss=0.00036]
+2025-05-13 17:32:00,279 - INFO - Training:  79%|███████▉  | 3958/5000 [00:50<00:11, 92.39steps/s, loss=0.000328]
+2025-05-13 17:32:00,279 - INFO - Training:  79%|███████▉  | 3969/5000 [00:50<00:11, 89.87steps/s, loss=0.000328]
+2025-05-13 17:32:00,386 - INFO - Training:  79%|███████▉  | 3969/5000 [00:50<00:11, 89.87steps/s, loss=0.00031]
+2025-05-13 17:32:00,386 - INFO - Training:  80%|███████▉  | 3980/5000 [00:50<00:11, 92.40steps/s, loss=0.00031]
+2025-05-13 17:32:00,493 - INFO - Training:  80%|███████▉  | 3980/5000 [00:50<00:11, 92.40steps/s, loss=0.00031]
+2025-05-13 17:32:00,602 - INFO - Training:  80%|███████▉  | 3989/5000 [00:50<00:10, 92.40steps/s, loss=0.000311]
+2025-05-13 17:32:00,602 - INFO - Training:  80%|████████  | 4000/5000 [00:51<00:10, 92.53steps/s, loss=0.000311]
+2025-05-13 17:32:00,709 - INFO - Training:  80%|████████  | 4000/5000 [00:51<00:10, 92.53steps/s, loss=0.000311]
+2025-05-13 17:32:00,816 - INFO - Training:  80%|████████  | 4009/5000 [00:51<00:10, 92.53steps/s, loss=0.000345]
+2025-05-13 17:32:00,816 - INFO - Training:  80%|████████  | 4018/5000 [00:51<00:10, 89.65steps/s, loss=0.000345]
+2025-05-13 17:32:00,924 - INFO - Training:  80%|████████  | 4018/5000 [00:51<00:10, 89.65steps/s, loss=0.000322]
+2025-05-13 17:32:00,924 - INFO - Training:  81%|████████  | 4029/5000 [00:51<00:10, 91.98steps/s, loss=0.000322]
+2025-05-13 17:32:01,031 - INFO - Training:  81%|████████  | 4029/5000 [00:51<00:10, 91.98steps/s, loss=0.000322]
+2025-05-13 17:32:01,132 - INFO - Training:  81%|████████  | 4038/5000 [00:51<00:10, 91.98steps/s, loss=0.000292]
+2025-05-13 17:32:01,132 - INFO - Training:  81%|████████  | 4048/5000 [00:51<00:10, 91.85steps/s, loss=0.000292]
+2025-05-13 17:32:01,239 - INFO - Training:  81%|████████  | 4048/5000 [00:51<00:10, 91.85steps/s, loss=0.000292]
+2025-05-13 17:32:01,346 - INFO - Training:  81%|████████  | 4057/5000 [00:51<00:10, 91.85steps/s, loss=0.000301]
+2025-05-13 17:32:01,346 - INFO - Training:  81%|████████▏ | 4066/5000 [00:51<00:10, 89.10steps/s, loss=0.000301]
+2025-05-13 17:32:01,456 - INFO - Training:  81%|████████▏ | 4066/5000 [00:51<00:10, 89.10steps/s, loss=0.000319]
+2025-05-13 17:32:01,456 - INFO - Training:  82%|████████▏ | 4077/5000 [00:51<00:10, 91.31steps/s, loss=0.000319]
+2025-05-13 17:32:01,564 - INFO - Training:  82%|████████▏ | 4077/5000 [00:51<00:10, 91.31steps/s, loss=0.000319]
+2025-05-13 17:32:01,664 - INFO - Training:  82%|████████▏ | 4086/5000 [00:51<00:10, 91.31steps/s, loss=0.000293]
+2025-05-13 17:32:01,664 - INFO - Training:  82%|████████▏ | 4096/5000 [00:52<00:09, 91.35steps/s, loss=0.000293]
+2025-05-13 17:32:01,772 - INFO - Training:  82%|████████▏ | 4096/5000 [00:52<00:09, 91.35steps/s, loss=0.000293]
+2025-05-13 17:32:01,880 - INFO - Training:  82%|████████▏ | 4105/5000 [00:52<00:09, 91.35steps/s, loss=0.000296]
+2025-05-13 17:32:01,881 - INFO - Training:  82%|████████▏ | 4114/5000 [00:52<00:10, 88.53steps/s, loss=0.000296]
+2025-05-13 17:32:01,982 - INFO - Training:  82%|████████▏ | 4114/5000 [00:52<00:10, 88.53steps/s, loss=0.000298]
+2025-05-13 17:32:01,982 - INFO - Training:  82%|████████▏ | 4124/5000 [00:52<00:09, 90.35steps/s, loss=0.000298]
+2025-05-13 17:32:02,092 - INFO - Training:  82%|████████▏ | 4124/5000 [00:52<00:09, 90.35steps/s, loss=0.000298]
+2025-05-13 17:32:02,193 - INFO - Training:  83%|████████▎ | 4133/5000 [00:52<00:09, 90.35steps/s, loss=0.000318]
+2025-05-13 17:32:02,194 - INFO - Training:  83%|████████▎ | 4143/5000 [00:52<00:09, 90.21steps/s, loss=0.000318]
+2025-05-13 17:32:02,303 - INFO - Training:  83%|████████▎ | 4143/5000 [00:52<00:09, 90.21steps/s, loss=0.000318]
+2025-05-13 17:32:02,412 - INFO - Training:  83%|████████▎ | 4152/5000 [00:52<00:09, 90.21steps/s, loss=0.000293]
+2025-05-13 17:32:02,412 - INFO - Training:  83%|████████▎ | 4161/5000 [00:52<00:09, 87.46steps/s, loss=0.000293]
+2025-05-13 17:32:02,514 - INFO - Training:  83%|████████▎ | 4161/5000 [00:52<00:09, 87.46steps/s, loss=0.000317]
+2025-05-13 17:32:02,515 - INFO - Training:  83%|████████▎ | 4171/5000 [00:52<00:09, 89.40steps/s, loss=0.000317]
+2025-05-13 17:32:02,616 - INFO - Training:  83%|████████▎ | 4171/5000 [00:52<00:09, 89.40steps/s, loss=0.000317]
+2025-05-13 17:32:02,719 - INFO - Training:  84%|████████▎ | 4179/5000 [00:53<00:09, 89.40steps/s, loss=0.000328]
+2025-05-13 17:32:02,719 - INFO - Training:  84%|████████▍ | 4189/5000 [00:53<00:09, 88.99steps/s, loss=0.000328]
+2025-05-13 17:32:02,819 - INFO - Training:  84%|████████▍ | 4189/5000 [00:53<00:09, 88.99steps/s, loss=0.000328]
+2025-05-13 17:32:02,921 - INFO - Training:  84%|████████▍ | 4197/5000 [00:53<00:09, 88.99steps/s, loss=0.000283]
+2025-05-13 17:32:02,921 - INFO - Training:  84%|████████▍ | 4207/5000 [00:53<00:08, 88.92steps/s, loss=0.000283]
+2025-05-13 17:32:03,022 - INFO - Training:  84%|████████▍ | 4207/5000 [00:53<00:08, 88.92steps/s, loss=0.000283]
+2025-05-13 17:32:03,144 - INFO - Training:  84%|████████▍ | 4215/5000 [00:53<00:08, 88.92steps/s, loss=0.000282]
+2025-05-13 17:32:03,144 - INFO - Training:  84%|████████▍ | 4225/5000 [00:53<00:08, 86.13steps/s, loss=0.000282]
+2025-05-13 17:32:03,248 - INFO - Training:  84%|████████▍ | 4225/5000 [00:53<00:08, 86.13steps/s, loss=0.000304]
+2025-05-13 17:32:03,248 - INFO - Training:  85%|████████▍ | 4235/5000 [00:53<00:08, 88.04steps/s, loss=0.000304]
+2025-05-13 17:32:03,349 - INFO - Training:  85%|████████▍ | 4235/5000 [00:53<00:08, 88.04steps/s, loss=0.000304]
+2025-05-13 17:32:03,453 - INFO - Training:  85%|████████▍ | 4243/5000 [00:53<00:08, 88.04steps/s, loss=0.000303]
+2025-05-13 17:32:03,453 - INFO - Training:  85%|████████▌ | 4253/5000 [00:53<00:08, 87.92steps/s, loss=0.000303]
+2025-05-13 17:32:03,555 - INFO - Training:  85%|████████▌ | 4253/5000 [00:53<00:08, 87.92steps/s, loss=0.000303]
+2025-05-13 17:32:03,661 - INFO - Training:  85%|████████▌ | 4261/5000 [00:53<00:08, 87.92steps/s, loss=0.000297]
+2025-05-13 17:32:03,661 - INFO - Training:  85%|████████▌ | 4271/5000 [00:54<00:08, 87.54steps/s, loss=0.000297]
+2025-05-13 17:32:03,763 - INFO - Training:  85%|████████▌ | 4271/5000 [00:54<00:08, 87.54steps/s, loss=0.000297]
+2025-05-13 17:32:03,885 - INFO - Training:  86%|████████▌ | 4279/5000 [00:54<00:08, 87.54steps/s, loss=0.000281]
+2025-05-13 17:32:03,885 - INFO - Training:  86%|████████▌ | 4289/5000 [00:54<00:08, 85.05steps/s, loss=0.000281]
+2025-05-13 17:32:03,990 - INFO - Training:  86%|████████▌ | 4289/5000 [00:54<00:08, 85.05steps/s, loss=0.00029]
+2025-05-13 17:32:03,990 - INFO - Training:  86%|████████▌ | 4299/5000 [00:54<00:08, 87.00steps/s, loss=0.00029]
+2025-05-13 17:32:04,093 - INFO - Training:  86%|████████▌ | 4299/5000 [00:54<00:08, 87.00steps/s, loss=0.00029]
+2025-05-13 17:32:04,199 - INFO - Training:  86%|████████▌ | 4307/5000 [00:54<00:07, 87.00steps/s, loss=0.000311]
+2025-05-13 17:32:04,199 - INFO - Training:  86%|████████▋ | 4317/5000 [00:54<00:07, 86.68steps/s, loss=0.000311]
+2025-05-13 17:32:04,301 - INFO - Training:  86%|████████▋ | 4317/5000 [00:54<00:07, 86.68steps/s, loss=0.000311]
+2025-05-13 17:32:04,407 - INFO - Training:  86%|████████▋ | 4325/5000 [00:54<00:07, 86.68steps/s, loss=0.000278]
+2025-05-13 17:32:04,407 - INFO - Training:  87%|████████▋ | 4335/5000 [00:54<00:07, 86.64steps/s, loss=0.000278]
+2025-05-13 17:32:04,511 - INFO - Training:  87%|████████▋ | 4335/5000 [00:54<00:07, 86.64steps/s, loss=0.000278]
+2025-05-13 17:32:04,637 - INFO - Training:  87%|████████▋ | 4343/5000 [00:54<00:07, 86.64steps/s, loss=0.000274]
+2025-05-13 17:32:04,638 - INFO - Training:  87%|████████▋ | 4353/5000 [00:55<00:07, 83.71steps/s, loss=0.000274]
+2025-05-13 17:32:04,744 - INFO - Training:  87%|████████▋ | 4353/5000 [00:55<00:07, 83.71steps/s, loss=0.000299]
+2025-05-13 17:32:04,744 - INFO - Training:  87%|████████▋ | 4363/5000 [00:55<00:07, 85.58steps/s, loss=0.000299]
+2025-05-13 17:32:04,847 - INFO - Training:  87%|████████▋ | 4363/5000 [00:55<00:07, 85.58steps/s, loss=0.000299]
+2025-05-13 17:32:04,953 - INFO - Training:  87%|████████▋ | 4371/5000 [00:55<00:07, 85.58steps/s, loss=0.000258]
+2025-05-13 17:32:04,953 - INFO - Training:  88%|████████▊ | 4381/5000 [00:55<00:07, 85.70steps/s, loss=0.000258]
+2025-05-13 17:32:05,057 - INFO - Training:  88%|████████▊ | 4381/5000 [00:55<00:07, 85.70steps/s, loss=0.000258]
+2025-05-13 17:32:05,165 - INFO - Training:  88%|████████▊ | 4389/5000 [00:55<00:07, 85.70steps/s, loss=0.000294]
+2025-05-13 17:32:05,165 - INFO - Training:  88%|████████▊ | 4399/5000 [00:55<00:07, 85.47steps/s, loss=0.000294]
+2025-05-13 17:32:05,269 - INFO - Training:  88%|████████▊ | 4399/5000 [00:55<00:07, 85.47steps/s, loss=0.000294]
+2025-05-13 17:32:05,393 - INFO - Training:  88%|████████▊ | 4407/5000 [00:55<00:06, 85.47steps/s, loss=0.000334]
+2025-05-13 17:32:05,393 - INFO - Training:  88%|████████▊ | 4417/5000 [00:55<00:07, 83.22steps/s, loss=0.000334]
+2025-05-13 17:32:05,501 - INFO - Training:  88%|████████▊ | 4417/5000 [00:55<00:07, 83.22steps/s, loss=0.000283]
+2025-05-13 17:32:05,501 - INFO - Training:  89%|████████▊ | 4427/5000 [00:55<00:06, 85.01steps/s, loss=0.000283]
+2025-05-13 17:32:05,607 - INFO - Training:  89%|████████▊ | 4427/5000 [00:55<00:06, 85.01steps/s, loss=0.000283]
+2025-05-13 17:32:05,714 - INFO - Training:  89%|████████▊ | 4435/5000 [00:56<00:06, 85.01steps/s, loss=0.000276]
+2025-05-13 17:32:05,714 - INFO - Training:  89%|████████▉ | 4445/5000 [00:56<00:06, 84.84steps/s, loss=0.000276]
+2025-05-13 17:32:05,819 - INFO - Training:  89%|████████▉ | 4445/5000 [00:56<00:06, 84.84steps/s, loss=0.000276]
+2025-05-13 17:32:05,926 - INFO - Training:  89%|████████▉ | 4453/5000 [00:56<00:06, 84.84steps/s, loss=0.000269]
+2025-05-13 17:32:05,926 - INFO - Training:  89%|████████▉ | 4463/5000 [00:56<00:06, 84.90steps/s, loss=0.000269]
+2025-05-13 17:32:06,030 - INFO - Training:  89%|████████▉ | 4463/5000 [00:56<00:06, 84.90steps/s, loss=0.000269]
+2025-05-13 17:32:06,157 - INFO - Training:  89%|████████▉ | 4471/5000 [00:56<00:06, 84.90steps/s, loss=0.000276]
+2025-05-13 17:32:06,157 - INFO - Training:  90%|████████▉ | 4481/5000 [00:56<00:06, 82.51steps/s, loss=0.000276]
+2025-05-13 17:32:06,264 - INFO - Training:  90%|████████▉ | 4481/5000 [00:56<00:06, 82.51steps/s, loss=0.000293]
+2025-05-13 17:32:06,264 - INFO - Training:  90%|████████▉ | 4491/5000 [00:56<00:06, 84.46steps/s, loss=0.000293]
+2025-05-13 17:32:06,369 - INFO - Training:  90%|████████▉ | 4491/5000 [00:56<00:06, 84.46steps/s, loss=0.000293]
+2025-05-13 17:32:06,477 - INFO - Training:  90%|████████▉ | 4499/5000 [00:56<00:05, 84.46steps/s, loss=0.0003]
+2025-05-13 17:32:06,477 - INFO - Training:  90%|█████████ | 4509/5000 [00:56<00:05, 84.56steps/s, loss=0.0003]
+2025-05-13 17:32:06,584 - INFO - Training:  90%|█████████ | 4509/5000 [00:56<00:05, 84.56steps/s, loss=0.0003]
+2025-05-13 17:32:06,692 - INFO - Training:  90%|█████████ | 4517/5000 [00:57<00:05, 84.56steps/s, loss=0.00028]
+2025-05-13 17:32:06,692 - INFO - Training:  91%|█████████ | 4527/5000 [00:57<00:05, 84.27steps/s, loss=0.00028]
+2025-05-13 17:32:06,797 - INFO - Training:  91%|█████████ | 4527/5000 [00:57<00:05, 84.27steps/s, loss=0.00028]
+2025-05-13 17:32:06,922 - INFO - Training:  91%|█████████ | 4535/5000 [00:57<00:05, 84.27steps/s, loss=0.000282]
+2025-05-13 17:32:06,922 - INFO - Training:  91%|█████████ | 4545/5000 [00:57<00:05, 82.18steps/s, loss=0.000282]
+2025-05-13 17:32:07,031 - INFO - Training:  91%|█████████ | 4545/5000 [00:57<00:05, 82.18steps/s, loss=0.000278]
+2025-05-13 17:32:07,031 - INFO - Training:  91%|█████████ | 4555/5000 [00:57<00:05, 84.02steps/s, loss=0.000278]
+2025-05-13 17:32:07,138 - INFO - Training:  91%|█████████ | 4555/5000 [00:57<00:05, 84.02steps/s, loss=0.000278]
+2025-05-13 17:32:07,247 - INFO - Training:  91%|█████████▏| 4563/5000 [00:57<00:05, 84.02steps/s, loss=0.000291]
+2025-05-13 17:32:07,247 - INFO - Training:  91%|█████████▏| 4573/5000 [00:57<00:05, 83.84steps/s, loss=0.000291]
+2025-05-13 17:32:07,352 - INFO - Training:  91%|█████████▏| 4573/5000 [00:57<00:05, 83.84steps/s, loss=0.000291]
+2025-05-13 17:32:07,461 - INFO - Training:  92%|█████████▏| 4581/5000 [00:57<00:04, 83.84steps/s, loss=0.000277]
+2025-05-13 17:32:07,462 - INFO - Training:  92%|█████████▏| 4591/5000 [00:57<00:04, 83.82steps/s, loss=0.000277]
+2025-05-13 17:32:07,567 - INFO - Training:  92%|█████████▏| 4591/5000 [00:57<00:04, 83.82steps/s, loss=0.000277]
+2025-05-13 17:32:07,695 - INFO - Training:  92%|█████████▏| 4599/5000 [00:57<00:04, 83.82steps/s, loss=0.000286]
+2025-05-13 17:32:07,696 - INFO - Training:  92%|█████████▏| 4609/5000 [00:58<00:04, 81.48steps/s, loss=0.000286]
+2025-05-13 17:32:07,804 - INFO - Training:  92%|█████████▏| 4609/5000 [00:58<00:04, 81.48steps/s, loss=0.000262]
+2025-05-13 17:32:07,805 - INFO - Training:  92%|█████████▏| 4619/5000 [00:58<00:04, 83.37steps/s, loss=0.000262]
+2025-05-13 17:32:07,910 - INFO - Training:  92%|█████████▏| 4619/5000 [00:58<00:04, 83.37steps/s, loss=0.000262]
+2025-05-13 17:32:08,020 - INFO - Training:  93%|█████████▎| 4627/5000 [00:58<00:04, 83.37steps/s, loss=0.000298]
+2025-05-13 17:32:08,020 - INFO - Training:  93%|█████████▎| 4637/5000 [00:58<00:04, 83.41steps/s, loss=0.000298]
+2025-05-13 17:32:08,128 - INFO - Training:  93%|█████████▎| 4637/5000 [00:58<00:04, 83.41steps/s, loss=0.000298]
+2025-05-13 17:32:08,237 - INFO - Training:  93%|█████████▎| 4645/5000 [00:58<00:04, 83.41steps/s, loss=0.000273]
+2025-05-13 17:32:08,238 - INFO - Training:  93%|█████████▎| 4655/5000 [00:58<00:04, 83.21steps/s, loss=0.000273]
+2025-05-13 17:32:08,344 - INFO - Training:  93%|█████████▎| 4655/5000 [00:58<00:04, 83.21steps/s, loss=0.000273]
+2025-05-13 17:32:08,472 - INFO - Training:  93%|█████████▎| 4663/5000 [00:58<00:04, 83.21steps/s, loss=0.000278]
+2025-05-13 17:32:08,472 - INFO - Training:  93%|█████████▎| 4673/5000 [00:58<00:04, 81.07steps/s, loss=0.000278]
+2025-05-13 17:32:08,582 - INFO - Training:  93%|█████████▎| 4673/5000 [00:58<00:04, 81.07steps/s, loss=0.000287]
+2025-05-13 17:32:08,582 - INFO - Training:  94%|█████████▎| 4683/5000 [00:59<00:03, 82.86steps/s, loss=0.000287]
+2025-05-13 17:32:08,688 - INFO - Training:  94%|█████████▎| 4683/5000 [00:59<00:03, 82.86steps/s, loss=0.000287]
+2025-05-13 17:32:08,798 - INFO - Training:  94%|█████████▍| 4691/5000 [00:59<00:03, 82.86steps/s, loss=0.00029]
+2025-05-13 17:32:08,798 - INFO - Training:  94%|█████████▍| 4701/5000 [00:59<00:03, 83.04steps/s, loss=0.00029]
+2025-05-13 17:32:08,904 - INFO - Training:  94%|█████████▍| 4701/5000 [00:59<00:03, 83.04steps/s, loss=0.00029]
+2025-05-13 17:32:09,013 - INFO - Training:  94%|█████████▍| 4709/5000 [00:59<00:03, 83.04steps/s, loss=0.000272]
+2025-05-13 17:32:09,013 - INFO - Training:  94%|█████████▍| 4719/5000 [00:59<00:03, 83.19steps/s, loss=0.000272]
+2025-05-13 17:32:09,121 - INFO - Training:  94%|█████████▍| 4719/5000 [00:59<00:03, 83.19steps/s, loss=0.000272]
+2025-05-13 17:32:09,248 - INFO - Training:  95%|█████████▍| 4727/5000 [00:59<00:03, 83.19steps/s, loss=0.000259]
+2025-05-13 17:32:09,248 - INFO - Training:  95%|█████████▍| 4737/5000 [00:59<00:03, 80.97steps/s, loss=0.000259]
+2025-05-13 17:32:09,358 - INFO - Training:  95%|█████████▍| 4737/5000 [00:59<00:03, 80.97steps/s, loss=0.000284]
+2025-05-13 17:32:09,358 - INFO - Training:  95%|█████████▍| 4747/5000 [00:59<00:03, 82.87steps/s, loss=0.000284]
+2025-05-13 17:32:09,464 - INFO - Training:  95%|█████████▍| 4747/5000 [00:59<00:03, 82.87steps/s, loss=0.000284]
+2025-05-13 17:32:09,574 - INFO - Training:  95%|█████████▌| 4755/5000 [00:59<00:02, 82.87steps/s, loss=0.000246]
+2025-05-13 17:32:09,574 - INFO - Training:  95%|█████████▌| 4765/5000 [00:59<00:02, 82.96steps/s, loss=0.000246]
+2025-05-13 17:32:09,682 - INFO - Training:  95%|█████████▌| 4765/5000 [00:59<00:02, 82.96steps/s, loss=0.000246]
+2025-05-13 17:32:09,792 - INFO - Training:  95%|█████████▌| 4773/5000 [01:00<00:02, 82.96steps/s, loss=0.000282]
+2025-05-13 17:32:09,792 - INFO - Training:  96%|█████████▌| 4783/5000 [01:00<00:02, 82.85steps/s, loss=0.000282]
+2025-05-13 17:32:09,899 - INFO - Training:  96%|█████████▌| 4783/5000 [01:00<00:02, 82.85steps/s, loss=0.000282]
+2025-05-13 17:32:10,027 - INFO - Training:  96%|█████████▌| 4791/5000 [01:00<00:02, 82.85steps/s, loss=0.000261]
+2025-05-13 17:32:10,027 - INFO - Training:  96%|█████████▌| 4801/5000 [01:00<00:02, 80.74steps/s, loss=0.000261]
+2025-05-13 17:32:10,128 - INFO - Training:  96%|█████████▌| 4801/5000 [01:00<00:02, 80.74steps/s, loss=0.000253]
+2025-05-13 17:32:10,129 - INFO - Training:  96%|█████████▌| 4810/5000 [01:00<00:02, 82.13steps/s, loss=0.000253]
+2025-05-13 17:32:10,235 - INFO - Training:  96%|█████████▌| 4810/5000 [01:00<00:02, 82.13steps/s, loss=0.000253]
+2025-05-13 17:32:10,345 - INFO - Training:  96%|█████████▋| 4818/5000 [01:00<00:02, 82.13steps/s, loss=0.000248]
+2025-05-13 17:32:10,345 - INFO - Training:  97%|█████████▋| 4828/5000 [01:00<00:02, 82.50steps/s, loss=0.000248]
+2025-05-13 17:32:10,451 - INFO - Training:  97%|█████████▋| 4828/5000 [01:00<00:02, 82.50steps/s, loss=0.000248]
+2025-05-13 17:32:10,562 - INFO - Training:  97%|█████████▋| 4836/5000 [01:00<00:01, 82.50steps/s, loss=0.000272]
+2025-05-13 17:32:10,562 - INFO - Training:  97%|█████████▋| 4846/5000 [01:00<00:01, 82.65steps/s, loss=0.000272]
+2025-05-13 17:32:10,670 - INFO - Training:  97%|█████████▋| 4846/5000 [01:00<00:01, 82.65steps/s, loss=0.000272]
+2025-05-13 17:32:10,779 - INFO - Training:  97%|█████████▋| 4854/5000 [01:01<00:01, 82.65steps/s, loss=0.000278]
+2025-05-13 17:32:10,780 - INFO - Training:  97%|█████████▋| 4864/5000 [01:01<00:01, 82.65steps/s, loss=0.000278]
+2025-05-13 17:32:10,886 - INFO - Training:  97%|█████████▋| 4864/5000 [01:01<00:01, 82.65steps/s, loss=0.000278]
+2025-05-13 17:32:11,004 - INFO - Training:  97%|█████████▋| 4872/5000 [01:01<00:01, 82.65steps/s, loss=0.00024]
+2025-05-13 17:32:11,004 - INFO - Training:  98%|█████████▊| 4881/5000 [01:01<00:01, 80.44steps/s, loss=0.00024]
+2025-05-13 17:32:11,105 - INFO - Training:  98%|█████████▊| 4881/5000 [01:01<00:01, 80.44steps/s, loss=0.00028]
+2025-05-13 17:32:11,105 - INFO - Training:  98%|█████████▊| 4890/5000 [01:01<00:01, 81.87steps/s, loss=0.00028]
+2025-05-13 17:32:11,212 - INFO - Training:  98%|█████████▊| 4890/5000 [01:01<00:01, 81.87steps/s, loss=0.00028]
+2025-05-13 17:32:11,323 - INFO - Training:  98%|█████████▊| 4898/5000 [01:01<00:01, 81.87steps/s, loss=0.000286]
+2025-05-13 17:32:11,323 - INFO - Training:  98%|█████████▊| 4908/5000 [01:01<00:01, 82.16steps/s, loss=0.000286]
+2025-05-13 17:32:11,430 - INFO - Training:  98%|█████████▊| 4908/5000 [01:01<00:01, 82.16steps/s, loss=0.000286]
+2025-05-13 17:32:11,530 - INFO - Training:  98%|█████████▊| 4916/5000 [01:01<00:01, 82.16steps/s, loss=0.000273]
+2025-05-13 17:32:11,530 - INFO - Training:  98%|█████████▊| 4925/5000 [01:01<00:00, 82.11steps/s, loss=0.000273]
+2025-05-13 17:32:11,642 - INFO - Training:  98%|█████████▊| 4925/5000 [01:01<00:00, 82.11steps/s, loss=0.000273]
+2025-05-13 17:32:11,760 - INFO - Training:  99%|█████████▊| 4933/5000 [01:02<00:00, 82.11steps/s, loss=0.000265]
+2025-05-13 17:32:11,760 - INFO - Training:  99%|█████████▉| 4940/5000 [01:02<00:00, 76.46steps/s, loss=0.000265]
+2025-05-13 17:32:11,871 - INFO - Training:  99%|█████████▉| 4940/5000 [01:02<00:00, 76.46steps/s, loss=0.000265]
+2025-05-13 17:32:11,980 - INFO - Training:  99%|█████████▉| 4945/5000 [01:02<00:00, 76.46steps/s, loss=0.00291]
+2025-05-13 17:32:11,980 - INFO - Training:  99%|█████████▉| 4954/5000 [01:02<00:00, 72.42steps/s, loss=0.00291]
+2025-05-13 17:32:12,080 - INFO - Training:  99%|█████████▉| 4954/5000 [01:02<00:00, 72.42steps/s, loss=0.00291]
+2025-05-13 17:32:12,080 - INFO - Training:  99%|█████████▉| 4962/5000 [01:02<00:00, 73.67steps/s, loss=0.00291]
+2025-05-13 17:32:12,181 - INFO - Training:  99%|█████████▉| 4962/5000 [01:02<00:00, 73.67steps/s, loss=0.00115]
+2025-05-13 17:32:12,182 - INFO - Training:  99%|█████████▉| 4972/5000 [01:02<00:00, 78.62steps/s, loss=0.00115]
+2025-05-13 17:32:12,289 - INFO - Training:  99%|█████████▉| 4972/5000 [01:02<00:00, 78.62steps/s, loss=0.00115]
+2025-05-13 17:32:12,289 - INFO - Training: 100%|█████████▉| 4981/5000 [01:02<00:00, 79.73steps/s, loss=0.00115]
+2025-05-13 17:32:12,399 - INFO - Training: 100%|█████████▉| 4981/5000 [01:02<00:00, 79.73steps/s, loss=0.000669]
+2025-05-13 17:32:12,399 - INFO - Training: 100%|█████████▉| 4992/5000 [01:02<00:00, 84.90steps/s, loss=0.000669]
+2025-05-13 17:32:12,498 - INFO - Training: 100%|█████████▉| 4992/5000 [01:02<00:00, 84.90steps/s, loss=0.000669]
+2025-05-13 17:32:12,498 - INFO - Training: 100%|█████████▉| 4992/5000 [01:02<00:00, 79.33steps/s, loss=0.000669]
+2025-05-13 17:32:12,546 - INFO - 17:32:12 [0;36mINFO     [0m#vertices=9288 #triangles=18604[K[0m
+2025-05-13 17:32:12,559 - INFO - Generating mesh via marching cubes and saving to /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/output.ply. Resolution=[256,256,256], Density Threshold=2.5
+2025-05-13 17:32:12,659 - INFO - [0m
+2025-05-13 17:32:12,667 - INFO - Converting PLY to OBJ format...
+2025-05-13 17:32:12,668 - INFO - Loading point cloud from /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/output.ply...
+2025-05-13 17:32:12,675 - INFO - Number of points in point cloud: 9472
+2025-05-13 17:32:12,675 - INFO - Performing Poisson surface reconstruction...
+2025-05-13 17:32:17,128 - INFO - Mesh created successfully!
+2025-05-13 17:32:17,273 - INFO - Mesh saved to /home/doan/VA_0223/20250411_Final/Reconstruction_3D/output/ins_ngp_old/xe_F1_khan_60/output.obj
+2025-05-13 17:32:17,273 - INFO - ==================================================
+2025-05-13 17:32:17,273 - INFO - Process completed successfully!
+2025-05-13 17:32:17,273 - INFO - ==================================================
