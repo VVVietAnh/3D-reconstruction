@@ -91,9 +91,10 @@ fmt/build/
 *.fbx
 *.glb
 *.gltf 
+*.MOV
 
 # Output
 output/
-
+output_old/
 # Temp
 **/temp.py

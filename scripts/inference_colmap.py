@@ -4,6 +4,7 @@ import shutil
 import open3d as o3d
 import time
 import argparse
+import logging
 
 # Define tunable parameters
 params = {
@@ -11,13 +12,29 @@ params = {
     "SiftExtraction.max_image_size": 2000,
     "SiftExtraction.estimate_affine_shape": 1,
     "SiftExtraction.domain_size_pooling": 1,
-    "SiftMatching.max_ratio": 0.85,
-    "Mapper.min_num_matches": 15,
+    "SiftMatching.max_ratio": 0.9,
+    "SiftMatching.guided_matching": True,
+    "SequentialMatching.overlap": 10,
+    "Mapper.min_num_matches": 8,
     "Mapper.ba_global_max_num_iterations": 50,
     "PatchMatchStereo.geom_consistency": True,
     "PatchMatchStereo.num_samples": 8,
     "PatchMatchStereo.window_radius": 2,
 }
+
+def setup_logging(log_file):
+    """
+    Set up logging configuration to write to both console and file
+    """
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()
+        ]
+    )
+    return logging.getLogger(__name__)
 
 def clean_up(output_path):
     """
@@ -65,8 +82,13 @@ def run_colmap_commands(input_path, output_path):
         f"--SiftExtraction.estimate_affine_shape {params['SiftExtraction.estimate_affine_shape']} "
         f"--SiftExtraction.domain_size_pooling {params['SiftExtraction.domain_size_pooling']}",
         
-        f"colmap exhaustive_matcher --database_path {output_path}/database.db "
-        f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']}",
+        # f"colmap exhaustive_matcher --database_path {output_path}/database.db "
+        # f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']}",
+
+        f"colmap sequential_matcher --database_path {output_path}/database.db "
+        f"--SiftMatching.max_ratio {params['SiftMatching.max_ratio']} "
+        f"--SiftMatching.guided_matching {params['SiftMatching.guided_matching']} "
+        f"--SequentialMatching.overlap {params['SequentialMatching.overlap']}",
         
         f"colmap mapper --database_path {output_path}/database.db --image_path {input_path} --output_path {output_path}/sparse "
         f"--Mapper.min_num_matches {params['Mapper.min_num_matches']} "
@@ -141,14 +163,22 @@ def main():
     scene_name = os.path.basename(args.input_dir)
     output_path = os.path.join(args.output_dir, scene_name)
     
+    # Setup logging
+    log_file = os.path.join(output_path, "log.txt")
+    logger = setup_logging(log_file)
+    
+    logger.info(f"Starting COLMAP reconstruction for scene: {scene_name}")
+    logger.info(f"Input directory: {args.input_dir}")
+    logger.info(f"Output directory: {output_path}")
+    
     # Clean up and run COLMAP
     clean_up(output_path)
     total_time = run_colmap_commands(args.input_dir, output_path)
     num_points = convert_ply_to_obj(output_path)
     
-    print(f"COLMAP reconstruction completed in {total_time:.2f} seconds")
-    print(f"Number of points: {num_points}")
-    print(f"Results saved to {output_path}")
+    logger.info(f"COLMAP reconstruction completed in {total_time:.2f} seconds")
+    logger.info(f"Number of points: {num_points}")
+    logger.info(f"Results saved to {output_path}")
 
 if __name__ == '__main__':
     main()

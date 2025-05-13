@@ -140,12 +140,13 @@ def process_input(input_path, output_dir, num_frames=None):
 
 if __name__ == "__main__":
     # Example usage
-    input_path = "data/videos/xe_F1_khan.mp4"  # Can be video, zip, or image folder
+    # input_path = "data/videos/xe_F1_khan.mp4"  # Can be video, zip, or image folder
+    input_path = "data/videos/dochoi.MOV"
     root_output_dir = "data/processed_images"
 
     output_dir_name = os.path.basename(input_path).split(".")[0]
     output_dir = os.path.join(root_output_dir, output_dir_name)
-    num_frames = 70  # Only needed if input is video
+    num_frames = 100  # Only needed if input is video
     
     process_input(input_path, output_dir, num_frames)
 
